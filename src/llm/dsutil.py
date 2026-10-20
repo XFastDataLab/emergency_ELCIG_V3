@@ -13,15 +13,12 @@ import os
 import httpx
 from openai import OpenAI, AsyncOpenAI
 
-VOLCES_API_KEY = "REPLACE_WITH_ENV_VALUE"
+VOLCES_API_KEY = "你的密钥"
 VOLCES_BASE_URL = "https://ark.cn-beijing.volces.com/api/v3"
 VOLCES_DPSK_V3 = "deepseek-v3-2-251201"
 # VOLCES_DPSK_V3 = "deepseek-v3-250324" #常规
 # VOLCES_DPSK_V3 = "doubao-seed-2-0-mini-260428" #token额度不足自动扣费
-
-
-VOLCES_DPSK_R1 = "ep-20250218150536-p4zwm"
-MISTRAL_API_KEY = "REPLACE_WITH_ENV_VALUE"
+ 
 
 src_file = "../GB∕T 33000-2025 大中型企业安全生产标准化管理体系目录.docx"
 import requests
