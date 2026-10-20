@@ -1,0 +1,1271 @@
+[
+  {
+    "iteration": 0,
+    "error_count": 23,
+    "deferred_error_count": 0,
+    "pending_error_count": 23,
+    "error_types": {
+      "temporal": 1,
+      "responsibility": 11,
+      "resource": 11
+    },
+    "hint_count": 8,
+    "total_constraints": 100,
+    "satisfied_constraints": 77,
+    "csr": 0.77,
+    "errors": [
+      {
+        "error_type": "temporal_hint",
+        "error_type_cn": "temporal_hint",
+        "step_id": 3,
+        "location": "动作'启动响应'（步骤3）",
+        "description": "提示：前置动作'事故上报'未在脚本中出现。偏序模式下允许省略该中间环节，仅作提示、不计入错误。",
+        "violated_rule": "时序:事故上报→启动响应",
+        "severity": 1
+      },
+      {
+        "error_type": "temporal_hint",
+        "error_type_cn": "temporal_hint",
+        "step_id": 13,
+        "location": "动作'信息通报'（步骤13）",
+        "description": "提示：前置动作'事故上报'未在脚本中出现。偏序模式下允许省略该中间环节，仅作提示、不计入错误。",
+        "violated_rule": "时序:事故上报→信息通报",
+        "severity": 1
+      },
+      {
+        "error_type": "temporal_hint",
+        "error_type_cn": "temporal_hint",
+        "step_id": 15,
+        "location": "动作'安置救助'（步骤15）",
+        "description": "提示：前置动作'人员疏散'未在脚本中出现。偏序模式下允许省略该中间环节，仅作提示、不计入错误。",
+        "violated_rule": "时序:人员疏散→安置救助",
+        "severity": 1
+      },
+      {
+        "error_type": "temporal",
+        "error_type_cn": "时序",
+        "step_id": 5,
+        "location": "动作'人员转移'（步骤5）出现在'危险区排查'（步骤7）之前",
+        "description": "时序倒置：'危险区排查'必须先于'人员转移'执行。",
+        "violated_rule": "时序:危险区排查→人员转移",
+        "severity": 1
+      },
+      {
+        "error_type": "temporal_hint",
+        "error_type_cn": "temporal_hint",
+        "step_id": 9,
+        "location": "动作'救援搜救'（步骤9）",
+        "description": "提示：前置动作'安全确认'未在脚本中出现。偏序模式下允许省略该中间环节，仅作提示、不计入错误。",
+        "violated_rule": "时序:安全确认→救援搜救",
+        "severity": 1
+      },
+      {
+        "error_type": "temporal_hint",
+        "error_type_cn": "temporal_hint",
+        "step_id": 16,
+        "location": "动作'响应终止'（步骤16）",
+        "description": "提示：前置动作'搜救完成'未在脚本中出现。偏序模式下允许省略该中间环节，仅作提示、不计入错误。",
+        "violated_rule": "时序:搜救完成→响应终止",
+        "severity": 1
+      },
+      {
+        "error_type": "temporal_hint",
+        "error_type_cn": "temporal_hint",
+        "step_id": 16,
+        "location": "动作'响应终止'（步骤16）",
+        "description": "提示：前置动作'安置完成'未在脚本中出现。偏序模式下允许省略该中间环节，仅作提示、不计入错误。",
+        "violated_rule": "时序:安置完成→响应终止",
+        "severity": 1
+      },
+      {
+        "error_type": "temporal_hint",
+        "error_type_cn": "temporal_hint",
+        "step_id": 16,
+        "location": "动作'响应终止'（步骤16）",
+        "description": "提示：前置动作'生活保障'未在脚本中出现。偏序模式下允许省略该中间环节，仅作提示、不计入错误。",
+        "violated_rule": "时序:生活保障→响应终止",
+        "severity": 1
+      },
+      {
+        "error_type": "temporal_hint",
+        "error_type_cn": "temporal_hint",
+        "step_id": 16,
+        "location": "动作'响应终止'（步骤16）",
+        "description": "提示：前置动作'秩序恢复'未在脚本中出现。偏序模式下允许省略该中间环节，仅作提示、不计入错误。",
+        "violated_rule": "时序:秩序恢复→响应终止",
+        "severity": 1
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 1,
+        "location": "步骤1 资源'预警信息发布平台'",
+        "description": "资源类型'预警信息发布平台'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 挖掘机, 救护车, 无人机, 消防车, 环境监测设备, 生命探测仪, 破拆工具, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 2,
+        "location": "步骤2 资源'视频会议终端'",
+        "description": "资源类型'视频会议终端'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 挖掘机, 救护车, 无人机, 消防车, 环境监测设备, 生命探测仪, 破拆工具, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 2,
+        "location": "步骤2 资源'地质灾害监测数据'",
+        "description": "资源类型'地质灾害监测数据'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 挖掘机, 救护车, 无人机, 消防车, 环境监测设备, 生命探测仪, 破拆工具, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 3,
+        "location": "步骤3 资源'指挥车'",
+        "description": "资源类型'指挥车'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 挖掘机, 救护车, 无人机, 消防车, 环境监测设备, 生命探测仪, 破拆工具, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 6,
+        "location": "步骤6 资源'警车'",
+        "description": "资源类型'警车'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 挖掘机, 救护车, 无人机, 消防车, 环境监测设备, 生命探测仪, 破拆工具, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 6,
+        "location": "步骤6 资源'警戒带'",
+        "description": "资源类型'警戒带'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 挖掘机, 救护车, 无人机, 消防车, 环境监测设备, 生命探测仪, 破拆工具, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 8,
+        "location": "步骤8 资源'监测设备'",
+        "description": "资源类型'监测设备'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 挖掘机, 救护车, 无人机, 消防车, 环境监测设备, 生命探测仪, 破拆工具, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 9,
+        "location": "步骤9 资源'搜救犬'",
+        "description": "资源类型'搜救犬'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 挖掘机, 救护车, 无人机, 消防车, 环境监测设备, 生命探测仪, 破拆工具, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 12,
+        "location": "步骤12 资源'通信设备'",
+        "description": "资源类型'通信设备'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 挖掘机, 救护车, 无人机, 消防车, 环境监测设备, 生命探测仪, 破拆工具, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 13,
+        "location": "步骤13 资源'通信设备'",
+        "description": "资源类型'通信设备'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 挖掘机, 救护车, 无人机, 消防车, 环境监测设备, 生命探测仪, 破拆工具, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 16,
+        "location": "步骤16 资源'指挥车'",
+        "description": "资源类型'指挥车'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 挖掘机, 救护车, 无人机, 消防车, 环境监测设备, 生命探测仪, 破拆工具, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 1,
+        "location": "步骤1：角色'自然资源局'执行动作'灾害预警'",
+        "description": "职责错配：角色'自然资源局'不包含动作'灾害预警'。",
+        "violated_rule": "职责:(自然资源局,灾害预警)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 2,
+        "location": "步骤2：角色'应急指挥部'执行动作'会商研判'",
+        "description": "职责错配：角色'应急指挥部'不包含动作'会商研判'。",
+        "violated_rule": "职责:(应急指挥部,会商研判)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 4,
+        "location": "步骤4：角色'应急队伍'执行动作'应急队伍集结'",
+        "description": "职责错配：角色'应急队伍'不包含动作'应急队伍集结'。",
+        "violated_rule": "职责:(应急队伍,应急队伍集结)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 6,
+        "location": "步骤6：角色'公安部门'执行动作'交通管制'",
+        "description": "职责错配：角色'公安部门'不包含动作'交通管制'。",
+        "violated_rule": "职责:(公安部门,交通管制)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 7,
+        "location": "步骤7：角色'自然资源局'执行动作'危险区排查'",
+        "description": "职责错配：角色'自然资源局'不包含动作'危险区排查'。",
+        "violated_rule": "职责:(自然资源局,危险区排查)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 8,
+        "location": "步骤8：角色'应急指挥部'执行动作'险情监测'",
+        "description": "职责错配：角色'应急指挥部'不包含动作'险情监测'。",
+        "violated_rule": "职责:(应急指挥部,险情监测)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 9,
+        "location": "步骤9：角色'消防救援队'执行动作'救援搜救'",
+        "description": "职责错配：角色'消防救援队'不包含动作'救援搜救'。",
+        "violated_rule": "职责:(消防救援队,救援搜救)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 11,
+        "location": "步骤11：角色'应急指挥部'执行动作'物资供应'",
+        "description": "职责错配：角色'应急指挥部'不包含动作'物资供应'。",
+        "violated_rule": "职责:(应急指挥部,物资供应)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 12,
+        "location": "步骤12：角色'通信保障组'执行动作'通信保障'",
+        "description": "职责错配：角色'通信保障组'不包含动作'通信保障'。",
+        "violated_rule": "职责:(通信保障组,通信保障)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 14,
+        "location": "步骤14：角色'交通部门'执行动作'交通保障'",
+        "description": "职责错配：角色'交通部门'不包含动作'交通保障'。",
+        "violated_rule": "职责:(交通部门,交通保障)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 15,
+        "location": "步骤15：角色'民政部门'执行动作'安置救助'",
+        "description": "职责错配：角色'民政部门'不包含动作'安置救助'。",
+        "violated_rule": "职责:(民政部门,安置救助)",
+        "severity": 3
+      }
+    ],
+    "script": {
+      "scenario_id": "S3",
+      "raw_text": "步骤1 | 07:50 | 自然资源局 | 灾害预警 | 根据气象与地质监测数据，研判某山区发生滑坡地质灾害风险极高，制作并发布地质灾害红色预警信息，明确影响范围、风险时段及防范要求，通过广播、短信、专用预警终端等渠道向相关责任人与公众发布。 | 资源：预警信息发布平台×1，卫星电话×2\n步骤2 | 07:55 | 应急指挥部 | 会商研判 | 应急指挥部组织自然资源、气象、应急管理、交通、消防等部门进行紧急会商，分析滑坡发展趋势、可能影响区域及人员分布，决定启动地质灾害应急响应，明确各成员单位任务分工。 | 资源：视频会议终端×1，地质灾害监测数据×1\n步骤3 | 08:05 | 应急指挥部 | 启动响应 | 依据会商结论，宣布启动地质灾害Ⅱ级应急响应，成立现场指挥部，统一指挥协调抢险救援、人员转移、医疗救护、交通管制等工作，通知各救援队伍立即集结出动。 | 资源：指挥车×1，卫星电话×3\n步骤4 | 08:10 | 应急队伍 | 应急队伍集结 | 消防、武警、民兵、专业救援队等应急队伍携带生命探测仪、破拆工具、挖掘机等装备到指定地点集结，接受现场指挥部统一调度。 | 资源：消防车×3，挖掘机×2，生命探测仪×2，破拆工具×5\n步骤5 | 08:20 | 社区/基层 | 人员转移 | 街道办事处及村（社区）干部按照避险转移方案，组织滑坡危险区内居民按照预定路线有序转移至临时安置点，重点照顾老弱病残孕等特殊群体，逐户确认转移情况。 | 资源：运输车辆×5，帐篷×20\n步骤6 | 08:25 | 公安部门 | 交通管制 | 公安交警在滑坡影响区域外围设置警戒线和交通管制点，禁止无关车辆和人员进入危险区，保障救援通道畅通，引导过往车辆绕行。 | 资源：警车×3，警戒带×10\n步骤7 | 08:30 | 自然资源局 | 危险区排查 | 自然资源部门技术人员利用无人机、边坡雷达等设备对滑坡体及周边区域进行排查，划定危险区范围，监测滑坡变形趋势，评估二次滑坡风险，为救援行动提供安全指引。 | 资源：无人机×2，环境监测设备×1\n步骤8 | 08:35 | 应急指挥部 | 险情监测 | 在滑坡体关键部位布设监测点，安排专人持续监测滑坡位移、裂缝变化及降雨情况，实时向现场指挥部报告监测数据，发现险情加剧立即发出警报。 | 资源：监测设备×5，卫星电话×2\n步骤9 | 08:40 | 消防救援队 | 救援搜救 | 消防救援队伍携带生命探测仪、破拆工具、搜救犬等进入滑坡区域，对可能被埋压人员进行搜救，利用生命探测仪定位被困者，使用破拆工具清理障碍，全力营救被困人员。 | 资源：生命探测仪×3，破拆工具×5，搜救犬×2\n步骤10 | 08:50 | 医疗救护组 | 医疗救护 | 医疗救护组在安全区域设立临时医疗点，对救出的伤员进行检伤分类、现场急救和初步治疗，重伤员及时转运至后方医院救治。 | 资源：救护车×3，急救包×10\n步骤11 | 09:00 | 应急指挥部 | 物资供应 | 根据现场需求，调配帐篷、食品、饮用水、发电机等生活物资运往临时安置点，保障转移群众基本生活需求。 | 资源：帐篷×30，发电机×2，运输车辆×5\n步骤12 | 09:10 | 通信保障组 | 通信保障 | 通信保障人员携带卫星电话等设备，在滑坡区域建立应急通信链路，确保现场指挥部与各救援队伍、后方指挥中心通信畅通。 | 资源：卫星电话×5，通信设备×3\n步骤13 | 09:20 | 应急指挥部 | 信息通报 | 现场指挥部汇总救援进展、人员伤亡、转移安置等情况，向本级政府和上级应急管理部门报告，并向社会公众通报救援动态和避险提示。 | 资源：通信设备×2\n步骤14 | 09:30 | 交通部门 | 交通保障 | 交通部门组织力量对受损道路进行抢修，调用吊装设备清理路障，保障救援车辆和物资运输车辆通行顺畅。 | 资源：吊装设备×2，挖掘机×2\n步骤15 | 09:40 | 民政部门 | 安置救助 | 民政部门在临时安置点设置登记点、物资发放点，为转移群众提供食品、饮用水、被褥等生活必需品，做好安置人员登记和情绪安抚工作。 | 资源：帐篷×20，急救包×5\n步骤16 | 09:50 | 应急指挥部 | 响应终止 | 经会商研判，滑坡体变形趋于稳定，险情基本消除，被困人员全部救出，转移群众得到妥善安置，宣布终止应急响应，转入善后处置和恢复重建阶段。 | 资源：指挥车×1",
+      "steps": [
+        {
+          "step_id": 1,
+          "time": "07:50",
+          "role": "自然资源局",
+          "action": "灾害预警",
+          "description": "根据气象与地质监测数据，研判某山区发生滑坡地质灾害风险极高，制作并发布地质灾害红色预警信息，明确影响范围、风险时段及防范要求，通过广播、短信、专用预警终端等渠道向相关责任人与公众发布。",
+          "resources": [
+            {
+              "resource_type": "预警信息发布平台",
+              "quantity": 1
+            },
+            {
+              "resource_type": "卫星电话",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "灾害预警",
+          "action_grounded": true
+        },
+        {
+          "step_id": 2,
+          "time": "07:55",
+          "role": "应急指挥部",
+          "action": "会商研判",
+          "description": "应急指挥部组织自然资源、气象、应急管理、交通、消防等部门进行紧急会商，分析滑坡发展趋势、可能影响区域及人员分布，决定启动地质灾害应急响应，明确各成员单位任务分工。",
+          "resources": [
+            {
+              "resource_type": "视频会议终端",
+              "quantity": 1
+            },
+            {
+              "resource_type": "地质灾害监测数据",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "会商研判",
+          "action_grounded": true
+        },
+        {
+          "step_id": 3,
+          "time": "08:05",
+          "role": "应急指挥部",
+          "action": "启动响应",
+          "description": "依据会商结论，宣布启动地质灾害Ⅱ级应急响应，成立现场指挥部，统一指挥协调抢险救援、人员转移、医疗救护、交通管制等工作，通知各救援队伍立即集结出动。",
+          "resources": [
+            {
+              "resource_type": "指挥车",
+              "quantity": 1
+            },
+            {
+              "resource_type": "卫星电话",
+              "quantity": 3
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "启动响应",
+          "action_grounded": true
+        },
+        {
+          "step_id": 4,
+          "time": "08:10",
+          "role": "应急队伍",
+          "action": "应急队伍集结",
+          "description": "消防、武警、民兵、专业救援队等应急队伍携带生命探测仪、破拆工具、挖掘机等装备到指定地点集结，接受现场指挥部统一调度。",
+          "resources": [
+            {
+              "resource_type": "消防车",
+              "quantity": 3
+            },
+            {
+              "resource_type": "挖掘机",
+              "quantity": 2
+            },
+            {
+              "resource_type": "生命探测仪",
+              "quantity": 2
+            },
+            {
+              "resource_type": "破拆工具",
+              "quantity": 5
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "应急队伍集结",
+          "action_grounded": true
+        },
+        {
+          "step_id": 5,
+          "time": "08:20",
+          "role": "社区/基层",
+          "action": "人员转移",
+          "description": "街道办事处及村（社区）干部按照避险转移方案，组织滑坡危险区内居民按照预定路线有序转移至临时安置点，重点照顾老弱病残孕等特殊群体，逐户确认转移情况。",
+          "resources": [
+            {
+              "resource_type": "运输车辆",
+              "quantity": 5
+            },
+            {
+              "resource_type": "帐篷",
+              "quantity": 20
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "人员转移",
+          "action_grounded": true
+        },
+        {
+          "step_id": 6,
+          "time": "08:25",
+          "role": "公安部门",
+          "action": "交通管制",
+          "description": "公安交警在滑坡影响区域外围设置警戒线和交通管制点，禁止无关车辆和人员进入危险区，保障救援通道畅通，引导过往车辆绕行。",
+          "resources": [
+            {
+              "resource_type": "警车",
+              "quantity": 3
+            },
+            {
+              "resource_type": "警戒带",
+              "quantity": 10
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "交通管制",
+          "action_grounded": true
+        },
+        {
+          "step_id": 7,
+          "time": "08:30",
+          "role": "自然资源局",
+          "action": "危险区排查",
+          "description": "自然资源部门技术人员利用无人机、边坡雷达等设备对滑坡体及周边区域进行排查，划定危险区范围，监测滑坡变形趋势，评估二次滑坡风险，为救援行动提供安全指引。",
+          "resources": [
+            {
+              "resource_type": "无人机",
+              "quantity": 2
+            },
+            {
+              "resource_type": "环境监测设备",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "危险区排查",
+          "action_grounded": true
+        },
+        {
+          "step_id": 8,
+          "time": "08:35",
+          "role": "应急指挥部",
+          "action": "险情监测",
+          "description": "在滑坡体关键部位布设监测点，安排专人持续监测滑坡位移、裂缝变化及降雨情况，实时向现场指挥部报告监测数据，发现险情加剧立即发出警报。",
+          "resources": [
+            {
+              "resource_type": "监测设备",
+              "quantity": 5
+            },
+            {
+              "resource_type": "卫星电话",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "险情监测",
+          "action_grounded": true
+        },
+        {
+          "step_id": 9,
+          "time": "08:40",
+          "role": "消防救援队",
+          "action": "救援搜救",
+          "description": "消防救援队伍携带生命探测仪、破拆工具、搜救犬等进入滑坡区域，对可能被埋压人员进行搜救，利用生命探测仪定位被困者，使用破拆工具清理障碍，全力营救被困人员。",
+          "resources": [
+            {
+              "resource_type": "生命探测仪",
+              "quantity": 3
+            },
+            {
+              "resource_type": "破拆工具",
+              "quantity": 5
+            },
+            {
+              "resource_type": "搜救犬",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "救援搜救",
+          "action_grounded": true
+        },
+        {
+          "step_id": 10,
+          "time": "08:50",
+          "role": "医疗救护组",
+          "action": "医疗救护",
+          "description": "医疗救护组在安全区域设立临时医疗点，对救出的伤员进行检伤分类、现场急救和初步治疗，重伤员及时转运至后方医院救治。",
+          "resources": [
+            {
+              "resource_type": "救护车",
+              "quantity": 3
+            },
+            {
+              "resource_type": "急救包",
+              "quantity": 10
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "医疗救护",
+          "action_grounded": true
+        },
+        {
+          "step_id": 11,
+          "time": "09:00",
+          "role": "应急指挥部",
+          "action": "物资供应",
+          "description": "根据现场需求，调配帐篷、食品、饮用水、发电机等生活物资运往临时安置点，保障转移群众基本生活需求。",
+          "resources": [
+            {
+              "resource_type": "帐篷",
+              "quantity": 30
+            },
+            {
+              "resource_type": "发电机",
+              "quantity": 2
+            },
+            {
+              "resource_type": "运输车辆",
+              "quantity": 5
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "物资供应",
+          "action_grounded": true
+        },
+        {
+          "step_id": 12,
+          "time": "09:10",
+          "role": "通信保障组",
+          "action": "通信保障",
+          "description": "通信保障人员携带卫星电话等设备，在滑坡区域建立应急通信链路，确保现场指挥部与各救援队伍、后方指挥中心通信畅通。",
+          "resources": [
+            {
+              "resource_type": "卫星电话",
+              "quantity": 5
+            },
+            {
+              "resource_type": "通信设备",
+              "quantity": 3
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "通信保障",
+          "action_grounded": true
+        },
+        {
+          "step_id": 13,
+          "time": "09:20",
+          "role": "应急指挥部",
+          "action": "信息通报",
+          "description": "现场指挥部汇总救援进展、人员伤亡、转移安置等情况，向本级政府和上级应急管理部门报告，并向社会公众通报救援动态和避险提示。",
+          "resources": [
+            {
+              "resource_type": "通信设备",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "信息通报",
+          "action_grounded": true
+        },
+        {
+          "step_id": 14,
+          "time": "09:30",
+          "role": "交通部门",
+          "action": "交通保障",
+          "description": "交通部门组织力量对受损道路进行抢修，调用吊装设备清理路障，保障救援车辆和物资运输车辆通行顺畅。",
+          "resources": [
+            {
+              "resource_type": "吊装设备",
+              "quantity": 2
+            },
+            {
+              "resource_type": "挖掘机",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "交通保障",
+          "action_grounded": true
+        },
+        {
+          "step_id": 15,
+          "time": "09:40",
+          "role": "民政部门",
+          "action": "安置救助",
+          "description": "民政部门在临时安置点设置登记点、物资发放点，为转移群众提供食品、饮用水、被褥等生活必需品，做好安置人员登记和情绪安抚工作。",
+          "resources": [
+            {
+              "resource_type": "帐篷",
+              "quantity": 20
+            },
+            {
+              "resource_type": "急救包",
+              "quantity": 5
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "安置救助",
+          "action_grounded": true
+        },
+        {
+          "step_id": 16,
+          "time": "09:50",
+          "role": "应急指挥部",
+          "action": "响应终止",
+          "description": "经会商研判，滑坡体变形趋于稳定，险情基本消除，被困人员全部救出，转移群众得到妥善安置，宣布终止应急响应，转入善后处置和恢复重建阶段。",
+          "resources": [
+            {
+              "resource_type": "指挥车",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "响应终止",
+          "action_grounded": true
+        }
+      ]
+    }
+  },
+  {
+    "iteration": 1,
+    "error_count": 24,
+    "deferred_error_count": 0,
+    "pending_error_count": 24,
+    "error_types": {
+      "temporal": 1,
+      "responsibility": 11,
+      "resource": 12
+    },
+    "hint_count": 8,
+    "total_constraints": 100,
+    "satisfied_constraints": 76,
+    "csr": 0.76,
+    "errors": [
+      {
+        "error_type": "temporal_hint",
+        "error_type_cn": "temporal_hint",
+        "step_id": 3,
+        "location": "动作'启动响应'（步骤3）",
+        "description": "提示：前置动作'事故上报'未在脚本中出现。偏序模式下允许省略该中间环节，仅作提示、不计入错误。",
+        "violated_rule": "时序:事故上报→启动响应",
+        "severity": 1
+      },
+      {
+        "error_type": "temporal_hint",
+        "error_type_cn": "temporal_hint",
+        "step_id": 13,
+        "location": "动作'信息通报'（步骤13）",
+        "description": "提示：前置动作'事故上报'未在脚本中出现。偏序模式下允许省略该中间环节，仅作提示、不计入错误。",
+        "violated_rule": "时序:事故上报→信息通报",
+        "severity": 1
+      },
+      {
+        "error_type": "temporal_hint",
+        "error_type_cn": "temporal_hint",
+        "step_id": 15,
+        "location": "动作'安置救助'（步骤15）",
+        "description": "提示：前置动作'人员疏散'未在脚本中出现。偏序模式下允许省略该中间环节，仅作提示、不计入错误。",
+        "violated_rule": "时序:人员疏散→安置救助",
+        "severity": 1
+      },
+      {
+        "error_type": "temporal",
+        "error_type_cn": "时序",
+        "step_id": 5,
+        "location": "动作'人员转移'（步骤5）出现在'危险区排查'（步骤7）之前",
+        "description": "时序倒置：'危险区排查'必须先于'人员转移'执行。",
+        "violated_rule": "时序:危险区排查→人员转移",
+        "severity": 1
+      },
+      {
+        "error_type": "temporal_hint",
+        "error_type_cn": "temporal_hint",
+        "step_id": 9,
+        "location": "动作'救援搜救'（步骤9）",
+        "description": "提示：前置动作'安全确认'未在脚本中出现。偏序模式下允许省略该中间环节，仅作提示、不计入错误。",
+        "violated_rule": "时序:安全确认→救援搜救",
+        "severity": 1
+      },
+      {
+        "error_type": "temporal_hint",
+        "error_type_cn": "temporal_hint",
+        "step_id": 16,
+        "location": "动作'响应终止'（步骤16）",
+        "description": "提示：前置动作'搜救完成'未在脚本中出现。偏序模式下允许省略该中间环节，仅作提示、不计入错误。",
+        "violated_rule": "时序:搜救完成→响应终止",
+        "severity": 1
+      },
+      {
+        "error_type": "temporal_hint",
+        "error_type_cn": "temporal_hint",
+        "step_id": 16,
+        "location": "动作'响应终止'（步骤16）",
+        "description": "提示：前置动作'安置完成'未在脚本中出现。偏序模式下允许省略该中间环节，仅作提示、不计入错误。",
+        "violated_rule": "时序:安置完成→响应终止",
+        "severity": 1
+      },
+      {
+        "error_type": "temporal_hint",
+        "error_type_cn": "temporal_hint",
+        "step_id": 16,
+        "location": "动作'响应终止'（步骤16）",
+        "description": "提示：前置动作'生活保障'未在脚本中出现。偏序模式下允许省略该中间环节，仅作提示、不计入错误。",
+        "violated_rule": "时序:生活保障→响应终止",
+        "severity": 1
+      },
+      {
+        "error_type": "temporal_hint",
+        "error_type_cn": "temporal_hint",
+        "step_id": 16,
+        "location": "动作'响应终止'（步骤16）",
+        "description": "提示：前置动作'秩序恢复'未在脚本中出现。偏序模式下允许省略该中间环节，仅作提示、不计入错误。",
+        "violated_rule": "时序:秩序恢复→响应终止",
+        "severity": 1
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 1,
+        "location": "步骤1 资源'预警信息发布平台'",
+        "description": "资源类型'预警信息发布平台'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 挖掘机, 救护车, 无人机, 消防车, 环境监测设备, 生命探测仪, 破拆工具, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 2,
+        "location": "步骤2 资源'视频会议终端'",
+        "description": "资源类型'视频会议终端'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 挖掘机, 救护车, 无人机, 消防车, 环境监测设备, 生命探测仪, 破拆工具, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 2,
+        "location": "步骤2 资源'地质灾害监测数据'",
+        "description": "资源类型'地质灾害监测数据'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 挖掘机, 救护车, 无人机, 消防车, 环境监测设备, 生命探测仪, 破拆工具, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 3,
+        "location": "步骤3 资源'指挥车'",
+        "description": "资源类型'指挥车'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 挖掘机, 救护车, 无人机, 消防车, 环境监测设备, 生命探测仪, 破拆工具, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 6,
+        "location": "步骤6 资源'警车'",
+        "description": "资源类型'警车'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 挖掘机, 救护车, 无人机, 消防车, 环境监测设备, 生命探测仪, 破拆工具, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 6,
+        "location": "步骤6 资源'警戒带'",
+        "description": "资源类型'警戒带'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 挖掘机, 救护车, 无人机, 消防车, 环境监测设备, 生命探测仪, 破拆工具, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 8,
+        "location": "步骤8 资源'监测设备'",
+        "description": "资源类型'监测设备'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 挖掘机, 救护车, 无人机, 消防车, 环境监测设备, 生命探测仪, 破拆工具, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 9,
+        "location": "步骤9 资源'搜救犬'",
+        "description": "资源类型'搜救犬'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 挖掘机, 救护车, 无人机, 消防车, 环境监测设备, 生命探测仪, 破拆工具, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 12,
+        "location": "步骤12 资源'通信设备'",
+        "description": "资源类型'通信设备'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 挖掘机, 救护车, 无人机, 消防车, 环境监测设备, 生命探测仪, 破拆工具, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 13,
+        "location": "步骤13 资源'通信设备'",
+        "description": "资源类型'通信设备'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 挖掘机, 救护车, 无人机, 消防车, 环境监测设备, 生命探测仪, 破拆工具, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 15,
+        "location": "步骤15 资源'生活物资包'",
+        "description": "资源类型'生活物资包'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 挖掘机, 救护车, 无人机, 消防车, 环境监测设备, 生命探测仪, 破拆工具, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 16,
+        "location": "步骤16 资源'指挥车'",
+        "description": "资源类型'指挥车'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 挖掘机, 救护车, 无人机, 消防车, 环境监测设备, 生命探测仪, 破拆工具, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 1,
+        "location": "步骤1：角色'自然资源局'执行动作'灾害预警'",
+        "description": "职责错配：角色'自然资源局'不包含动作'灾害预警'。",
+        "violated_rule": "职责:(自然资源局,灾害预警)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 2,
+        "location": "步骤2：角色'应急指挥部'执行动作'会商研判'",
+        "description": "职责错配：角色'应急指挥部'不包含动作'会商研判'。",
+        "violated_rule": "职责:(应急指挥部,会商研判)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 4,
+        "location": "步骤4：角色'应急队伍'执行动作'应急队伍集结'",
+        "description": "职责错配：角色'应急队伍'不包含动作'应急队伍集结'。",
+        "violated_rule": "职责:(应急队伍,应急队伍集结)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 6,
+        "location": "步骤6：角色'公安部门'执行动作'交通管制'",
+        "description": "职责错配：角色'公安部门'不包含动作'交通管制'。",
+        "violated_rule": "职责:(公安部门,交通管制)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 7,
+        "location": "步骤7：角色'自然资源局'执行动作'危险区排查'",
+        "description": "职责错配：角色'自然资源局'不包含动作'危险区排查'。",
+        "violated_rule": "职责:(自然资源局,危险区排查)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 8,
+        "location": "步骤8：角色'自然资源局'执行动作'险情监测'",
+        "description": "职责错配：角色'自然资源局'不包含动作'险情监测'。",
+        "violated_rule": "职责:(自然资源局,险情监测)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 9,
+        "location": "步骤9：角色'消防救援队'执行动作'救援搜救'",
+        "description": "职责错配：角色'消防救援队'不包含动作'救援搜救'。",
+        "violated_rule": "职责:(消防救援队,救援搜救)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 11,
+        "location": "步骤11：角色'应急指挥部'执行动作'物资供应'",
+        "description": "职责错配：角色'应急指挥部'不包含动作'物资供应'。",
+        "violated_rule": "职责:(应急指挥部,物资供应)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 12,
+        "location": "步骤12：角色'通信保障组'执行动作'通信保障'",
+        "description": "职责错配：角色'通信保障组'不包含动作'通信保障'。",
+        "violated_rule": "职责:(通信保障组,通信保障)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 14,
+        "location": "步骤14：角色'交通部门'执行动作'交通保障'",
+        "description": "职责错配：角色'交通部门'不包含动作'交通保障'。",
+        "violated_rule": "职责:(交通部门,交通保障)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 15,
+        "location": "步骤15：角色'民政部门'执行动作'安置救助'",
+        "description": "职责错配：角色'民政部门'不包含动作'安置救助'。",
+        "violated_rule": "职责:(民政部门,安置救助)",
+        "severity": 3
+      }
+    ],
+    "script": {
+      "scenario_id": "S3",
+      "raw_text": "步骤1 | 07:50 | 自然资源局 | 灾害预警 | 根据气象与地质监测数据，研判某山区发生滑坡地质灾害风险极高，制作并发布地质灾害红色预警信息，明确影响范围、风险时段及防范要求，通过广播、短信、专用预警终端等渠道向相关责任人与公众发布。 | 资源：预警信息发布平台×1，卫星电话×2\n步骤2 | 07:55 | 应急指挥部 | 会商研判 | 应急指挥部组织自然资源、气象、应急管理、交通、消防等部门进行紧急会商，分析滑坡发展趋势、可能影响区域及人员分布，决定启动地质灾害应急响应，明确各成员单位任务分工。 | 资源：视频会议终端×1，地质灾害监测数据×1\n步骤3 | 08:05 | 应急指挥部 | 启动响应 | 依据会商结论，宣布启动地质灾害Ⅱ级应急响应，成立现场指挥部，统一指挥协调抢险救援、人员转移、医疗救护、交通管制等工作，通知各救援队伍立即集结出动。 | 资源：指挥车×1，卫星电话×3\n步骤4 | 08:10 | 应急队伍 | 应急队伍集结 | 消防、武警、民兵、专业救援队等应急队伍携带生命探测仪、破拆工具、挖掘机等装备到指定地点集结，接受现场指挥部统一调度。 | 资源：消防车×3，挖掘机×2，生命探测仪×2，破拆工具×5\n步骤5 | 08:20 | 社区/基层 | 人员转移 | 街道办事处及村（社区）干部按照避险转移方案，组织滑坡危险区内居民按照预定路线有序转移至临时安置点，重点照顾老弱病残孕等特殊群体，逐户确认转移情况。 | 资源：运输车辆×5，帐篷×20\n步骤6 | 08:25 | 公安部门 | 交通管制 | 公安交警在滑坡影响区域外围设置警戒线和交通管制点，禁止无关车辆和人员进入危险区，保障救援通道畅通，引导过往车辆绕行。 | 资源：警车×3，警戒带×10\n步骤7 | 08:30 | 自然资源局 | 危险区排查 | 自然资源部门技术人员利用无人机、边坡雷达等设备对滑坡体及周边区域进行排查，划定危险区范围，监测滑坡变形趋势，评估二次滑坡风险，为救援行动提供安全指引。 | 资源：无人机×2，环境监测设备×1\n步骤8 | 08:35 | 自然资源局 | 险情监测 | 在滑坡体关键部位布设监测点，安排专人持续监测滑坡位移、裂缝变化及降雨情况，实时向现场指挥部报告监测数据，发现险情加剧立即发出警报。 | 资源：监测设备×5，卫星电话×2\n步骤9 | 08:40 | 消防救援队 | 救援搜救 | 消防救援队伍携带生命探测仪、破拆工具、搜救犬等进入滑坡区域，对可能被埋压人员进行搜救，利用生命探测仪定位被困者，使用破拆工具清理障碍，全力营救被困人员。 | 资源：生命探测仪×3，破拆工具×5，搜救犬×2\n步骤10 | 08:50 | 医疗救护组 | 医疗救护 | 医疗救护组在安全区域设立临时医疗点，对救出的伤员进行检伤分类、现场急救和初步治疗，重伤员及时转运至后方医院救治。 | 资源：救护车×3，急救包×10\n步骤11 | 09:00 | 应急指挥部 | 物资供应 | 根据现场需求，调配帐篷、食品、饮用水、发电机等生活物资运往临时安置点，保障转移群众基本生活需求。 | 资源：帐篷×30，发电机×2，运输车辆×5\n步骤12 | 09:10 | 通信保障组 | 通信保障 | 通信保障人员携带卫星电话等设备，在滑坡区域建立应急通信链路，确保现场指挥部与各救援队伍、后方指挥中心通信畅通。 | 资源：卫星电话×5，通信设备×3\n步骤13 | 09:20 | 应急指挥部 | 信息通报 | 现场指挥部汇总救援进展、人员伤亡、转移安置等情况，向本级政府和上级应急管理部门报告，并向社会公众通报救援动态和避险提示。 | 资源：通信设备×2\n步骤14 | 09:30 | 交通部门 | 交通保障 | 交通部门组织力量对受损道路进行抢修，调用吊装设备清理路障，保障救援车辆和物资运输车辆通行顺畅。 | 资源：吊装设备×2，挖掘机×2\n步骤15 | 09:40 | 民政部门 | 安置救助 | 民政部门在临时安置点设置登记点、物资发放点，为转移群众提供食品、饮用水、被褥等生活必需品，做好安置人员登记和情绪安抚工作。 | 资源：帐篷×20，生活物资包×50\n步骤16 | 09:50 | 应急指挥部 | 响应终止 | 经会商研判，滑坡体变形趋于稳定，险情基本消除，被困人员全部救出，转移群众得到妥善安置，宣布终止应急响应，转入善后处置和恢复重建阶段。 | 资源：指挥车×1",
+      "steps": [
+        {
+          "step_id": 1,
+          "time": "07:50",
+          "role": "自然资源局",
+          "action": "灾害预警",
+          "description": "根据气象与地质监测数据，研判某山区发生滑坡地质灾害风险极高，制作并发布地质灾害红色预警信息，明确影响范围、风险时段及防范要求，通过广播、短信、专用预警终端等渠道向相关责任人与公众发布。",
+          "resources": [
+            {
+              "resource_type": "预警信息发布平台",
+              "quantity": 1
+            },
+            {
+              "resource_type": "卫星电话",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "灾害预警",
+          "action_grounded": true
+        },
+        {
+          "step_id": 2,
+          "time": "07:55",
+          "role": "应急指挥部",
+          "action": "会商研判",
+          "description": "应急指挥部组织自然资源、气象、应急管理、交通、消防等部门进行紧急会商，分析滑坡发展趋势、可能影响区域及人员分布，决定启动地质灾害应急响应，明确各成员单位任务分工。",
+          "resources": [
+            {
+              "resource_type": "视频会议终端",
+              "quantity": 1
+            },
+            {
+              "resource_type": "地质灾害监测数据",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "会商研判",
+          "action_grounded": true
+        },
+        {
+          "step_id": 3,
+          "time": "08:05",
+          "role": "应急指挥部",
+          "action": "启动响应",
+          "description": "依据会商结论，宣布启动地质灾害Ⅱ级应急响应，成立现场指挥部，统一指挥协调抢险救援、人员转移、医疗救护、交通管制等工作，通知各救援队伍立即集结出动。",
+          "resources": [
+            {
+              "resource_type": "指挥车",
+              "quantity": 1
+            },
+            {
+              "resource_type": "卫星电话",
+              "quantity": 3
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "启动响应",
+          "action_grounded": true
+        },
+        {
+          "step_id": 4,
+          "time": "08:10",
+          "role": "应急队伍",
+          "action": "应急队伍集结",
+          "description": "消防、武警、民兵、专业救援队等应急队伍携带生命探测仪、破拆工具、挖掘机等装备到指定地点集结，接受现场指挥部统一调度。",
+          "resources": [
+            {
+              "resource_type": "消防车",
+              "quantity": 3
+            },
+            {
+              "resource_type": "挖掘机",
+              "quantity": 2
+            },
+            {
+              "resource_type": "生命探测仪",
+              "quantity": 2
+            },
+            {
+              "resource_type": "破拆工具",
+              "quantity": 5
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "队伍集结",
+          "action_grounded": true
+        },
+        {
+          "step_id": 5,
+          "time": "08:20",
+          "role": "社区/基层",
+          "action": "人员转移",
+          "description": "街道办事处及村（社区）干部按照避险转移方案，组织滑坡危险区内居民按照预定路线有序转移至临时安置点，重点照顾老弱病残孕等特殊群体，逐户确认转移情况。",
+          "resources": [
+            {
+              "resource_type": "运输车辆",
+              "quantity": 5
+            },
+            {
+              "resource_type": "帐篷",
+              "quantity": 20
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "人员转移",
+          "action_grounded": true
+        },
+        {
+          "step_id": 6,
+          "time": "08:25",
+          "role": "公安部门",
+          "action": "交通管制",
+          "description": "公安交警在滑坡影响区域外围设置警戒线和交通管制点，禁止无关车辆和人员进入危险区，保障救援通道畅通，引导过往车辆绕行。",
+          "resources": [
+            {
+              "resource_type": "警车",
+              "quantity": 3
+            },
+            {
+              "resource_type": "警戒带",
+              "quantity": 10
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "交通管制",
+          "action_grounded": true
+        },
+        {
+          "step_id": 7,
+          "time": "08:30",
+          "role": "自然资源局",
+          "action": "危险区排查",
+          "description": "自然资源部门技术人员利用无人机、边坡雷达等设备对滑坡体及周边区域进行排查，划定危险区范围，监测滑坡变形趋势，评估二次滑坡风险，为救援行动提供安全指引。",
+          "resources": [
+            {
+              "resource_type": "无人机",
+              "quantity": 2
+            },
+            {
+              "resource_type": "环境监测设备",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "危险区排查",
+          "action_grounded": true
+        },
+        {
+          "step_id": 8,
+          "time": "08:35",
+          "role": "自然资源局",
+          "action": "险情监测",
+          "description": "在滑坡体关键部位布设监测点，安排专人持续监测滑坡位移、裂缝变化及降雨情况，实时向现场指挥部报告监测数据，发现险情加剧立即发出警报。",
+          "resources": [
+            {
+              "resource_type": "监测设备",
+              "quantity": 5
+            },
+            {
+              "resource_type": "卫星电话",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "险情监测",
+          "action_grounded": true
+        },
+        {
+          "step_id": 9,
+          "time": "08:40",
+          "role": "消防救援队",
+          "action": "救援搜救",
+          "description": "消防救援队伍携带生命探测仪、破拆工具、搜救犬等进入滑坡区域，对可能被埋压人员进行搜救，利用生命探测仪定位被困者，使用破拆工具清理障碍，全力营救被困人员。",
+          "resources": [
+            {
+              "resource_type": "生命探测仪",
+              "quantity": 3
+            },
+            {
+              "resource_type": "破拆工具",
+              "quantity": 5
+            },
+            {
+              "resource_type": "搜救犬",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "救援搜救",
+          "action_grounded": true
+        },
+        {
+          "step_id": 10,
+          "time": "08:50",
+          "role": "医疗救护组",
+          "action": "医疗救护",
+          "description": "医疗救护组在安全区域设立临时医疗点，对救出的伤员进行检伤分类、现场急救和初步治疗，重伤员及时转运至后方医院救治。",
+          "resources": [
+            {
+              "resource_type": "救护车",
+              "quantity": 3
+            },
+            {
+              "resource_type": "急救包",
+              "quantity": 10
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "医疗救护",
+          "action_grounded": true
+        },
+        {
+          "step_id": 11,
+          "time": "09:00",
+          "role": "应急指挥部",
+          "action": "物资供应",
+          "description": "根据现场需求，调配帐篷、食品、饮用水、发电机等生活物资运往临时安置点，保障转移群众基本生活需求。",
+          "resources": [
+            {
+              "resource_type": "帐篷",
+              "quantity": 30
+            },
+            {
+              "resource_type": "发电机",
+              "quantity": 2
+            },
+            {
+              "resource_type": "运输车辆",
+              "quantity": 5
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "物资供应",
+          "action_grounded": true
+        },
+        {
+          "step_id": 12,
+          "time": "09:10",
+          "role": "通信保障组",
+          "action": "通信保障",
+          "description": "通信保障人员携带卫星电话等设备，在滑坡区域建立应急通信链路，确保现场指挥部与各救援队伍、后方指挥中心通信畅通。",
+          "resources": [
+            {
+              "resource_type": "卫星电话",
+              "quantity": 5
+            },
+            {
+              "resource_type": "通信设备",
+              "quantity": 3
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "通信保障",
+          "action_grounded": true
+        },
+        {
+          "step_id": 13,
+          "time": "09:20",
+          "role": "应急指挥部",
+          "action": "信息通报",
+          "description": "现场指挥部汇总救援进展、人员伤亡、转移安置等情况，向本级政府和上级应急管理部门报告，并向社会公众通报救援动态和避险提示。",
+          "resources": [
+            {
+              "resource_type": "通信设备",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "信息通报",
+          "action_grounded": true
+        },
+        {
+          "step_id": 14,
+          "time": "09:30",
+          "role": "交通部门",
+          "action": "交通保障",
+          "description": "交通部门组织力量对受损道路进行抢修，调用吊装设备清理路障，保障救援车辆和物资运输车辆通行顺畅。",
+          "resources": [
+            {
+              "resource_type": "吊装设备",
+              "quantity": 2
+            },
+            {
+              "resource_type": "挖掘机",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "交通保障",
+          "action_grounded": true
+        },
+        {
+          "step_id": 15,
+          "time": "09:40",
+          "role": "民政部门",
+          "action": "安置救助",
+          "description": "民政部门在临时安置点设置登记点、物资发放点，为转移群众提供食品、饮用水、被褥等生活必需品，做好安置人员登记和情绪安抚工作。",
+          "resources": [
+            {
+              "resource_type": "帐篷",
+              "quantity": 20
+            },
+            {
+              "resource_type": "生活物资包",
+              "quantity": 50
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "安置救助",
+          "action_grounded": true
+        },
+        {
+          "step_id": 16,
+          "time": "09:50",
+          "role": "应急指挥部",
+          "action": "响应终止",
+          "description": "经会商研判，滑坡体变形趋于稳定，险情基本消除，被困人员全部救出，转移群众得到妥善安置，宣布终止应急响应，转入善后处置和恢复重建阶段。",
+          "resources": [
+            {
+              "resource_type": "指挥车",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "响应终止",
+          "action_grounded": true
+        }
+      ]
+    }
+  }
+]

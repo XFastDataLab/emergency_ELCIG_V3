@@ -1,0 +1,158 @@
+{
+  "sample_id": "S2-B001",
+  "scenario": "S2",
+  "profile": "temporal_boundary",
+  "variant": 0,
+  "mutations": [
+    "omit_required_release_condition"
+  ],
+  "boundary_case": true,
+  "annotation_source": "人工设计的必要前置条件边界用例，标注先于检测生成",
+  "annotation_reason": "台风影响未解除便组织渔船出港，违反影响解除→渔船出港的必要前置条件。",
+  "miss_reason": "当前temporal_strict=false将所有缺失前置都降为提示，未区分必要条件与可省略环节；提示不计入检出错误。严格模式会检出。",
+  "script": {
+    "scenario_id": "S2",
+    "raw_text": "步骤1 | 08:00 | 气象/监测组 | 台风预警 | 资源：无\n步骤2 | 08:03 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 08:06 | 市气象局 | 会商研判 | 资源：无\n步骤4 | 08:09 | 应急指挥部 | 启动响应 | 资源：无\n步骤5 | 08:12 | 海事/海上救援 | 船只回港 | 资源：无\n步骤6 | 08:15 | 社区/基层 | 险情巡查 | 资源：无\n步骤7 | 08:18 | 工程抢险组 | 排涝作业 | 资源：无\n步骤8 | 08:21 | 交通管制组 | 交通管制 | 资源：无\n步骤9 | 08:24 | 社区/基层 | 人员转移 | 资源：无\n步骤10 | 08:27 | 工程抢险组 | 险情处置 | 资源：无\n步骤11 | 08:30 | 疏散引导组 | 安置点开放 | 资源：无\n步骤12 | 10:00 | 市海洋局 | 渔船出港 | 台风影响尚未解除，提前组织渔船出港；本步骤不满足影响解除这一必要前置条件。 | 资源：无",
+    "steps": [
+      {
+        "step_id": 1,
+        "time": "08:00",
+        "role": "气象/监测组",
+        "action": "台风预警",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 2,
+        "time": "08:03",
+        "role": "企业负责人",
+        "action": "事故上报",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 3,
+        "time": "08:06",
+        "role": "市气象局",
+        "action": "会商研判",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 4,
+        "time": "08:09",
+        "role": "应急指挥部",
+        "action": "启动响应",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 5,
+        "time": "08:12",
+        "role": "海事/海上救援",
+        "action": "船只回港",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 6,
+        "time": "08:15",
+        "role": "社区/基层",
+        "action": "险情巡查",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 7,
+        "time": "08:18",
+        "role": "工程抢险组",
+        "action": "排涝作业",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 8,
+        "time": "08:21",
+        "role": "交通管制组",
+        "action": "交通管制",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 9,
+        "time": "08:24",
+        "role": "社区/基层",
+        "action": "人员转移",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 10,
+        "time": "08:27",
+        "role": "工程抢险组",
+        "action": "险情处置",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 11,
+        "time": "08:30",
+        "role": "疏散引导组",
+        "action": "安置点开放",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 12,
+        "time": "10:00",
+        "role": "市海洋局",
+        "action": "渔船出港",
+        "description": "台风影响尚未解除，提前组织渔船出港；本步骤不满足影响解除这一必要前置条件。",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      }
+    ]
+  },
+  "expected_errors": [
+    {
+      "error_type": "temporal",
+      "step_id": 12,
+      "violated_rule": "时序:影响解除→渔船出港"
+    }
+  ]
+}

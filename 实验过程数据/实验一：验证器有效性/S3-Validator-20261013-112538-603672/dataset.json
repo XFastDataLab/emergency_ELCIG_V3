@@ -1,0 +1,3273 @@
+[
+  {
+    "sample_id": "S3-0001",
+    "scenario": "S3",
+    "profile": 0,
+    "variant": 0,
+    "mutations": [],
+    "dataset_version": "local-multiple-errors-v2",
+    "injection_plan": {
+      "temporal_pairs": [
+        3,
+        4
+      ],
+      "responsibility_steps": [
+        4,
+        6
+      ],
+      "resource_single_tasks": 3,
+      "resource_unknown_types": 2
+    },
+    "annotation_source": "人工设计错误模板的确定性参数化标注，未经人工逐条复核",
+    "script": {
+      "scenario_id": "S3",
+      "raw_text": "步骤1 | 06:00 | 气象/监测组 | 灾害预警 | 资源：无\n步骤2 | 06:03 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 06:06 | 应急指挥部 | 启动响应 | 资源：无\n步骤4 | 06:09 | 社区/基层 | 危险区排查 | 资源：无\n步骤5 | 06:12 | 社区/基层 | 人员转移 | 资源：无\n步骤6 | 06:15 | 工程抢险组 | 安全确认 | 资源：无\n步骤7 | 06:18 | 工程抢险组 | 救援搜救 | 资源：无\n步骤8 | 06:21 | 医疗救护组 | 医疗救护 | 资源：无\n步骤9 | 06:24 | 交通管制组 | 现场警戒 | 资源：无\n步骤10 | 06:27 | 区政府 | 人员疏散 | 资源：无\n步骤11 | 06:30 | 交通管制组 | 交通管制 | 资源：无\n步骤12 | 06:33 | 市应急局 | 应急队伍集结 | 资源：无\n步骤13 | 06:36 | 工程抢险组 | 现场处置 | 资源：无\n步骤14 | 06:39 | 环境监测组 | 环境监测 | 资源：无\n步骤15 | 06:42 | 气象/监测组 | 隐患监测 | 资源：冲锋舟×4",
+      "steps": [
+        {
+          "step_id": 1,
+          "time": "06:00",
+          "role": "气象/监测组",
+          "action": "灾害预警",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 2,
+          "time": "06:03",
+          "role": "企业负责人",
+          "action": "事故上报",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 3,
+          "time": "06:06",
+          "role": "应急指挥部",
+          "action": "启动响应",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 4,
+          "time": "06:09",
+          "role": "社区/基层",
+          "action": "危险区排查",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 5,
+          "time": "06:12",
+          "role": "社区/基层",
+          "action": "人员转移",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 6,
+          "time": "06:15",
+          "role": "工程抢险组",
+          "action": "安全确认",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 7,
+          "time": "06:18",
+          "role": "工程抢险组",
+          "action": "救援搜救",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 8,
+          "time": "06:21",
+          "role": "医疗救护组",
+          "action": "医疗救护",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 9,
+          "time": "06:24",
+          "role": "交通管制组",
+          "action": "现场警戒",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 10,
+          "time": "06:27",
+          "role": "区政府",
+          "action": "人员疏散",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 11,
+          "time": "06:30",
+          "role": "交通管制组",
+          "action": "交通管制",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 12,
+          "time": "06:33",
+          "role": "市应急局",
+          "action": "应急队伍集结",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 13,
+          "time": "06:36",
+          "role": "工程抢险组",
+          "action": "现场处置",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 14,
+          "time": "06:39",
+          "role": "环境监测组",
+          "action": "环境监测",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 15,
+          "time": "06:42",
+          "role": "气象/监测组",
+          "action": "隐患监测",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "冲锋舟",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        }
+      ]
+    },
+    "expected_errors": []
+  },
+  {
+    "sample_id": "S3-0002",
+    "scenario": "S3",
+    "profile": 1,
+    "variant": 0,
+    "mutations": [
+      "local_timestamp_swaps"
+    ],
+    "dataset_version": "local-multiple-errors-v2",
+    "injection_plan": {
+      "temporal_pairs": [
+        3,
+        4
+      ],
+      "responsibility_steps": [
+        4,
+        6
+      ],
+      "resource_single_tasks": 3,
+      "resource_unknown_types": 2
+    },
+    "annotation_source": "人工设计错误模板的确定性参数化标注，未经人工逐条复核",
+    "script": {
+      "scenario_id": "S3",
+      "raw_text": "步骤1 | 06:00 | 气象/监测组 | 灾害预警 | 资源：无\n步骤2 | 06:06 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 06:03 | 应急指挥部 | 启动响应 | 资源：无\n步骤4 | 06:12 | 社区/基层 | 危险区排查 | 资源：无\n步骤5 | 06:09 | 社区/基层 | 人员转移 | 资源：无\n步骤6 | 06:18 | 工程抢险组 | 安全确认 | 资源：无\n步骤7 | 06:15 | 工程抢险组 | 救援搜救 | 资源：无\n步骤8 | 06:21 | 医疗救护组 | 医疗救护 | 资源：无\n步骤9 | 06:24 | 交通管制组 | 现场警戒 | 资源：无\n步骤10 | 06:27 | 区政府 | 人员疏散 | 资源：无\n步骤11 | 06:30 | 交通管制组 | 交通管制 | 资源：无\n步骤12 | 06:33 | 市应急局 | 应急队伍集结 | 资源：无\n步骤13 | 06:36 | 工程抢险组 | 现场处置 | 资源：无\n步骤14 | 06:39 | 环境监测组 | 环境监测 | 资源：无\n步骤15 | 06:42 | 气象/监测组 | 隐患监测 | 资源：冲锋舟×4",
+      "steps": [
+        {
+          "step_id": 1,
+          "time": "06:00",
+          "role": "气象/监测组",
+          "action": "灾害预警",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 2,
+          "time": "06:06",
+          "role": "企业负责人",
+          "action": "事故上报",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 3,
+          "time": "06:03",
+          "role": "应急指挥部",
+          "action": "启动响应",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 4,
+          "time": "06:12",
+          "role": "社区/基层",
+          "action": "危险区排查",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 5,
+          "time": "06:09",
+          "role": "社区/基层",
+          "action": "人员转移",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 6,
+          "time": "06:18",
+          "role": "工程抢险组",
+          "action": "安全确认",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 7,
+          "time": "06:15",
+          "role": "工程抢险组",
+          "action": "救援搜救",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 8,
+          "time": "06:21",
+          "role": "医疗救护组",
+          "action": "医疗救护",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 9,
+          "time": "06:24",
+          "role": "交通管制组",
+          "action": "现场警戒",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 10,
+          "time": "06:27",
+          "role": "区政府",
+          "action": "人员疏散",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 11,
+          "time": "06:30",
+          "role": "交通管制组",
+          "action": "交通管制",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 12,
+          "time": "06:33",
+          "role": "市应急局",
+          "action": "应急队伍集结",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 13,
+          "time": "06:36",
+          "role": "工程抢险组",
+          "action": "现场处置",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 14,
+          "time": "06:39",
+          "role": "环境监测组",
+          "action": "环境监测",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 15,
+          "time": "06:42",
+          "role": "气象/监测组",
+          "action": "隐患监测",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "冲锋舟",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        }
+      ]
+    },
+    "expected_errors": [
+      {
+        "error_type": "temporal",
+        "step_id": 3,
+        "violated_rule": "时序:事故上报→启动响应"
+      },
+      {
+        "error_type": "temporal",
+        "step_id": 5,
+        "violated_rule": "时序:危险区排查→人员转移"
+      },
+      {
+        "error_type": "temporal",
+        "step_id": 7,
+        "violated_rule": "时序:安全确认→救援搜救"
+      }
+    ]
+  },
+  {
+    "sample_id": "S3-0003",
+    "scenario": "S3",
+    "profile": 2,
+    "variant": 0,
+    "mutations": [
+      "multiple_explicit_responsibility_conflicts"
+    ],
+    "dataset_version": "local-multiple-errors-v2",
+    "injection_plan": {
+      "temporal_pairs": [
+        3,
+        4
+      ],
+      "responsibility_steps": [
+        4,
+        6
+      ],
+      "resource_single_tasks": 3,
+      "resource_unknown_types": 2
+    },
+    "annotation_source": "人工设计错误模板的确定性参数化标注，未经人工逐条复核",
+    "script": {
+      "scenario_id": "S3",
+      "raw_text": "步骤1 | 06:00 | 气象/监测组 | 灾害预警 | 资源：无\n步骤2 | 06:03 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 06:06 | 医疗救护组 | 启动响应 | 资源：无\n步骤4 | 06:09 | 工程抢险组 | 危险区排查 | 资源：无\n步骤5 | 06:12 | 交通管制组 | 人员转移 | 资源：无\n步骤6 | 06:15 | 工程抢险组 | 安全确认 | 资源：无\n步骤7 | 06:18 | 环境监测组 | 救援搜救 | 资源：无\n步骤8 | 06:21 | 医疗救护组 | 医疗救护 | 资源：无\n步骤9 | 06:24 | 交通管制组 | 现场警戒 | 资源：无\n步骤10 | 06:27 | 区政府 | 人员疏散 | 资源：无\n步骤11 | 06:30 | 交通管制组 | 交通管制 | 资源：无\n步骤12 | 06:33 | 市应急局 | 应急队伍集结 | 资源：无\n步骤13 | 06:36 | 工程抢险组 | 现场处置 | 资源：无\n步骤14 | 06:39 | 环境监测组 | 环境监测 | 资源：无\n步骤15 | 06:42 | 气象/监测组 | 隐患监测 | 资源：冲锋舟×4",
+      "steps": [
+        {
+          "step_id": 1,
+          "time": "06:00",
+          "role": "气象/监测组",
+          "action": "灾害预警",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 2,
+          "time": "06:03",
+          "role": "企业负责人",
+          "action": "事故上报",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 3,
+          "time": "06:06",
+          "role": "医疗救护组",
+          "action": "启动响应",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 4,
+          "time": "06:09",
+          "role": "工程抢险组",
+          "action": "危险区排查",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 5,
+          "time": "06:12",
+          "role": "交通管制组",
+          "action": "人员转移",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 6,
+          "time": "06:15",
+          "role": "工程抢险组",
+          "action": "安全确认",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 7,
+          "time": "06:18",
+          "role": "环境监测组",
+          "action": "救援搜救",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 8,
+          "time": "06:21",
+          "role": "医疗救护组",
+          "action": "医疗救护",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 9,
+          "time": "06:24",
+          "role": "交通管制组",
+          "action": "现场警戒",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 10,
+          "time": "06:27",
+          "role": "区政府",
+          "action": "人员疏散",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 11,
+          "time": "06:30",
+          "role": "交通管制组",
+          "action": "交通管制",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 12,
+          "time": "06:33",
+          "role": "市应急局",
+          "action": "应急队伍集结",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 13,
+          "time": "06:36",
+          "role": "工程抢险组",
+          "action": "现场处置",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 14,
+          "time": "06:39",
+          "role": "环境监测组",
+          "action": "环境监测",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 15,
+          "time": "06:42",
+          "role": "气象/监测组",
+          "action": "隐患监测",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "冲锋舟",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        }
+      ]
+    },
+    "expected_errors": [
+      {
+        "error_type": "responsibility",
+        "step_id": 3,
+        "violated_rule": "职责:(医疗救护组,启动响应)"
+      },
+      {
+        "error_type": "responsibility",
+        "step_id": 4,
+        "violated_rule": "职责:(工程抢险组,危险区排查)"
+      },
+      {
+        "error_type": "responsibility",
+        "step_id": 5,
+        "violated_rule": "职责:(交通管制组,人员转移)"
+      },
+      {
+        "error_type": "responsibility",
+        "step_id": 7,
+        "violated_rule": "职责:(环境监测组,救援搜救)"
+      }
+    ]
+  },
+  {
+    "sample_id": "S3-0004",
+    "scenario": "S3",
+    "profile": 3,
+    "variant": 0,
+    "mutations": [
+      "local_timestamp_swaps",
+      "multiple_explicit_responsibility_conflicts"
+    ],
+    "dataset_version": "local-multiple-errors-v2",
+    "injection_plan": {
+      "temporal_pairs": [
+        3,
+        4
+      ],
+      "responsibility_steps": [
+        4,
+        6
+      ],
+      "resource_single_tasks": 3,
+      "resource_unknown_types": 2
+    },
+    "annotation_source": "人工设计错误模板的确定性参数化标注，未经人工逐条复核",
+    "script": {
+      "scenario_id": "S3",
+      "raw_text": "步骤1 | 06:00 | 气象/监测组 | 灾害预警 | 资源：无\n步骤2 | 06:06 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 06:03 | 应急指挥部 | 启动响应 | 资源：无\n步骤4 | 06:12 | 工程抢险组 | 危险区排查 | 资源：无\n步骤5 | 06:09 | 交通管制组 | 人员转移 | 资源：无\n步骤6 | 06:18 | 工程抢险组 | 安全确认 | 资源：无\n步骤7 | 06:15 | 环境监测组 | 救援搜救 | 资源：无\n步骤8 | 06:21 | 工程抢险组 | 医疗救护 | 资源：无\n步骤9 | 06:24 | 交通管制组 | 现场警戒 | 资源：无\n步骤10 | 06:27 | 区政府 | 人员疏散 | 资源：无\n步骤11 | 06:30 | 交通管制组 | 交通管制 | 资源：无\n步骤12 | 06:33 | 市应急局 | 应急队伍集结 | 资源：无\n步骤13 | 06:36 | 工程抢险组 | 现场处置 | 资源：无\n步骤14 | 06:39 | 环境监测组 | 环境监测 | 资源：无\n步骤15 | 06:42 | 气象/监测组 | 隐患监测 | 资源：冲锋舟×4",
+      "steps": [
+        {
+          "step_id": 1,
+          "time": "06:00",
+          "role": "气象/监测组",
+          "action": "灾害预警",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 2,
+          "time": "06:06",
+          "role": "企业负责人",
+          "action": "事故上报",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 3,
+          "time": "06:03",
+          "role": "应急指挥部",
+          "action": "启动响应",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 4,
+          "time": "06:12",
+          "role": "工程抢险组",
+          "action": "危险区排查",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 5,
+          "time": "06:09",
+          "role": "交通管制组",
+          "action": "人员转移",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 6,
+          "time": "06:18",
+          "role": "工程抢险组",
+          "action": "安全确认",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 7,
+          "time": "06:15",
+          "role": "环境监测组",
+          "action": "救援搜救",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 8,
+          "time": "06:21",
+          "role": "工程抢险组",
+          "action": "医疗救护",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 9,
+          "time": "06:24",
+          "role": "交通管制组",
+          "action": "现场警戒",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 10,
+          "time": "06:27",
+          "role": "区政府",
+          "action": "人员疏散",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 11,
+          "time": "06:30",
+          "role": "交通管制组",
+          "action": "交通管制",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 12,
+          "time": "06:33",
+          "role": "市应急局",
+          "action": "应急队伍集结",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 13,
+          "time": "06:36",
+          "role": "工程抢险组",
+          "action": "现场处置",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 14,
+          "time": "06:39",
+          "role": "环境监测组",
+          "action": "环境监测",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 15,
+          "time": "06:42",
+          "role": "气象/监测组",
+          "action": "隐患监测",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "冲锋舟",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        }
+      ]
+    },
+    "expected_errors": [
+      {
+        "error_type": "temporal",
+        "step_id": 3,
+        "violated_rule": "时序:事故上报→启动响应"
+      },
+      {
+        "error_type": "temporal",
+        "step_id": 5,
+        "violated_rule": "时序:危险区排查→人员转移"
+      },
+      {
+        "error_type": "temporal",
+        "step_id": 7,
+        "violated_rule": "时序:安全确认→救援搜救"
+      },
+      {
+        "error_type": "responsibility",
+        "step_id": 4,
+        "violated_rule": "职责:(工程抢险组,危险区排查)"
+      },
+      {
+        "error_type": "responsibility",
+        "step_id": 5,
+        "violated_rule": "职责:(交通管制组,人员转移)"
+      },
+      {
+        "error_type": "responsibility",
+        "step_id": 7,
+        "violated_rule": "职责:(环境监测组,救援搜救)"
+      },
+      {
+        "error_type": "responsibility",
+        "step_id": 8,
+        "violated_rule": "职责:(工程抢险组,医疗救护)"
+      }
+    ]
+  },
+  {
+    "sample_id": "S3-0005",
+    "scenario": "S3",
+    "profile": 4,
+    "variant": 0,
+    "mutations": [
+      "multiple_single_task_over_capacity",
+      "unknown_resource_types",
+      "two_task_concurrency"
+    ],
+    "dataset_version": "local-multiple-errors-v2",
+    "injection_plan": {
+      "temporal_pairs": [
+        3,
+        4
+      ],
+      "responsibility_steps": [
+        4,
+        6
+      ],
+      "resource_single_tasks": 3,
+      "resource_unknown_types": 2
+    },
+    "annotation_source": "人工设计错误模板的确定性参数化标注，未经人工逐条复核",
+    "script": {
+      "scenario_id": "S3",
+      "raw_text": "步骤1 | 06:00 | 气象/监测组 | 灾害预警 | 资源：无\n步骤2 | 06:03 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 06:06 | 应急指挥部 | 启动响应 | 资源：无\n步骤4 | 06:09 | 社区/基层 | 危险区排查 | 资源：无\n步骤5 | 06:12 | 社区/基层 | 人员转移 | 资源：帐篷×31\n步骤6 | 06:15 | 工程抢险组 | 安全确认 | 资源：急救包×51\n步骤7 | 06:18 | 工程抢险组 | 救援搜救 | 资源：挖掘机×7\n步骤8 | 06:21 | 医疗救护组 | 医疗救护 | 资源：未登记测试装备1×1\n步骤9 | 06:24 | 交通管制组 | 现场警戒 | 资源：未登记测试装备2×1\n步骤10 | 06:27 | 区政府 | 人员疏散 | 资源：无\n步骤11 | 06:30 | 交通管制组 | 交通管制 | 资源：无\n步骤12 | 06:33 | 市应急局 | 应急队伍集结 | 资源：无\n步骤13 | 06:36 | 工程抢险组 | 现场处置 | 资源：无\n步骤14 | 06:39 | 环境监测组 | 环境监测 | 资源：无\n步骤15 | 06:42 | 气象/监测组 | 隐患监测 | 资源：无\n步骤16 | 23:00 | 气象/监测组 | 隐患监测 | 资源：救护车×2\n步骤17 | 23:00 | 气象/监测组 | 隐患监测 | 资源：救护车×2",
+      "steps": [
+        {
+          "step_id": 1,
+          "time": "06:00",
+          "role": "气象/监测组",
+          "action": "灾害预警",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 2,
+          "time": "06:03",
+          "role": "企业负责人",
+          "action": "事故上报",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 3,
+          "time": "06:06",
+          "role": "应急指挥部",
+          "action": "启动响应",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 4,
+          "time": "06:09",
+          "role": "社区/基层",
+          "action": "危险区排查",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 5,
+          "time": "06:12",
+          "role": "社区/基层",
+          "action": "人员转移",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "帐篷",
+              "quantity": 31
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 6,
+          "time": "06:15",
+          "role": "工程抢险组",
+          "action": "安全确认",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "急救包",
+              "quantity": 51
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 7,
+          "time": "06:18",
+          "role": "工程抢险组",
+          "action": "救援搜救",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "挖掘机",
+              "quantity": 7
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 8,
+          "time": "06:21",
+          "role": "医疗救护组",
+          "action": "医疗救护",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "未登记测试装备1",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 9,
+          "time": "06:24",
+          "role": "交通管制组",
+          "action": "现场警戒",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "未登记测试装备2",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 10,
+          "time": "06:27",
+          "role": "区政府",
+          "action": "人员疏散",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 11,
+          "time": "06:30",
+          "role": "交通管制组",
+          "action": "交通管制",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 12,
+          "time": "06:33",
+          "role": "市应急局",
+          "action": "应急队伍集结",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 13,
+          "time": "06:36",
+          "role": "工程抢险组",
+          "action": "现场处置",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 14,
+          "time": "06:39",
+          "role": "环境监测组",
+          "action": "环境监测",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 15,
+          "time": "06:42",
+          "role": "气象/监测组",
+          "action": "隐患监测",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 16,
+          "time": "23:00",
+          "role": "气象/监测组",
+          "action": "隐患监测",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "救护车",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 17,
+          "time": "23:00",
+          "role": "气象/监测组",
+          "action": "隐患监测",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "救护车",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        }
+      ]
+    },
+    "expected_errors": [
+      {
+        "error_type": "resource",
+        "step_id": 5,
+        "violated_rule": "资源:帐篷<= 30"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 5,
+        "violated_rule": "资源并发:帐篷<= 30"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 6,
+        "violated_rule": "资源:急救包<= 50"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 6,
+        "violated_rule": "资源并发:急救包<= 50"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 7,
+        "violated_rule": "资源:挖掘机<= 6"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 7,
+        "violated_rule": "资源并发:挖掘机<= 6"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 8,
+        "violated_rule": "资源约束:资源类型必须在约束清单内"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 9,
+        "violated_rule": "资源约束:资源类型必须在约束清单内"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 16,
+        "violated_rule": "资源并发:救护车<= 3"
+      }
+    ]
+  },
+  {
+    "sample_id": "S3-0006",
+    "scenario": "S3",
+    "profile": 5,
+    "variant": 0,
+    "mutations": [
+      "local_timestamp_swaps",
+      "multiple_single_task_over_capacity",
+      "unknown_resource_types",
+      "two_task_concurrency"
+    ],
+    "dataset_version": "local-multiple-errors-v2",
+    "injection_plan": {
+      "temporal_pairs": [
+        3,
+        4
+      ],
+      "responsibility_steps": [
+        4,
+        6
+      ],
+      "resource_single_tasks": 3,
+      "resource_unknown_types": 2
+    },
+    "annotation_source": "人工设计错误模板的确定性参数化标注，未经人工逐条复核",
+    "script": {
+      "scenario_id": "S3",
+      "raw_text": "步骤1 | 06:00 | 气象/监测组 | 灾害预警 | 资源：无\n步骤2 | 06:06 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 06:03 | 应急指挥部 | 启动响应 | 资源：无\n步骤4 | 06:12 | 社区/基层 | 危险区排查 | 资源：无\n步骤5 | 06:09 | 社区/基层 | 人员转移 | 资源：无\n步骤6 | 06:18 | 工程抢险组 | 安全确认 | 资源：急救包×51\n步骤7 | 06:15 | 工程抢险组 | 救援搜救 | 资源：挖掘机×7\n步骤8 | 06:21 | 医疗救护组 | 医疗救护 | 资源：救护车×4\n步骤9 | 06:24 | 交通管制组 | 现场警戒 | 资源：未登记测试装备1×1\n步骤10 | 06:27 | 区政府 | 人员疏散 | 资源：未登记测试装备2×1\n步骤11 | 06:30 | 交通管制组 | 交通管制 | 资源：无\n步骤12 | 06:33 | 市应急局 | 应急队伍集结 | 资源：无\n步骤13 | 06:36 | 工程抢险组 | 现场处置 | 资源：无\n步骤14 | 06:39 | 环境监测组 | 环境监测 | 资源：无\n步骤15 | 06:42 | 气象/监测组 | 隐患监测 | 资源：无\n步骤16 | 23:00 | 气象/监测组 | 隐患监测 | 资源：无人机×3\n步骤17 | 23:00 | 气象/监测组 | 隐患监测 | 资源：无人机×3",
+      "steps": [
+        {
+          "step_id": 1,
+          "time": "06:00",
+          "role": "气象/监测组",
+          "action": "灾害预警",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 2,
+          "time": "06:06",
+          "role": "企业负责人",
+          "action": "事故上报",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 3,
+          "time": "06:03",
+          "role": "应急指挥部",
+          "action": "启动响应",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 4,
+          "time": "06:12",
+          "role": "社区/基层",
+          "action": "危险区排查",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 5,
+          "time": "06:09",
+          "role": "社区/基层",
+          "action": "人员转移",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 6,
+          "time": "06:18",
+          "role": "工程抢险组",
+          "action": "安全确认",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "急救包",
+              "quantity": 51
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 7,
+          "time": "06:15",
+          "role": "工程抢险组",
+          "action": "救援搜救",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "挖掘机",
+              "quantity": 7
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 8,
+          "time": "06:21",
+          "role": "医疗救护组",
+          "action": "医疗救护",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "救护车",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 9,
+          "time": "06:24",
+          "role": "交通管制组",
+          "action": "现场警戒",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "未登记测试装备1",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 10,
+          "time": "06:27",
+          "role": "区政府",
+          "action": "人员疏散",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "未登记测试装备2",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 11,
+          "time": "06:30",
+          "role": "交通管制组",
+          "action": "交通管制",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 12,
+          "time": "06:33",
+          "role": "市应急局",
+          "action": "应急队伍集结",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 13,
+          "time": "06:36",
+          "role": "工程抢险组",
+          "action": "现场处置",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 14,
+          "time": "06:39",
+          "role": "环境监测组",
+          "action": "环境监测",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 15,
+          "time": "06:42",
+          "role": "气象/监测组",
+          "action": "隐患监测",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 16,
+          "time": "23:00",
+          "role": "气象/监测组",
+          "action": "隐患监测",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "无人机",
+              "quantity": 3
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 17,
+          "time": "23:00",
+          "role": "气象/监测组",
+          "action": "隐患监测",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "无人机",
+              "quantity": 3
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        }
+      ]
+    },
+    "expected_errors": [
+      {
+        "error_type": "temporal",
+        "step_id": 3,
+        "violated_rule": "时序:事故上报→启动响应"
+      },
+      {
+        "error_type": "temporal",
+        "step_id": 5,
+        "violated_rule": "时序:危险区排查→人员转移"
+      },
+      {
+        "error_type": "temporal",
+        "step_id": 7,
+        "violated_rule": "时序:安全确认→救援搜救"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 6,
+        "violated_rule": "资源:急救包<= 50"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 6,
+        "violated_rule": "资源并发:急救包<= 50"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 7,
+        "violated_rule": "资源:挖掘机<= 6"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 7,
+        "violated_rule": "资源并发:挖掘机<= 6"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 8,
+        "violated_rule": "资源:救护车<= 3"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 8,
+        "violated_rule": "资源并发:救护车<= 3"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 9,
+        "violated_rule": "资源约束:资源类型必须在约束清单内"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 10,
+        "violated_rule": "资源约束:资源类型必须在约束清单内"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 16,
+        "violated_rule": "资源并发:无人机<= 5"
+      }
+    ]
+  },
+  {
+    "sample_id": "S3-0007",
+    "scenario": "S3",
+    "profile": 6,
+    "variant": 0,
+    "mutations": [
+      "multiple_explicit_responsibility_conflicts",
+      "multiple_single_task_over_capacity",
+      "unknown_resource_types",
+      "two_task_concurrency"
+    ],
+    "dataset_version": "local-multiple-errors-v2",
+    "injection_plan": {
+      "temporal_pairs": [
+        3,
+        4
+      ],
+      "responsibility_steps": [
+        4,
+        6
+      ],
+      "resource_single_tasks": 3,
+      "resource_unknown_types": 2
+    },
+    "annotation_source": "人工设计错误模板的确定性参数化标注，未经人工逐条复核",
+    "script": {
+      "scenario_id": "S3",
+      "raw_text": "步骤1 | 06:00 | 气象/监测组 | 灾害预警 | 资源：无\n步骤2 | 06:03 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 06:06 | 应急指挥部 | 启动响应 | 资源：无\n步骤4 | 06:09 | 社区/基层 | 危险区排查 | 资源：无\n步骤5 | 06:12 | 社区/基层 | 人员转移 | 资源：无\n步骤6 | 06:15 | 工程抢险组 | 安全确认 | 资源：无\n步骤7 | 06:18 | 工程抢险组 | 救援搜救 | 资源：挖掘机×7\n步骤8 | 06:21 | 工程抢险组 | 医疗救护 | 资源：救护车×4\n步骤9 | 06:24 | 交通管制组 | 现场警戒 | 资源：无人机×6\n步骤10 | 06:27 | 防化处置组 | 人员疏散 | 资源：未登记测试装备1×1\n步骤11 | 06:30 | 医疗救护组 | 交通管制 | 资源：未登记测试装备2×1\n步骤12 | 06:33 | 市应急局 | 应急队伍集结 | 资源：无\n步骤13 | 06:36 | 工程抢险组 | 现场处置 | 资源：无\n步骤14 | 06:39 | 消防救援组 | 环境监测 | 资源：无\n步骤15 | 06:42 | 气象/监测组 | 隐患监测 | 资源：无\n步骤16 | 23:00 | 气象/监测组 | 隐患监测 | 资源：消防车×3\n步骤17 | 23:00 | 气象/监测组 | 隐患监测 | 资源：消防车×3",
+      "steps": [
+        {
+          "step_id": 1,
+          "time": "06:00",
+          "role": "气象/监测组",
+          "action": "灾害预警",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 2,
+          "time": "06:03",
+          "role": "企业负责人",
+          "action": "事故上报",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 3,
+          "time": "06:06",
+          "role": "应急指挥部",
+          "action": "启动响应",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 4,
+          "time": "06:09",
+          "role": "社区/基层",
+          "action": "危险区排查",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 5,
+          "time": "06:12",
+          "role": "社区/基层",
+          "action": "人员转移",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 6,
+          "time": "06:15",
+          "role": "工程抢险组",
+          "action": "安全确认",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 7,
+          "time": "06:18",
+          "role": "工程抢险组",
+          "action": "救援搜救",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "挖掘机",
+              "quantity": 7
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 8,
+          "time": "06:21",
+          "role": "工程抢险组",
+          "action": "医疗救护",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "救护车",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 9,
+          "time": "06:24",
+          "role": "交通管制组",
+          "action": "现场警戒",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "无人机",
+              "quantity": 6
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 10,
+          "time": "06:27",
+          "role": "防化处置组",
+          "action": "人员疏散",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "未登记测试装备1",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 11,
+          "time": "06:30",
+          "role": "医疗救护组",
+          "action": "交通管制",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "未登记测试装备2",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 12,
+          "time": "06:33",
+          "role": "市应急局",
+          "action": "应急队伍集结",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 13,
+          "time": "06:36",
+          "role": "工程抢险组",
+          "action": "现场处置",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 14,
+          "time": "06:39",
+          "role": "消防救援组",
+          "action": "环境监测",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 15,
+          "time": "06:42",
+          "role": "气象/监测组",
+          "action": "隐患监测",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 16,
+          "time": "23:00",
+          "role": "气象/监测组",
+          "action": "隐患监测",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "消防车",
+              "quantity": 3
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 17,
+          "time": "23:00",
+          "role": "气象/监测组",
+          "action": "隐患监测",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "消防车",
+              "quantity": 3
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        }
+      ]
+    },
+    "expected_errors": [
+      {
+        "error_type": "responsibility",
+        "step_id": 8,
+        "violated_rule": "职责:(工程抢险组,医疗救护)"
+      },
+      {
+        "error_type": "responsibility",
+        "step_id": 10,
+        "violated_rule": "职责:(防化处置组,人员疏散)"
+      },
+      {
+        "error_type": "responsibility",
+        "step_id": 11,
+        "violated_rule": "职责:(医疗救护组,交通管制)"
+      },
+      {
+        "error_type": "responsibility",
+        "step_id": 14,
+        "violated_rule": "职责:(消防救援组,环境监测)"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 7,
+        "violated_rule": "资源:挖掘机<= 6"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 7,
+        "violated_rule": "资源并发:挖掘机<= 6"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 8,
+        "violated_rule": "资源:救护车<= 3"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 8,
+        "violated_rule": "资源并发:救护车<= 3"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 9,
+        "violated_rule": "资源:无人机<= 5"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 9,
+        "violated_rule": "资源并发:无人机<= 5"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 10,
+        "violated_rule": "资源约束:资源类型必须在约束清单内"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 11,
+        "violated_rule": "资源约束:资源类型必须在约束清单内"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 16,
+        "violated_rule": "资源并发:消防车<= 5"
+      }
+    ]
+  },
+  {
+    "sample_id": "S3-0008",
+    "scenario": "S3",
+    "profile": 7,
+    "variant": 0,
+    "mutations": [
+      "local_timestamp_swaps",
+      "multiple_explicit_responsibility_conflicts",
+      "multiple_single_task_over_capacity",
+      "unknown_resource_types",
+      "two_task_concurrency"
+    ],
+    "dataset_version": "local-multiple-errors-v2",
+    "injection_plan": {
+      "temporal_pairs": [
+        3,
+        4
+      ],
+      "responsibility_steps": [
+        4,
+        6
+      ],
+      "resource_single_tasks": 3,
+      "resource_unknown_types": 2
+    },
+    "annotation_source": "人工设计错误模板的确定性参数化标注，未经人工逐条复核",
+    "script": {
+      "scenario_id": "S3",
+      "raw_text": "步骤1 | 06:00 | 气象/监测组 | 灾害预警 | 资源：无\n步骤2 | 06:06 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 06:03 | 应急指挥部 | 启动响应 | 资源：无\n步骤4 | 06:12 | 社区/基层 | 危险区排查 | 资源：无\n步骤5 | 06:09 | 社区/基层 | 人员转移 | 资源：无\n步骤6 | 06:18 | 工程抢险组 | 安全确认 | 资源：无\n步骤7 | 06:15 | 工程抢险组 | 救援搜救 | 资源：无\n步骤8 | 06:21 | 医疗救护组 | 医疗救护 | 资源：救护车×4\n步骤9 | 06:24 | 交通管制组 | 现场警戒 | 资源：无人机×6\n步骤10 | 06:27 | 防化处置组 | 人员疏散 | 资源：消防车×6\n步骤11 | 06:30 | 医疗救护组 | 交通管制 | 资源：未登记测试装备1×1\n步骤12 | 06:33 | 市应急局 | 应急队伍集结 | 资源：未登记测试装备2×1\n步骤13 | 06:36 | 工程抢险组 | 现场处置 | 资源：无\n步骤14 | 06:39 | 消防救援组 | 环境监测 | 资源：无\n步骤15 | 06:42 | 消防救援组 | 隐患监测 | 资源：无\n步骤16 | 23:00 | 气象/监测组 | 隐患监测 | 资源：环境监测设备×3\n步骤17 | 23:00 | 气象/监测组 | 隐患监测 | 资源：环境监测设备×3",
+      "steps": [
+        {
+          "step_id": 1,
+          "time": "06:00",
+          "role": "气象/监测组",
+          "action": "灾害预警",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 2,
+          "time": "06:06",
+          "role": "企业负责人",
+          "action": "事故上报",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 3,
+          "time": "06:03",
+          "role": "应急指挥部",
+          "action": "启动响应",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 4,
+          "time": "06:12",
+          "role": "社区/基层",
+          "action": "危险区排查",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 5,
+          "time": "06:09",
+          "role": "社区/基层",
+          "action": "人员转移",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 6,
+          "time": "06:18",
+          "role": "工程抢险组",
+          "action": "安全确认",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 7,
+          "time": "06:15",
+          "role": "工程抢险组",
+          "action": "救援搜救",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 8,
+          "time": "06:21",
+          "role": "医疗救护组",
+          "action": "医疗救护",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "救护车",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 9,
+          "time": "06:24",
+          "role": "交通管制组",
+          "action": "现场警戒",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "无人机",
+              "quantity": 6
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 10,
+          "time": "06:27",
+          "role": "防化处置组",
+          "action": "人员疏散",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "消防车",
+              "quantity": 6
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 11,
+          "time": "06:30",
+          "role": "医疗救护组",
+          "action": "交通管制",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "未登记测试装备1",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 12,
+          "time": "06:33",
+          "role": "市应急局",
+          "action": "应急队伍集结",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "未登记测试装备2",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 13,
+          "time": "06:36",
+          "role": "工程抢险组",
+          "action": "现场处置",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 14,
+          "time": "06:39",
+          "role": "消防救援组",
+          "action": "环境监测",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 15,
+          "time": "06:42",
+          "role": "消防救援组",
+          "action": "隐患监测",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 16,
+          "time": "23:00",
+          "role": "气象/监测组",
+          "action": "隐患监测",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "环境监测设备",
+              "quantity": 3
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 17,
+          "time": "23:00",
+          "role": "气象/监测组",
+          "action": "隐患监测",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "环境监测设备",
+              "quantity": 3
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        }
+      ]
+    },
+    "expected_errors": [
+      {
+        "error_type": "temporal",
+        "step_id": 3,
+        "violated_rule": "时序:事故上报→启动响应"
+      },
+      {
+        "error_type": "temporal",
+        "step_id": 5,
+        "violated_rule": "时序:危险区排查→人员转移"
+      },
+      {
+        "error_type": "temporal",
+        "step_id": 7,
+        "violated_rule": "时序:安全确认→救援搜救"
+      },
+      {
+        "error_type": "responsibility",
+        "step_id": 10,
+        "violated_rule": "职责:(防化处置组,人员疏散)"
+      },
+      {
+        "error_type": "responsibility",
+        "step_id": 11,
+        "violated_rule": "职责:(医疗救护组,交通管制)"
+      },
+      {
+        "error_type": "responsibility",
+        "step_id": 14,
+        "violated_rule": "职责:(消防救援组,环境监测)"
+      },
+      {
+        "error_type": "responsibility",
+        "step_id": 15,
+        "violated_rule": "职责:(消防救援组,隐患监测)"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 8,
+        "violated_rule": "资源:救护车<= 3"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 8,
+        "violated_rule": "资源并发:救护车<= 3"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 9,
+        "violated_rule": "资源:无人机<= 5"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 9,
+        "violated_rule": "资源并发:无人机<= 5"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 10,
+        "violated_rule": "资源:消防车<= 5"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 10,
+        "violated_rule": "资源并发:消防车<= 5"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 11,
+        "violated_rule": "资源约束:资源类型必须在约束清单内"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 12,
+        "violated_rule": "资源约束:资源类型必须在约束清单内"
+      },
+      {
+        "error_type": "resource",
+        "step_id": 16,
+        "violated_rule": "资源并发:环境监测设备<= 4"
+      }
+    ]
+  },
+  {
+    "sample_id": "S3-0009",
+    "scenario": "S3",
+    "profile": 0,
+    "variant": 1,
+    "mutations": [],
+    "dataset_version": "local-multiple-errors-v2",
+    "injection_plan": {
+      "temporal_pairs": [
+        3,
+        4
+      ],
+      "responsibility_steps": [
+        4,
+        6
+      ],
+      "resource_single_tasks": 3,
+      "resource_unknown_types": 2
+    },
+    "annotation_source": "人工设计错误模板的确定性参数化标注，未经人工逐条复核",
+    "script": {
+      "scenario_id": "S3",
+      "raw_text": "步骤1 | 06:01 | 气象/监测组 | 灾害预警 | 资源：无\n步骤2 | 06:04 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 06:07 | 应急指挥部 | 启动响应 | 资源：无\n步骤4 | 06:10 | 社区/基层 | 危险区排查 | 资源：无\n步骤5 | 06:13 | 社区/基层 | 人员转移 | 资源：无\n步骤6 | 06:16 | 工程抢险组 | 安全确认 | 资源：无\n步骤7 | 06:19 | 工程抢险组 | 救援搜救 | 资源：无\n步骤8 | 06:22 | 医疗救护组 | 医疗救护 | 资源：无\n步骤9 | 06:25 | 交通管制组 | 现场警戒 | 资源：无\n步骤10 | 06:28 | 区政府 | 人员疏散 | 资源：无\n步骤11 | 06:31 | 交通管制组 | 交通管制 | 资源：无\n步骤12 | 06:34 | 市应急局 | 应急队伍集结 | 资源：无\n步骤13 | 06:37 | 工程抢险组 | 现场处置 | 资源：无\n步骤14 | 06:40 | 环境监测组 | 环境监测 | 资源：无\n步骤15 | 06:43 | 气象/监测组 | 隐患监测 | 资源：卫星电话×10",
+      "steps": [
+        {
+          "step_id": 1,
+          "time": "06:01",
+          "role": "气象/监测组",
+          "action": "灾害预警",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 2,
+          "time": "06:04",
+          "role": "企业负责人",
+          "action": "事故上报",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 3,
+          "time": "06:07",
+          "role": "应急指挥部",
+          "action": "启动响应",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 4,
+          "time": "06:10",
+          "role": "社区/基层",
+          "action": "危险区排查",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 5,
+          "time": "06:13",
+          "role": "社区/基层",
+          "action": "人员转移",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 6,
+          "time": "06:16",
+          "role": "工程抢险组",
+          "action": "安全确认",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 7,
+          "time": "06:19",
+          "role": "工程抢险组",
+          "action": "救援搜救",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 8,
+          "time": "06:22",
+          "role": "医疗救护组",
+          "action": "医疗救护",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 9,
+          "time": "06:25",
+          "role": "交通管制组",
+          "action": "现场警戒",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 10,
+          "time": "06:28",
+          "role": "区政府",
+          "action": "人员疏散",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 11,
+          "time": "06:31",
+          "role": "交通管制组",
+          "action": "交通管制",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 12,
+          "time": "06:34",
+          "role": "市应急局",
+          "action": "应急队伍集结",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 13,
+          "time": "06:37",
+          "role": "工程抢险组",
+          "action": "现场处置",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 14,
+          "time": "06:40",
+          "role": "环境监测组",
+          "action": "环境监测",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 15,
+          "time": "06:43",
+          "role": "气象/监测组",
+          "action": "隐患监测",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "卫星电话",
+              "quantity": 10
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        }
+      ]
+    },
+    "expected_errors": []
+  },
+  {
+    "sample_id": "S3-0010",
+    "scenario": "S3",
+    "profile": 1,
+    "variant": 1,
+    "mutations": [
+      "local_step_swaps"
+    ],
+    "dataset_version": "local-multiple-errors-v2",
+    "injection_plan": {
+      "temporal_pairs": [
+        3,
+        4
+      ],
+      "responsibility_steps": [
+        4,
+        6
+      ],
+      "resource_single_tasks": 3,
+      "resource_unknown_types": 2
+    },
+    "annotation_source": "人工设计错误模板的确定性参数化标注，未经人工逐条复核",
+    "script": {
+      "scenario_id": "S3",
+      "raw_text": "步骤1 | 06:01 | 气象/监测组 | 灾害预警 | 资源：无\n步骤2 | 06:04 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 06:07 | 应急指挥部 | 启动响应 | 资源：无\n步骤4 | 06:13 | 社区/基层 | 人员转移 | 资源：无\n步骤5 | 06:10 | 社区/基层 | 危险区排查 | 资源：无\n步骤6 | 06:19 | 工程抢险组 | 救援搜救 | 资源：无\n步骤7 | 06:16 | 工程抢险组 | 安全确认 | 资源：无\n步骤8 | 06:22 | 医疗救护组 | 医疗救护 | 资源：无\n步骤9 | 06:28 | 区政府 | 人员疏散 | 资源：无\n步骤10 | 06:25 | 交通管制组 | 现场警戒 | 资源：无\n步骤11 | 06:31 | 交通管制组 | 交通管制 | 资源：无\n步骤12 | 06:37 | 工程抢险组 | 现场处置 | 资源：无\n步骤13 | 06:34 | 市应急局 | 应急队伍集结 | 资源：无\n步骤14 | 06:40 | 环境监测组 | 环境监测 | 资源：无\n步骤15 | 06:43 | 气象/监测组 | 隐患监测 | 资源：卫星电话×10",
+      "steps": [
+        {
+          "step_id": 1,
+          "time": "06:01",
+          "role": "气象/监测组",
+          "action": "灾害预警",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 2,
+          "time": "06:04",
+          "role": "企业负责人",
+          "action": "事故上报",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 3,
+          "time": "06:07",
+          "role": "应急指挥部",
+          "action": "启动响应",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 4,
+          "time": "06:13",
+          "role": "社区/基层",
+          "action": "人员转移",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 5,
+          "time": "06:10",
+          "role": "社区/基层",
+          "action": "危险区排查",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 6,
+          "time": "06:19",
+          "role": "工程抢险组",
+          "action": "救援搜救",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 7,
+          "time": "06:16",
+          "role": "工程抢险组",
+          "action": "安全确认",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 8,
+          "time": "06:22",
+          "role": "医疗救护组",
+          "action": "医疗救护",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 9,
+          "time": "06:28",
+          "role": "区政府",
+          "action": "人员疏散",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 10,
+          "time": "06:25",
+          "role": "交通管制组",
+          "action": "现场警戒",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 11,
+          "time": "06:31",
+          "role": "交通管制组",
+          "action": "交通管制",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 12,
+          "time": "06:37",
+          "role": "工程抢险组",
+          "action": "现场处置",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 13,
+          "time": "06:34",
+          "role": "市应急局",
+          "action": "应急队伍集结",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 14,
+          "time": "06:40",
+          "role": "环境监测组",
+          "action": "环境监测",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 15,
+          "time": "06:43",
+          "role": "气象/监测组",
+          "action": "隐患监测",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "卫星电话",
+              "quantity": 10
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        }
+      ]
+    },
+    "expected_errors": [
+      {
+        "error_type": "temporal",
+        "step_id": 4,
+        "violated_rule": "时序:危险区排查→人员转移"
+      },
+      {
+        "error_type": "temporal",
+        "step_id": 6,
+        "violated_rule": "时序:安全确认→救援搜救"
+      },
+      {
+        "error_type": "temporal",
+        "step_id": 9,
+        "violated_rule": "时序:现场警戒→人员疏散"
+      },
+      {
+        "error_type": "temporal",
+        "step_id": 12,
+        "violated_rule": "时序:应急队伍集结→现场处置"
+      }
+    ]
+  },
+  {
+    "sample_id": "S3-0011",
+    "scenario": "S3",
+    "profile": 2,
+    "variant": 1,
+    "mutations": [
+      "multiple_explicit_responsibility_conflicts"
+    ],
+    "dataset_version": "local-multiple-errors-v2",
+    "injection_plan": {
+      "temporal_pairs": [
+        3,
+        4
+      ],
+      "responsibility_steps": [
+        4,
+        6
+      ],
+      "resource_single_tasks": 3,
+      "resource_unknown_types": 2
+    },
+    "annotation_source": "人工设计错误模板的确定性参数化标注，未经人工逐条复核",
+    "script": {
+      "scenario_id": "S3",
+      "raw_text": "步骤1 | 06:01 | 气象/监测组 | 灾害预警 | 资源：无\n步骤2 | 06:04 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 06:07 | 应急指挥部 | 启动响应 | 资源：无\n步骤4 | 06:10 | 工程抢险组 | 危险区排查 | 资源：无\n步骤5 | 06:13 | 交通管制组 | 人员转移 | 资源：无\n步骤6 | 06:16 | 工程抢险组 | 安全确认 | 资源：无\n步骤7 | 06:19 | 环境监测组 | 救援搜救 | 资源：无\n步骤8 | 06:22 | 工程抢险组 | 医疗救护 | 资源：无\n步骤9 | 06:25 | 交通管制组 | 现场警戒 | 资源：无\n步骤10 | 06:28 | 防化处置组 | 人员疏散 | 资源：无\n步骤11 | 06:31 | 医疗救护组 | 交通管制 | 资源：无\n步骤12 | 06:34 | 市应急局 | 应急队伍集结 | 资源：无\n步骤13 | 06:37 | 工程抢险组 | 现场处置 | 资源：无\n步骤14 | 06:40 | 环境监测组 | 环境监测 | 资源：无\n步骤15 | 06:43 | 气象/监测组 | 隐患监测 | 资源：卫星电话×10",
+      "steps": [
+        {
+          "step_id": 1,
+          "time": "06:01",
+          "role": "气象/监测组",
+          "action": "灾害预警",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 2,
+          "time": "06:04",
+          "role": "企业负责人",
+          "action": "事故上报",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 3,
+          "time": "06:07",
+          "role": "应急指挥部",
+          "action": "启动响应",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 4,
+          "time": "06:10",
+          "role": "工程抢险组",
+          "action": "危险区排查",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 5,
+          "time": "06:13",
+          "role": "交通管制组",
+          "action": "人员转移",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 6,
+          "time": "06:16",
+          "role": "工程抢险组",
+          "action": "安全确认",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 7,
+          "time": "06:19",
+          "role": "环境监测组",
+          "action": "救援搜救",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 8,
+          "time": "06:22",
+          "role": "工程抢险组",
+          "action": "医疗救护",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 9,
+          "time": "06:25",
+          "role": "交通管制组",
+          "action": "现场警戒",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 10,
+          "time": "06:28",
+          "role": "防化处置组",
+          "action": "人员疏散",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 11,
+          "time": "06:31",
+          "role": "医疗救护组",
+          "action": "交通管制",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 12,
+          "time": "06:34",
+          "role": "市应急局",
+          "action": "应急队伍集结",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 13,
+          "time": "06:37",
+          "role": "工程抢险组",
+          "action": "现场处置",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 14,
+          "time": "06:40",
+          "role": "环境监测组",
+          "action": "环境监测",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 15,
+          "time": "06:43",
+          "role": "气象/监测组",
+          "action": "隐患监测",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "卫星电话",
+              "quantity": 10
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        }
+      ]
+    },
+    "expected_errors": [
+      {
+        "error_type": "responsibility",
+        "step_id": 4,
+        "violated_rule": "职责:(工程抢险组,危险区排查)"
+      },
+      {
+        "error_type": "responsibility",
+        "step_id": 5,
+        "violated_rule": "职责:(交通管制组,人员转移)"
+      },
+      {
+        "error_type": "responsibility",
+        "step_id": 7,
+        "violated_rule": "职责:(环境监测组,救援搜救)"
+      },
+      {
+        "error_type": "responsibility",
+        "step_id": 8,
+        "violated_rule": "职责:(工程抢险组,医疗救护)"
+      },
+      {
+        "error_type": "responsibility",
+        "step_id": 10,
+        "violated_rule": "职责:(防化处置组,人员疏散)"
+      },
+      {
+        "error_type": "responsibility",
+        "step_id": 11,
+        "violated_rule": "职责:(医疗救护组,交通管制)"
+      }
+    ]
+  },
+  {
+    "sample_id": "S3-0012",
+    "scenario": "S3",
+    "profile": 3,
+    "variant": 1,
+    "mutations": [
+      "local_step_swaps",
+      "multiple_explicit_responsibility_conflicts"
+    ],
+    "dataset_version": "local-multiple-errors-v2",
+    "injection_plan": {
+      "temporal_pairs": [
+        3,
+        4
+      ],
+      "responsibility_steps": [
+        4,
+        6
+      ],
+      "resource_single_tasks": 3,
+      "resource_unknown_types": 2
+    },
+    "annotation_source": "人工设计错误模板的确定性参数化标注，未经人工逐条复核",
+    "script": {
+      "scenario_id": "S3",
+      "raw_text": "步骤1 | 06:01 | 气象/监测组 | 灾害预警 | 资源：无\n步骤2 | 06:04 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 06:07 | 应急指挥部 | 启动响应 | 资源：无\n步骤4 | 06:13 | 交通管制组 | 人员转移 | 资源：无\n步骤5 | 06:10 | 社区/基层 | 危险区排查 | 资源：无\n步骤6 | 06:19 | 环境监测组 | 救援搜救 | 资源：无\n步骤7 | 06:16 | 工程抢险组 | 安全确认 | 资源：无\n步骤8 | 06:22 | 工程抢险组 | 医疗救护 | 资源：无\n步骤9 | 06:28 | 防化处置组 | 人员疏散 | 资源：无\n步骤10 | 06:25 | 交通管制组 | 现场警戒 | 资源：无\n步骤11 | 06:31 | 医疗救护组 | 交通管制 | 资源：无\n步骤12 | 06:37 | 工程抢险组 | 现场处置 | 资源：无\n步骤13 | 06:34 | 市应急局 | 应急队伍集结 | 资源：无\n步骤14 | 06:40 | 消防救援组 | 环境监测 | 资源：无\n步骤15 | 06:43 | 气象/监测组 | 隐患监测 | 资源：卫星电话×10",
+      "steps": [
+        {
+          "step_id": 1,
+          "time": "06:01",
+          "role": "气象/监测组",
+          "action": "灾害预警",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 2,
+          "time": "06:04",
+          "role": "企业负责人",
+          "action": "事故上报",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 3,
+          "time": "06:07",
+          "role": "应急指挥部",
+          "action": "启动响应",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 4,
+          "time": "06:13",
+          "role": "交通管制组",
+          "action": "人员转移",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 5,
+          "time": "06:10",
+          "role": "社区/基层",
+          "action": "危险区排查",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 6,
+          "time": "06:19",
+          "role": "环境监测组",
+          "action": "救援搜救",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 7,
+          "time": "06:16",
+          "role": "工程抢险组",
+          "action": "安全确认",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 8,
+          "time": "06:22",
+          "role": "工程抢险组",
+          "action": "医疗救护",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 9,
+          "time": "06:28",
+          "role": "防化处置组",
+          "action": "人员疏散",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 10,
+          "time": "06:25",
+          "role": "交通管制组",
+          "action": "现场警戒",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 11,
+          "time": "06:31",
+          "role": "医疗救护组",
+          "action": "交通管制",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 12,
+          "time": "06:37",
+          "role": "工程抢险组",
+          "action": "现场处置",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 13,
+          "time": "06:34",
+          "role": "市应急局",
+          "action": "应急队伍集结",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 14,
+          "time": "06:40",
+          "role": "消防救援组",
+          "action": "环境监测",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 15,
+          "time": "06:43",
+          "role": "气象/监测组",
+          "action": "隐患监测",
+          "description": "",
+          "resources": [
+            {
+              "resource_type": "卫星电话",
+              "quantity": 10
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        }
+      ]
+    },
+    "expected_errors": [
+      {
+        "error_type": "temporal",
+        "step_id": 4,
+        "violated_rule": "时序:危险区排查→人员转移"
+      },
+      {
+        "error_type": "temporal",
+        "step_id": 6,
+        "violated_rule": "时序:安全确认→救援搜救"
+      },
+      {
+        "error_type": "temporal",
+        "step_id": 9,
+        "violated_rule": "时序:现场警戒→人员疏散"
+      },
+      {
+        "error_type": "temporal",
+        "step_id": 12,
+        "violated_rule": "时序:应急队伍集结→现场处置"
+      },
+      {
+        "error_type": "responsibility",
+        "step_id": 4,
+        "violated_rule": "职责:(交通管制组,人员转移)"
+      },
+      {
+        "error_type": "responsibility",
+        "step_id": 6,
+        "violated_rule": "职责:(环境监测组,救援搜救)"
+      },
+      {
+        "error_type": "responsibility",
+        "step_id": 8,
+        "violated_rule": "职责:(工程抢险组,医疗救护)"
+      },
+      {
+        "error_type": "responsibility",
+        "step_id": 9,
+        "violated_rule": "职责:(防化处置组,人员疏散)"
+      },
+      {
+        "error_type": "responsibility",
+        "step_id": 11,
+        "violated_rule": "职责:(医疗救护组,交通管制)"
+      },
+      {
+        "error_type": "responsibility",
+        "step_id": 14,
+        "violated_rule": "职责:(消防救援组,环境监测)"
+      }
+    ]
+  },
+  {
+    "sample_id": "S3-B001",
+    "scenario": "S3",
+    "profile": "resource_overlap_boundary",
+    "variant": 0,
+    "mutations": [
+      "overlapping_occupation_with_different_start_times"
+    ],
+    "boundary_case": true,
+    "annotation_source": "人工设计的资源占用区间边界用例，标注先于检测生成",
+    "annotation_reason": "10:05至10:30两项任务同时占用挖掘机：4+4=8>6。",
+    "miss_reason": "并发检查只合并完全相同的开始时间字符串，不读取描述中的结束时间和占用时长，漏掉不同开始时间下的区间重叠。",
+    "script": {
+      "scenario_id": "S3",
+      "raw_text": "步骤1 | 08:00 | 气象/监测组 | 灾害预警 | 资源：无\n步骤2 | 08:03 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 08:06 | 工程抢险组 | 安全确认 | 资源：无\n步骤4 | 08:09 | 交通管制组 | 现场警戒 | 资源：无\n步骤5 | 08:12 | 应急指挥部 | 启动响应 | 资源：无\n步骤6 | 08:15 | 社区/基层 | 危险区排查 | 资源：无\n步骤7 | 08:18 | 交通管制组 | 交通管制 | 资源：无\n步骤8 | 08:21 | 市应急局 | 应急队伍集结 | 资源：无\n步骤9 | 08:24 | 区政府 | 人员疏散 | 资源：无\n步骤10 | 08:27 | 社区/基层 | 人员转移 | 资源：无\n步骤11 | 08:30 | 气象/监测组 | 隐患监测 | 资源：无\n步骤12 | 08:33 | 工程抢险组 | 现场处置 | 资源：无\n步骤13 | 08:36 | 工程抢险组 | 救援搜救 | 资源：无\n步骤14 | 08:39 | 环境监测组 | 环境监测 | 资源：无\n步骤15 | 08:42 | 医疗救护组 | 医疗救护 | 资源：无\n步骤16 | 10:00 | 工程抢险组 | 救援搜救 | A区任务从10:00至10:30连续独占挖掘机4台，期间不能调拨或共用。 | 资源：挖掘机×4\n步骤17 | 10:05 | 工程抢险组 | 救援搜救 | B区任务从10:05至10:35连续独占挖掘机4台，期间不能调拨或共用。 | 资源：挖掘机×4",
+      "steps": [
+        {
+          "step_id": 1,
+          "time": "08:00",
+          "role": "气象/监测组",
+          "action": "灾害预警",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 2,
+          "time": "08:03",
+          "role": "企业负责人",
+          "action": "事故上报",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 3,
+          "time": "08:06",
+          "role": "工程抢险组",
+          "action": "安全确认",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 4,
+          "time": "08:09",
+          "role": "交通管制组",
+          "action": "现场警戒",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 5,
+          "time": "08:12",
+          "role": "应急指挥部",
+          "action": "启动响应",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 6,
+          "time": "08:15",
+          "role": "社区/基层",
+          "action": "危险区排查",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 7,
+          "time": "08:18",
+          "role": "交通管制组",
+          "action": "交通管制",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 8,
+          "time": "08:21",
+          "role": "市应急局",
+          "action": "应急队伍集结",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 9,
+          "time": "08:24",
+          "role": "区政府",
+          "action": "人员疏散",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 10,
+          "time": "08:27",
+          "role": "社区/基层",
+          "action": "人员转移",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 11,
+          "time": "08:30",
+          "role": "气象/监测组",
+          "action": "隐患监测",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 12,
+          "time": "08:33",
+          "role": "工程抢险组",
+          "action": "现场处置",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 13,
+          "time": "08:36",
+          "role": "工程抢险组",
+          "action": "救援搜救",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 14,
+          "time": "08:39",
+          "role": "环境监测组",
+          "action": "环境监测",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 15,
+          "time": "08:42",
+          "role": "医疗救护组",
+          "action": "医疗救护",
+          "description": "",
+          "resources": [],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 16,
+          "time": "10:00",
+          "role": "工程抢险组",
+          "action": "救援搜救",
+          "description": "A区任务从10:00至10:30连续独占挖掘机4台，期间不能调拨或共用。",
+          "resources": [
+            {
+              "resource_type": "挖掘机",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        },
+        {
+          "step_id": 17,
+          "time": "10:05",
+          "role": "工程抢险组",
+          "action": "救援搜救",
+          "description": "B区任务从10:05至10:35连续独占挖掘机4台，期间不能调拨或共用。",
+          "resources": [
+            {
+              "resource_type": "挖掘机",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "",
+          "action_grounded": true
+        }
+      ]
+    },
+    "expected_errors": [
+      {
+        "error_type": "resource",
+        "step_id": 16,
+        "violated_rule": "资源并发:挖掘机<= 6"
+      }
+    ]
+  }
+]

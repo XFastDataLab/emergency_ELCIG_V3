@@ -1,0 +1,7 @@
+S3 LLM-only 重复1 初始/最终错误=23/23 ERedR=0.0 CSR=0.77 修正轮次=0
+数据： D:\czb\work\标准化建设\code\emergency_ELCIG_V3\output\S3-LLM-only-1014-1641
+S3 RAG-LLM 重复1 初始/最终错误=4/4 ERedR=0.0 CSR=0.9701 修正轮次=0
+数据： D:\czb\work\标准化建设\code\emergency_ELCIG_V3\output\S3-RAG-LLM-1014-1641
+S3 Self-Refine 重复1 初始/最终错误=23/24 ERedR=-0.0435 CSR=0.76 修正轮次=1
+数据： D:\czb\work\标准化建设\code\emergency_ELCIG_V3\output\S3-Self-Refine-1014-1642
+S3 ELCIG 重复1 初始/最终错误=4/0 ERedR=1.0 CSR=1.0 修正轮次=1

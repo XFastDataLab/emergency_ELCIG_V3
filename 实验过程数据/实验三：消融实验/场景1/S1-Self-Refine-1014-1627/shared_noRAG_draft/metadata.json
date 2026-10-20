@@ -1,0 +1,14 @@
+{
+  "knowledge": "",
+  "draft_id": "S1-LLM-only-1014-1626-shared_noRAG_draft",
+  "draft_hash": "d61c22596145dd73254f3827c1f3e5f4e2309af1fa8e2ade599c88daec2b132e",
+  "source_dir": "D:\\czb\\work\\标准化建设\\code\\emergency_ELCIG_V3\\output\\S1-LLM-only-1014-1626\\shared_noRAG_draft",
+  "repeat": 1,
+  "use_rag": false,
+  "generation_seconds": 27.48894159961492,
+  "generation_cost": {
+    "llm_calls": 1,
+    "llm_seconds": 27.48491059988737,
+    "response_characters": 9763
+  }
+}

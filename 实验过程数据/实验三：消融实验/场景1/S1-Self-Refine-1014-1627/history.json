@@ -1,0 +1,3635 @@
+[
+  {
+    "iteration": 0,
+    "error_count": 63,
+    "deferred_error_count": 0,
+    "pending_error_count": 63,
+    "error_types": {
+      "temporal": 2,
+      "responsibility": 27,
+      "resource": 34
+    },
+    "hint_count": 2,
+    "total_constraints": 174,
+    "satisfied_constraints": 111,
+    "csr": 0.6379,
+    "errors": [
+      {
+        "error_type": "temporal",
+        "error_type_cn": "时序",
+        "step_id": 3,
+        "location": "动作'启动响应'（步骤3）出现在'事故上报'（步骤8）之前",
+        "description": "时序倒置：'事故上报'必须先于'启动响应'执行。",
+        "violated_rule": "时序:事故上报→启动响应",
+        "severity": 1
+      },
+      {
+        "error_type": "temporal_hint",
+        "error_type_cn": "temporal_hint",
+        "step_id": 12,
+        "location": "动作'环境监测'（步骤12）",
+        "description": "提示：前置动作'现场处置'未在脚本中出现。偏序模式下允许省略该中间环节，仅作提示、不计入错误。",
+        "violated_rule": "时序:现场处置→环境监测",
+        "severity": 1
+      },
+      {
+        "error_type": "temporal_hint",
+        "error_type_cn": "temporal_hint",
+        "step_id": 5,
+        "location": "动作'人员疏散'（步骤5）",
+        "description": "提示：前置动作'现场警戒'未在脚本中出现。偏序模式下允许省略该中间环节，仅作提示、不计入错误。",
+        "violated_rule": "时序:现场警戒→人员疏散",
+        "severity": 1
+      },
+      {
+        "error_type": "temporal",
+        "error_type_cn": "时序",
+        "step_id": 4,
+        "location": "动作'泄漏控制'（步骤4）出现在'污染源切断'（步骤14）之前",
+        "description": "时序倒置：'污染源切断'必须先于'泄漏控制'执行。",
+        "violated_rule": "时序:污染源切断→泄漏控制",
+        "severity": 1
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 1,
+        "location": "步骤1 资源'便携式气体检测仪'",
+        "description": "资源类型'便携式气体检测仪'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 2,
+        "location": "步骤2 资源'便携式气体检测仪'",
+        "description": "资源类型'便携式气体检测仪'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 4,
+        "location": "步骤4 资源'沙袋'",
+        "description": "资源类型'沙袋'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 5,
+        "location": "步骤5 资源'扩音器'",
+        "description": "资源类型'扩音器'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 5,
+        "location": "步骤5 资源'对讲机'",
+        "description": "资源类型'对讲机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 6,
+        "location": "步骤6 资源'警戒带'",
+        "description": "资源类型'警戒带'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 6,
+        "location": "步骤6 资源'警示标志'",
+        "description": "资源类型'警示标志'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 6,
+        "location": "步骤6 资源'对讲机'",
+        "description": "资源类型'对讲机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 8,
+        "location": "步骤8 资源'传真机'",
+        "description": "资源类型'传真机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 9,
+        "location": "步骤9 资源'应急指挥车'",
+        "description": "资源类型'应急指挥车'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 10,
+        "location": "步骤10 资源'泡沫液'",
+        "description": "资源类型'泡沫液'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 11,
+        "location": "步骤11 资源'警车'",
+        "description": "资源类型'警车'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 11,
+        "location": "步骤11 资源'警戒带'",
+        "description": "资源类型'警戒带'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 11,
+        "location": "步骤11 资源'交通标志牌'",
+        "description": "资源类型'交通标志牌'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 14,
+        "location": "步骤14 资源'防爆泵'",
+        "description": "资源类型'防爆泵'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 16,
+        "location": "步骤16 资源'应急指挥车'",
+        "description": "资源类型'应急指挥车'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 17,
+        "location": "步骤17 资源'扩音器'",
+        "description": "资源类型'扩音器'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 18,
+        "location": "步骤18 资源'饮用水'",
+        "description": "资源类型'饮用水'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 18,
+        "location": "步骤18 资源'食品'",
+        "description": "资源类型'食品'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 18,
+        "location": "步骤18 资源'毛毯'",
+        "description": "资源类型'毛毯'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 19,
+        "location": "步骤19 资源'广播系统'",
+        "description": "资源类型'广播系统'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 19,
+        "location": "步骤19 资源'短信平台'",
+        "description": "资源类型'短信平台'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 20,
+        "location": "步骤20 资源'计算机'",
+        "description": "资源类型'计算机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 20,
+        "location": "步骤20 资源'照相机'",
+        "description": "资源类型'照相机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 21,
+        "location": "步骤21 资源'计算机'",
+        "description": "资源类型'计算机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 22,
+        "location": "步骤22 资源'吸附材料'",
+        "description": "资源类型'吸附材料'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 22,
+        "location": "步骤22 资源'中和药剂'",
+        "description": "资源类型'中和药剂'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 23,
+        "location": "步骤23 资源'维修工具'",
+        "description": "资源类型'维修工具'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 23,
+        "location": "步骤23 资源'备用法兰'",
+        "description": "资源类型'备用法兰'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 25,
+        "location": "步骤25 资源'对讲机'",
+        "description": "资源类型'对讲机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 25,
+        "location": "步骤25 资源'扩音器'",
+        "description": "资源类型'扩音器'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 27,
+        "location": "步骤27 资源'计算机'",
+        "description": "资源类型'计算机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 28,
+        "location": "步骤28 资源'投影仪'",
+        "description": "资源类型'投影仪'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 28,
+        "location": "步骤28 资源'计算机'",
+        "description": "资源类型'计算机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 1,
+        "location": "步骤1：角色'企业中控室值班员'执行动作'先期处置'",
+        "description": "职责错配：角色'企业中控室值班员'不包含动作'先期处置'。",
+        "violated_rule": "职责:(企业中控室值班员,先期处置)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 2,
+        "location": "步骤2：角色'企业当班巡检员'执行动作'现场侦检'",
+        "description": "职责错配：角色'企业当班巡检员'不包含动作'现场侦检'。",
+        "violated_rule": "职责:(企业当班巡检员,现场侦检)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 3,
+        "location": "步骤3：角色'企业应急指挥部'执行动作'启动响应'",
+        "description": "职责错配：角色'企业应急指挥部'不包含动作'启动响应'。",
+        "violated_rule": "职责:(企业应急指挥部,启动响应)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 4,
+        "location": "步骤4：角色'企业应急处置组'执行动作'泄漏控制'",
+        "description": "职责错配：角色'企业应急处置组'不包含动作'泄漏控制'。",
+        "violated_rule": "职责:(企业应急处置组,泄漏控制)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 5,
+        "location": "步骤5：角色'企业疏散引导组'执行动作'人员疏散'",
+        "description": "职责错配：角色'企业疏散引导组'不包含动作'人员疏散'。",
+        "violated_rule": "职责:(企业疏散引导组,人员疏散)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 6,
+        "location": "步骤6：角色'企业警戒保卫组'执行动作'危险区划定'",
+        "description": "职责错配：角色'企业警戒保卫组'不包含动作'危险区划定'。",
+        "violated_rule": "职责:(企业警戒保卫组,危险区划定)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 7,
+        "location": "步骤7：角色'企业医疗救护组'执行动作'救护设点'",
+        "description": "职责错配：角色'企业医疗救护组'不包含动作'救护设点'。",
+        "violated_rule": "职责:(企业医疗救护组,救护设点)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 8,
+        "location": "步骤8：角色'企业应急指挥部'执行动作'事故上报'",
+        "description": "职责错配：角色'企业应急指挥部'不包含动作'事故上报'。",
+        "violated_rule": "职责:(企业应急指挥部,事故上报)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 9,
+        "location": "步骤9：角色'属地应急管理局'执行动作'启动响应'",
+        "description": "职责错配：角色'属地应急管理局'不包含动作'启动响应'。",
+        "violated_rule": "职责:(属地应急管理局,启动响应)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 11,
+        "location": "步骤11：角色'属地公安局'执行动作'交通管制'",
+        "description": "职责错配：角色'属地公安局'不包含动作'交通管制'。",
+        "violated_rule": "职责:(属地公安局,交通管制)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 12,
+        "location": "步骤12：角色'属地生态环境局'执行动作'环境监测'",
+        "description": "职责错配：角色'属地生态环境局'不包含动作'环境监测'。",
+        "violated_rule": "职责:(属地生态环境局,环境监测)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 13,
+        "location": "步骤13：角色'属地卫健委'执行动作'医疗救护'",
+        "description": "职责错配：角色'属地卫健委'不包含动作'医疗救护'。",
+        "violated_rule": "职责:(属地卫健委,医疗救护)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 14,
+        "location": "步骤14：角色'企业应急处置组'执行动作'污染源切断'",
+        "description": "职责错配：角色'企业应急处置组'不包含动作'污染源切断'。",
+        "violated_rule": "职责:(企业应急处置组,污染源切断)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 15,
+        "location": "步骤15：角色'企业洗消组'执行动作'防化洗消'",
+        "description": "职责错配：角色'企业洗消组'不包含动作'防化洗消'。",
+        "violated_rule": "职责:(企业洗消组,防化洗消)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 16,
+        "location": "步骤16：角色'现场指挥部'执行动作'统一指挥'",
+        "description": "职责错配：角色'现场指挥部'不包含动作'统一指挥'。",
+        "violated_rule": "职责:(现场指挥部,统一指挥)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 17,
+        "location": "步骤17：角色'属地街道办事处'执行动作'周边疏散'",
+        "description": "职责错配：角色'属地街道办事处'不包含动作'周边疏散'。",
+        "violated_rule": "职责:(属地街道办事处,周边疏散)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 18,
+        "location": "步骤18：角色'属地民政局'执行动作'安置救助'",
+        "description": "职责错配：角色'属地民政局'不包含动作'安置救助'。",
+        "violated_rule": "职责:(属地民政局,安置救助)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 19,
+        "location": "步骤19：角色'企业应急指挥部'执行动作'信息通报'",
+        "description": "职责错配：角色'企业应急指挥部'不包含动作'信息通报'。",
+        "violated_rule": "职责:(企业应急指挥部,信息通报)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 20,
+        "location": "步骤20：角色'属地宣传部'执行动作'宣传引导'",
+        "description": "职责错配：角色'属地宣传部'不包含动作'宣传引导'。",
+        "violated_rule": "职责:(属地宣传部,宣传引导)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 21,
+        "location": "步骤21：角色'属地生态环境局'执行动作'污染评估'",
+        "description": "职责错配：角色'属地生态环境局'不包含动作'污染评估'。",
+        "violated_rule": "职责:(属地生态环境局,污染评估)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 22,
+        "location": "步骤22：角色'企业应急处置组'执行动作'危害消除'",
+        "description": "职责错配：角色'企业应急处置组'不包含动作'危害消除'。",
+        "violated_rule": "职责:(企业应急处置组,危害消除)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 23,
+        "location": "步骤23：角色'企业设备抢修组'执行动作'设施抢修'",
+        "description": "职责错配：角色'企业设备抢修组'不包含动作'设施抢修'。",
+        "violated_rule": "职责:(企业设备抢修组,设施抢修)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 24,
+        "location": "步骤24：角色'属地生态环境局'执行动作'环境合格'",
+        "description": "职责错配：角色'属地生态环境局'不包含动作'环境合格'。",
+        "violated_rule": "职责:(属地生态环境局,环境合格)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 25,
+        "location": "步骤25：角色'现场指挥部'执行动作'撤除警戒'",
+        "description": "职责错配：角色'现场指挥部'不包含动作'撤除警戒'。",
+        "violated_rule": "职责:(现场指挥部,撤除警戒)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 26,
+        "location": "步骤26：角色'现场指挥部'执行动作'响应终止'",
+        "description": "职责错配：角色'现场指挥部'不包含动作'响应终止'。",
+        "violated_rule": "职责:(现场指挥部,响应终止)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 27,
+        "location": "步骤27：角色'企业应急指挥部'执行动作'善后处置'",
+        "description": "职责错配：角色'企业应急指挥部'不包含动作'善后处置'。",
+        "violated_rule": "职责:(企业应急指挥部,善后处置)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 28,
+        "location": "步骤28：角色'现场指挥部'执行动作'总结评估'",
+        "description": "职责错配：角色'现场指挥部'不包含动作'总结评估'。",
+        "violated_rule": "职责:(现场指挥部,总结评估)",
+        "severity": 3
+      }
+    ],
+    "script": {
+      "scenario_id": "S1",
+      "raw_text": "步骤1 | 07:55 | 企业中控室值班员 | 先期处置 | 中控室值班员通过可燃有毒气体报警系统发现储罐区T-102苯储罐区域浓度异常升高，立即通知当班巡检人员佩戴便携式检测仪前往现场核查，同时启动罐区固定喷淋系统进行预处置，并持续盯守DCS画面。 | 资源：便携式气体检测仪×2\n步骤2 | 07:58 | 企业当班巡检员 | 现场侦检 | 当班巡检员到达储罐区外围，使用便携式检测仪确认苯蒸气浓度超标，发现T-102储罐底部法兰处有液体持续泄漏并形成液池，伴有刺激性气味扩散，立即向中控室报告泄漏位置、介质和扩散方向。 | 资源：便携式气体检测仪×1，防化装备×2\n步骤3 | 08:00 | 企业应急指挥部 | 启动响应 | 企业应急指挥部接报后立即启动《危险化学品泄漏事故应急预案》一级响应，成立现场应急指挥部，由企业总经理任总指挥，通知各应急小组集结，同时向属地应急管理局、生态环境局和消防救援机构报告事故情况。 | 资源：卫星电话×1\n步骤4 | 08:03 | 企业应急处置组 | 泄漏控制 | 应急处置组佩戴正压式空气呼吸器和防化服进入罐区，尝试关闭T-102储罐底部法兰上游阀门，切断泄漏源；同时利用围油栏和沙袋在泄漏液池外围构筑围堰，防止泄漏液体流入雨水管网和周边水体。 | 资源：防化装备×6，围油栏×4，沙袋×50\n步骤5 | 08:05 | 企业疏散引导组 | 人员疏散 | 疏散引导组按照预案设定的疏散路线，组织储罐区周边办公区、化验室及维修车间人员向上风向安全集合点撤离，逐人清点并登记，确保无人员滞留。 | 资源：扩音器×2，对讲机×4\n步骤6 | 08:06 | 企业警戒保卫组 | 危险区划定 | 警戒保卫组根据泄漏物质特性和气象条件，初步划定热区、温区和冷区，在罐区周边设置警戒带和警示标志，禁止无关人员和车辆进入，并在厂区大门设置引导点。 | 资源：警戒带×10，警示标志×8，对讲机×2\n步骤7 | 08:08 | 企业医疗救护组 | 救护设点 | 医疗救护组在上风向冷区设立临时医疗救护点，配备急救包和解毒药品，做好接诊可能中毒人员的准备，并安排救护车在厂区外待命。 | 资源：急救包×3，救护车×1，帐篷×1\n步骤8 | 08:10 | 企业应急指挥部 | 事故上报 | 企业应急指挥部向属地应急管理局、生态环境局、消防救援大队和属地街道办事处书面报告事故基本情况，包括泄漏介质、泄漏量、影响范围和已采取的先期处置措施，并请求外部救援力量增援。 | 资源：卫星电话×1，传真机×1\n步骤9 | 08:12 | 属地应急管理局 | 启动响应 | 属地应急管理局接报后启动危险化学品事故应急响应，成立现场指挥部，由局主要负责人任现场总指挥，通知公安、生态环境、卫健、消防等部门赶赴现场，统一协调指挥各救援力量。 | 资源：应急指挥车×1\n步骤10 | 08:15 | 消防救援组 | 灭火处置 | 消防救援大队到达现场后，根据现场侦检情况，出设泡沫水枪对泄漏液池进行覆盖，抑制苯蒸气挥发，同时对邻近储罐进行冷却保护，防止火源引燃和事故扩大。 | 资源：消防车×3，泡沫液×2，防化装备×8\n步骤11 | 08:18 | 属地公安局 | 交通管制 | 属地公安局在事故现场周边主要路口设置交通管制点，对厂区周边道路实施临时封闭，疏导过往车辆绕行，保障应急救援车辆和人员通行顺畅。 | 资源：警车×2，警戒带×6，交通标志牌×4\n步骤12 | 08:20 | 属地生态环境局 | 环境监测 | 属地生态环境局监测人员在下风向厂界外设置多个大气监测点和废水监测点，使用环境监测设备对苯蒸气浓度和周边水体进行连续监测，及时向现场指挥部报告监测数据。 | 资源：环境监测设备×4，无人机×1\n步骤13 | 08:22 | 属地卫健委 | 医疗救护 | 属地卫健委组织急救力量到达现场，在临时医疗救护点对可能接触泄漏化学品的员工进行检伤分类和初步诊治，对一名出现头晕恶心症状的员工进行现场急救并安排救护车转运至医院。 | 资源：救护车×2，急救包×5\n步骤14 | 08:25 | 企业应急处置组 | 污染源切断 | 企业应急处置组在消防掩护下成功关闭T-102储罐底部法兰上游阀门，泄漏源被切断；随后使用防爆泵将围堰内泄漏液体转移至应急事故池，防止污染扩大。 | 资源：防爆泵×2，运输车辆×1，防化装备×4\n步骤15 | 08:30 | 企业洗消组 | 防化洗消 | 企业洗消组在温区设置洗消通道，对從热区撤出的救援人员和被污染的装备进行洗消，洗消废水统一收集至应急事故池，防止二次污染。 | 资源：洗消药剂×10，帐篷×2，防化装备×4\n步骤16 | 08:35 | 现场指挥部 | 统一指挥 | 现场指挥部召开第一次现场会商会，听取企业、消防、生态环境、卫健等部门情况汇报，研判泄漏处置进展和环境影响趋势，部署下一步泄漏物收集、环境监测和人员安置等工作。 | 资源：应急指挥车×1，卫星电话×1，发电机×1\n步骤17 | 08:40 | 属地街道办事处 | 周边疏散 | 属地街道办事处根据现场指挥部指令，组织厂区周边500米范围内居民进行有序疏散，引导居民前往临时安置点，并做好人员登记和情绪安抚工作。 | 资源：运输车辆×4，扩音器×3，帐篷×5\n步骤18 | 08:45 | 属地民政局 | 安置救助 | 属地民政局在临时安置点设置救助服务站，为疏散居民提供饮用水、食品、毛毯等基本生活物资，并安排工作人员做好登记和安抚工作。 | 资源：帐篷×5，饮用水×50，食品×100，毛毯×50\n步骤19 | 08:50 | 企业应急指挥部 | 信息通报 | 企业应急指挥部通过厂区广播和短信平台向全体员工通报事故处置进展，告知泄漏源已切断、环境监测持续达标，要求员工保持冷静、服从指挥，不传谣不信谣。 | 资源：广播系统×1，短信平台×1\n步骤20 | 08:55 | 属地宣传部 | 宣传引导 | 属地宣传部通过官方微博、微信公众号等渠道发布事故信息通报，说明事故基本情况、已采取的措施和周边环境监测结果，回应社会关切，引导舆论客观理性。 | 资源：计算机×2，照相机×1\n步骤21 | 09:00 | 属地生态环境局 | 污染评估 | 属地生态环境局根据连续监测数据，对事故周边大气、水体和土壤环境进行污染评估，编制环境监测报告，评估事故对周边环境的影响程度和范围。 | 资源：环境监测设备×4，无人机×1，计算机×2\n步骤22 | 09:10 | 企业应急处置组 | 危害消除 | 企业应急处置组使用吸附材料和中和药剂对罐区地面残留泄漏物进行彻底清理，清理产生的危险废物统一收集、分类贮存，交由有资质单位处置。 | 资源：吸附材料×20，中和药剂×10，运输车辆×2，防化装备×6\n步骤23 | 09:20 | 企业设备抢修组 | 设施抢修 | 企业设备抢修组对T-102储罐泄漏法兰进行更换和紧固，对罐区相关管道、阀门和仪表进行全面检查维修，确保设备设施恢复正常安全状态。 | 资源：维修工具×4，备用法兰×2，防化装备×4\n步骤24 | 09:30 | 属地生态环境局 | 环境合格 | 属地生态环境局对事故现场及周边大气、水体进行最终监测，确认苯蒸气浓度和废水指标均已降至安全限值以下，环境质量恢复正常，出具环境达标确认意见。 | 资源：环境监测设备×4\n步骤25 | 09:35 | 现场指挥部 | 撤除警戒 | 现场指挥部根据环境监测达标确认和现场处置完成情况，下令撤除事故现场警戒，恢复厂区周边道路交通，组织疏散居民有序返回。 | 资源：对讲机×4，扩音器×2\n步骤26 | 09:40 | 现场指挥部 | 响应终止 | 现场指挥部确认泄漏源已切断、泄漏物已清理、环境监测达标、人员全部撤离和安置妥当，宣布终止应急响应，转入后期处置和事故调查阶段。 | 资源：卫星电话×1\n步骤27 | 09:50 | 企业应急指挥部 | 善后处置 | 企业应急指挥部组织开展善后处置工作，包括受伤人员救治和抚恤、周边居民安置补偿、事故现场清理和生态恢复，配合政府部门开展事故调查。 | 资源：计算机×2，运输车辆×2\n步骤28 | 10:00 | 现场指挥部 | 总结评估 | 现场指挥部组织参演单位和专家召开演练总结评估会，对预警报警、应急响应、指挥协调、现场处置、环境监测、人员疏散等环节进行复盘评估，总结经验教训，提出预案修订和应急能力提升建议。 | 资源：投影仪×1，计算机×3",
+      "steps": [
+        {
+          "step_id": 1,
+          "time": "07:55",
+          "role": "企业中控室值班员",
+          "action": "先期处置",
+          "description": "中控室值班员通过可燃有毒气体报警系统发现储罐区T-102苯储罐区域浓度异常升高，立即通知当班巡检人员佩戴便携式检测仪前往现场核查，同时启动罐区固定喷淋系统进行预处置，并持续盯守DCS画面。",
+          "resources": [
+            {
+              "resource_type": "便携式气体检测仪",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "先期处置",
+          "action_grounded": true
+        },
+        {
+          "step_id": 2,
+          "time": "07:58",
+          "role": "企业当班巡检员",
+          "action": "现场侦检",
+          "description": "当班巡检员到达储罐区外围，使用便携式检测仪确认苯蒸气浓度超标，发现T-102储罐底部法兰处有液体持续泄漏并形成液池，伴有刺激性气味扩散，立即向中控室报告泄漏位置、介质和扩散方向。",
+          "resources": [
+            {
+              "resource_type": "便携式气体检测仪",
+              "quantity": 1
+            },
+            {
+              "resource_type": "防化装备",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "现场侦检",
+          "action_grounded": true
+        },
+        {
+          "step_id": 3,
+          "time": "08:00",
+          "role": "企业应急指挥部",
+          "action": "启动响应",
+          "description": "企业应急指挥部接报后立即启动《危险化学品泄漏事故应急预案》一级响应，成立现场应急指挥部，由企业总经理任总指挥，通知各应急小组集结，同时向属地应急管理局、生态环境局和消防救援机构报告事故情况。",
+          "resources": [
+            {
+              "resource_type": "卫星电话",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "启动响应",
+          "action_grounded": true
+        },
+        {
+          "step_id": 4,
+          "time": "08:03",
+          "role": "企业应急处置组",
+          "action": "泄漏控制",
+          "description": "应急处置组佩戴正压式空气呼吸器和防化服进入罐区，尝试关闭T-102储罐底部法兰上游阀门，切断泄漏源；同时利用围油栏和沙袋在泄漏液池外围构筑围堰，防止泄漏液体流入雨水管网和周边水体。",
+          "resources": [
+            {
+              "resource_type": "防化装备",
+              "quantity": 6
+            },
+            {
+              "resource_type": "围油栏",
+              "quantity": 4
+            },
+            {
+              "resource_type": "沙袋",
+              "quantity": 50
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "泄漏控制",
+          "action_grounded": true
+        },
+        {
+          "step_id": 5,
+          "time": "08:05",
+          "role": "企业疏散引导组",
+          "action": "人员疏散",
+          "description": "疏散引导组按照预案设定的疏散路线，组织储罐区周边办公区、化验室及维修车间人员向上风向安全集合点撤离，逐人清点并登记，确保无人员滞留。",
+          "resources": [
+            {
+              "resource_type": "扩音器",
+              "quantity": 2
+            },
+            {
+              "resource_type": "对讲机",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "人员疏散",
+          "action_grounded": true
+        },
+        {
+          "step_id": 6,
+          "time": "08:06",
+          "role": "企业警戒保卫组",
+          "action": "危险区划定",
+          "description": "警戒保卫组根据泄漏物质特性和气象条件，初步划定热区、温区和冷区，在罐区周边设置警戒带和警示标志，禁止无关人员和车辆进入，并在厂区大门设置引导点。",
+          "resources": [
+            {
+              "resource_type": "警戒带",
+              "quantity": 10
+            },
+            {
+              "resource_type": "警示标志",
+              "quantity": 8
+            },
+            {
+              "resource_type": "对讲机",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "危险区划定",
+          "action_grounded": true
+        },
+        {
+          "step_id": 7,
+          "time": "08:08",
+          "role": "企业医疗救护组",
+          "action": "救护设点",
+          "description": "医疗救护组在上风向冷区设立临时医疗救护点，配备急救包和解毒药品，做好接诊可能中毒人员的准备，并安排救护车在厂区外待命。",
+          "resources": [
+            {
+              "resource_type": "急救包",
+              "quantity": 3
+            },
+            {
+              "resource_type": "救护车",
+              "quantity": 1
+            },
+            {
+              "resource_type": "帐篷",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "救护设点",
+          "action_grounded": true
+        },
+        {
+          "step_id": 8,
+          "time": "08:10",
+          "role": "企业应急指挥部",
+          "action": "事故上报",
+          "description": "企业应急指挥部向属地应急管理局、生态环境局、消防救援大队和属地街道办事处书面报告事故基本情况，包括泄漏介质、泄漏量、影响范围和已采取的先期处置措施，并请求外部救援力量增援。",
+          "resources": [
+            {
+              "resource_type": "卫星电话",
+              "quantity": 1
+            },
+            {
+              "resource_type": "传真机",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "事故上报",
+          "action_grounded": true
+        },
+        {
+          "step_id": 9,
+          "time": "08:12",
+          "role": "属地应急管理局",
+          "action": "启动响应",
+          "description": "属地应急管理局接报后启动危险化学品事故应急响应，成立现场指挥部，由局主要负责人任现场总指挥，通知公安、生态环境、卫健、消防等部门赶赴现场，统一协调指挥各救援力量。",
+          "resources": [
+            {
+              "resource_type": "应急指挥车",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "启动响应",
+          "action_grounded": true
+        },
+        {
+          "step_id": 10,
+          "time": "08:15",
+          "role": "消防救援组",
+          "action": "灭火处置",
+          "description": "消防救援大队到达现场后，根据现场侦检情况，出设泡沫水枪对泄漏液池进行覆盖，抑制苯蒸气挥发，同时对邻近储罐进行冷却保护，防止火源引燃和事故扩大。",
+          "resources": [
+            {
+              "resource_type": "消防车",
+              "quantity": 3
+            },
+            {
+              "resource_type": "泡沫液",
+              "quantity": 2
+            },
+            {
+              "resource_type": "防化装备",
+              "quantity": 8
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "消防灭火",
+          "action_grounded": true
+        },
+        {
+          "step_id": 11,
+          "time": "08:18",
+          "role": "属地公安局",
+          "action": "交通管制",
+          "description": "属地公安局在事故现场周边主要路口设置交通管制点，对厂区周边道路实施临时封闭，疏导过往车辆绕行，保障应急救援车辆和人员通行顺畅。",
+          "resources": [
+            {
+              "resource_type": "警车",
+              "quantity": 2
+            },
+            {
+              "resource_type": "警戒带",
+              "quantity": 6
+            },
+            {
+              "resource_type": "交通标志牌",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "交通管制",
+          "action_grounded": true
+        },
+        {
+          "step_id": 12,
+          "time": "08:20",
+          "role": "属地生态环境局",
+          "action": "环境监测",
+          "description": "属地生态环境局监测人员在下风向厂界外设置多个大气监测点和废水监测点，使用环境监测设备对苯蒸气浓度和周边水体进行连续监测，及时向现场指挥部报告监测数据。",
+          "resources": [
+            {
+              "resource_type": "环境监测设备",
+              "quantity": 4
+            },
+            {
+              "resource_type": "无人机",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "环境监测",
+          "action_grounded": true
+        },
+        {
+          "step_id": 13,
+          "time": "08:22",
+          "role": "属地卫健委",
+          "action": "医疗救护",
+          "description": "属地卫健委组织急救力量到达现场，在临时医疗救护点对可能接触泄漏化学品的员工进行检伤分类和初步诊治，对一名出现头晕恶心症状的员工进行现场急救并安排救护车转运至医院。",
+          "resources": [
+            {
+              "resource_type": "救护车",
+              "quantity": 2
+            },
+            {
+              "resource_type": "急救包",
+              "quantity": 5
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "医疗救护",
+          "action_grounded": true
+        },
+        {
+          "step_id": 14,
+          "time": "08:25",
+          "role": "企业应急处置组",
+          "action": "污染源切断",
+          "description": "企业应急处置组在消防掩护下成功关闭T-102储罐底部法兰上游阀门，泄漏源被切断；随后使用防爆泵将围堰内泄漏液体转移至应急事故池，防止污染扩大。",
+          "resources": [
+            {
+              "resource_type": "防爆泵",
+              "quantity": 2
+            },
+            {
+              "resource_type": "运输车辆",
+              "quantity": 1
+            },
+            {
+              "resource_type": "防化装备",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "污染源切断",
+          "action_grounded": true
+        },
+        {
+          "step_id": 15,
+          "time": "08:30",
+          "role": "企业洗消组",
+          "action": "防化洗消",
+          "description": "企业洗消组在温区设置洗消通道，对從热区撤出的救援人员和被污染的装备进行洗消，洗消废水统一收集至应急事故池，防止二次污染。",
+          "resources": [
+            {
+              "resource_type": "洗消药剂",
+              "quantity": 10
+            },
+            {
+              "resource_type": "帐篷",
+              "quantity": 2
+            },
+            {
+              "resource_type": "防化装备",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "洗消作业",
+          "action_grounded": true
+        },
+        {
+          "step_id": 16,
+          "time": "08:35",
+          "role": "现场指挥部",
+          "action": "统一指挥",
+          "description": "现场指挥部召开第一次现场会商会，听取企业、消防、生态环境、卫健等部门情况汇报，研判泄漏处置进展和环境影响趋势，部署下一步泄漏物收集、环境监测和人员安置等工作。",
+          "resources": [
+            {
+              "resource_type": "应急指挥车",
+              "quantity": 1
+            },
+            {
+              "resource_type": "卫星电话",
+              "quantity": 1
+            },
+            {
+              "resource_type": "发电机",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "统一指挥",
+          "action_grounded": true
+        },
+        {
+          "step_id": 17,
+          "time": "08:40",
+          "role": "属地街道办事处",
+          "action": "周边疏散",
+          "description": "属地街道办事处根据现场指挥部指令，组织厂区周边500米范围内居民进行有序疏散，引导居民前往临时安置点，并做好人员登记和情绪安抚工作。",
+          "resources": [
+            {
+              "resource_type": "运输车辆",
+              "quantity": 4
+            },
+            {
+              "resource_type": "扩音器",
+              "quantity": 3
+            },
+            {
+              "resource_type": "帐篷",
+              "quantity": 5
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "周边疏散",
+          "action_grounded": true
+        },
+        {
+          "step_id": 18,
+          "time": "08:45",
+          "role": "属地民政局",
+          "action": "安置救助",
+          "description": "属地民政局在临时安置点设置救助服务站，为疏散居民提供饮用水、食品、毛毯等基本生活物资，并安排工作人员做好登记和安抚工作。",
+          "resources": [
+            {
+              "resource_type": "帐篷",
+              "quantity": 5
+            },
+            {
+              "resource_type": "饮用水",
+              "quantity": 50
+            },
+            {
+              "resource_type": "食品",
+              "quantity": 100
+            },
+            {
+              "resource_type": "毛毯",
+              "quantity": 50
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "安置救助",
+          "action_grounded": true
+        },
+        {
+          "step_id": 19,
+          "time": "08:50",
+          "role": "企业应急指挥部",
+          "action": "信息通报",
+          "description": "企业应急指挥部通过厂区广播和短信平台向全体员工通报事故处置进展，告知泄漏源已切断、环境监测持续达标，要求员工保持冷静、服从指挥，不传谣不信谣。",
+          "resources": [
+            {
+              "resource_type": "广播系统",
+              "quantity": 1
+            },
+            {
+              "resource_type": "短信平台",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "信息通报",
+          "action_grounded": true
+        },
+        {
+          "step_id": 20,
+          "time": "08:55",
+          "role": "属地宣传部",
+          "action": "宣传引导",
+          "description": "属地宣传部通过官方微博、微信公众号等渠道发布事故信息通报，说明事故基本情况、已采取的措施和周边环境监测结果，回应社会关切，引导舆论客观理性。",
+          "resources": [
+            {
+              "resource_type": "计算机",
+              "quantity": 2
+            },
+            {
+              "resource_type": "照相机",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "宣传引导",
+          "action_grounded": true
+        },
+        {
+          "step_id": 21,
+          "time": "09:00",
+          "role": "属地生态环境局",
+          "action": "污染评估",
+          "description": "属地生态环境局根据连续监测数据，对事故周边大气、水体和土壤环境进行污染评估，编制环境监测报告，评估事故对周边环境的影响程度和范围。",
+          "resources": [
+            {
+              "resource_type": "环境监测设备",
+              "quantity": 4
+            },
+            {
+              "resource_type": "无人机",
+              "quantity": 1
+            },
+            {
+              "resource_type": "计算机",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "污染评估",
+          "action_grounded": true
+        },
+        {
+          "step_id": 22,
+          "time": "09:10",
+          "role": "企业应急处置组",
+          "action": "危害消除",
+          "description": "企业应急处置组使用吸附材料和中和药剂对罐区地面残留泄漏物进行彻底清理，清理产生的危险废物统一收集、分类贮存，交由有资质单位处置。",
+          "resources": [
+            {
+              "resource_type": "吸附材料",
+              "quantity": 20
+            },
+            {
+              "resource_type": "中和药剂",
+              "quantity": 10
+            },
+            {
+              "resource_type": "运输车辆",
+              "quantity": 2
+            },
+            {
+              "resource_type": "防化装备",
+              "quantity": 6
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "危害消除",
+          "action_grounded": true
+        },
+        {
+          "step_id": 23,
+          "time": "09:20",
+          "role": "企业设备抢修组",
+          "action": "设施抢修",
+          "description": "企业设备抢修组对T-102储罐泄漏法兰进行更换和紧固，对罐区相关管道、阀门和仪表进行全面检查维修，确保设备设施恢复正常安全状态。",
+          "resources": [
+            {
+              "resource_type": "维修工具",
+              "quantity": 4
+            },
+            {
+              "resource_type": "备用法兰",
+              "quantity": 2
+            },
+            {
+              "resource_type": "防化装备",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "设施抢修",
+          "action_grounded": true
+        },
+        {
+          "step_id": 24,
+          "time": "09:30",
+          "role": "属地生态环境局",
+          "action": "环境合格",
+          "description": "属地生态环境局对事故现场及周边大气、水体进行最终监测，确认苯蒸气浓度和废水指标均已降至安全限值以下，环境质量恢复正常，出具环境达标确认意见。",
+          "resources": [
+            {
+              "resource_type": "环境监测设备",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "环境合格",
+          "action_grounded": true
+        },
+        {
+          "step_id": 25,
+          "time": "09:35",
+          "role": "现场指挥部",
+          "action": "撤除警戒",
+          "description": "现场指挥部根据环境监测达标确认和现场处置完成情况，下令撤除事故现场警戒，恢复厂区周边道路交通，组织疏散居民有序返回。",
+          "resources": [
+            {
+              "resource_type": "对讲机",
+              "quantity": 4
+            },
+            {
+              "resource_type": "扩音器",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "撤除警戒",
+          "action_grounded": true
+        },
+        {
+          "step_id": 26,
+          "time": "09:40",
+          "role": "现场指挥部",
+          "action": "响应终止",
+          "description": "现场指挥部确认泄漏源已切断、泄漏物已清理、环境监测达标、人员全部撤离和安置妥当，宣布终止应急响应，转入后期处置和事故调查阶段。",
+          "resources": [
+            {
+              "resource_type": "卫星电话",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "响应终止",
+          "action_grounded": true
+        },
+        {
+          "step_id": 27,
+          "time": "09:50",
+          "role": "企业应急指挥部",
+          "action": "善后处置",
+          "description": "企业应急指挥部组织开展善后处置工作，包括受伤人员救治和抚恤、周边居民安置补偿、事故现场清理和生态恢复，配合政府部门开展事故调查。",
+          "resources": [
+            {
+              "resource_type": "计算机",
+              "quantity": 2
+            },
+            {
+              "resource_type": "运输车辆",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "善后处置",
+          "action_grounded": true
+        },
+        {
+          "step_id": 28,
+          "time": "10:00",
+          "role": "现场指挥部",
+          "action": "总结评估",
+          "description": "现场指挥部组织参演单位和专家召开演练总结评估会，对预警报警、应急响应、指挥协调、现场处置、环境监测、人员疏散等环节进行复盘评估，总结经验教训，提出预案修订和应急能力提升建议。",
+          "resources": [
+            {
+              "resource_type": "投影仪",
+              "quantity": 1
+            },
+            {
+              "resource_type": "计算机",
+              "quantity": 3
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "总结评估",
+          "action_grounded": true
+        }
+      ]
+    }
+  },
+  {
+    "iteration": 1,
+    "error_count": 63,
+    "deferred_error_count": 0,
+    "pending_error_count": 63,
+    "error_types": {
+      "temporal": 2,
+      "responsibility": 27,
+      "resource": 34
+    },
+    "hint_count": 2,
+    "total_constraints": 174,
+    "satisfied_constraints": 111,
+    "csr": 0.6379,
+    "errors": [
+      {
+        "error_type": "temporal",
+        "error_type_cn": "时序",
+        "step_id": 3,
+        "location": "动作'启动响应'（步骤3）出现在'事故上报'（步骤8）之前",
+        "description": "时序倒置：'事故上报'必须先于'启动响应'执行。",
+        "violated_rule": "时序:事故上报→启动响应",
+        "severity": 1
+      },
+      {
+        "error_type": "temporal_hint",
+        "error_type_cn": "temporal_hint",
+        "step_id": 12,
+        "location": "动作'环境监测'（步骤12）",
+        "description": "提示：前置动作'现场处置'未在脚本中出现。偏序模式下允许省略该中间环节，仅作提示、不计入错误。",
+        "violated_rule": "时序:现场处置→环境监测",
+        "severity": 1
+      },
+      {
+        "error_type": "temporal_hint",
+        "error_type_cn": "temporal_hint",
+        "step_id": 5,
+        "location": "动作'人员疏散'（步骤5）",
+        "description": "提示：前置动作'现场警戒'未在脚本中出现。偏序模式下允许省略该中间环节，仅作提示、不计入错误。",
+        "violated_rule": "时序:现场警戒→人员疏散",
+        "severity": 1
+      },
+      {
+        "error_type": "temporal",
+        "error_type_cn": "时序",
+        "step_id": 4,
+        "location": "动作'泄漏控制'（步骤4）出现在'污染源切断'（步骤14）之前",
+        "description": "时序倒置：'污染源切断'必须先于'泄漏控制'执行。",
+        "violated_rule": "时序:污染源切断→泄漏控制",
+        "severity": 1
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 1,
+        "location": "步骤1 资源'便携式气体检测仪'",
+        "description": "资源类型'便携式气体检测仪'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 2,
+        "location": "步骤2 资源'便携式气体检测仪'",
+        "description": "资源类型'便携式气体检测仪'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 4,
+        "location": "步骤4 资源'沙袋'",
+        "description": "资源类型'沙袋'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 5,
+        "location": "步骤5 资源'扩音器'",
+        "description": "资源类型'扩音器'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 5,
+        "location": "步骤5 资源'对讲机'",
+        "description": "资源类型'对讲机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 6,
+        "location": "步骤6 资源'警戒带'",
+        "description": "资源类型'警戒带'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 6,
+        "location": "步骤6 资源'警示标志'",
+        "description": "资源类型'警示标志'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 6,
+        "location": "步骤6 资源'对讲机'",
+        "description": "资源类型'对讲机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 8,
+        "location": "步骤8 资源'传真机'",
+        "description": "资源类型'传真机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 9,
+        "location": "步骤9 资源'应急指挥车'",
+        "description": "资源类型'应急指挥车'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 10,
+        "location": "步骤10 资源'泡沫液'",
+        "description": "资源类型'泡沫液'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 11,
+        "location": "步骤11 资源'警车'",
+        "description": "资源类型'警车'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 11,
+        "location": "步骤11 资源'警戒带'",
+        "description": "资源类型'警戒带'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 11,
+        "location": "步骤11 资源'交通标志牌'",
+        "description": "资源类型'交通标志牌'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 14,
+        "location": "步骤14 资源'防爆泵'",
+        "description": "资源类型'防爆泵'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 16,
+        "location": "步骤16 资源'应急指挥车'",
+        "description": "资源类型'应急指挥车'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 17,
+        "location": "步骤17 资源'扩音器'",
+        "description": "资源类型'扩音器'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 18,
+        "location": "步骤18 资源'饮用水'",
+        "description": "资源类型'饮用水'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 18,
+        "location": "步骤18 资源'食品'",
+        "description": "资源类型'食品'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 18,
+        "location": "步骤18 资源'毛毯'",
+        "description": "资源类型'毛毯'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 19,
+        "location": "步骤19 资源'广播系统'",
+        "description": "资源类型'广播系统'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 19,
+        "location": "步骤19 资源'短信平台'",
+        "description": "资源类型'短信平台'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 20,
+        "location": "步骤20 资源'计算机'",
+        "description": "资源类型'计算机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 20,
+        "location": "步骤20 资源'照相机'",
+        "description": "资源类型'照相机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 21,
+        "location": "步骤21 资源'计算机'",
+        "description": "资源类型'计算机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 22,
+        "location": "步骤22 资源'吸附材料'",
+        "description": "资源类型'吸附材料'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 22,
+        "location": "步骤22 资源'中和药剂'",
+        "description": "资源类型'中和药剂'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 23,
+        "location": "步骤23 资源'维修工具'",
+        "description": "资源类型'维修工具'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 23,
+        "location": "步骤23 资源'备用法兰'",
+        "description": "资源类型'备用法兰'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 25,
+        "location": "步骤25 资源'对讲机'",
+        "description": "资源类型'对讲机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 25,
+        "location": "步骤25 资源'扩音器'",
+        "description": "资源类型'扩音器'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 27,
+        "location": "步骤27 资源'计算机'",
+        "description": "资源类型'计算机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 28,
+        "location": "步骤28 资源'投影仪'",
+        "description": "资源类型'投影仪'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 28,
+        "location": "步骤28 资源'计算机'",
+        "description": "资源类型'计算机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 1,
+        "location": "步骤1：角色'企业中控室值班员'执行动作'先期处置'",
+        "description": "职责错配：角色'企业中控室值班员'不包含动作'先期处置'。",
+        "violated_rule": "职责:(企业中控室值班员,先期处置)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 2,
+        "location": "步骤2：角色'企业当班巡检员'执行动作'现场侦检'",
+        "description": "职责错配：角色'企业当班巡检员'不包含动作'现场侦检'。",
+        "violated_rule": "职责:(企业当班巡检员,现场侦检)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 3,
+        "location": "步骤3：角色'企业应急指挥部'执行动作'启动响应'",
+        "description": "职责错配：角色'企业应急指挥部'不包含动作'启动响应'。",
+        "violated_rule": "职责:(企业应急指挥部,启动响应)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 4,
+        "location": "步骤4：角色'企业应急处置组'执行动作'泄漏控制'",
+        "description": "职责错配：角色'企业应急处置组'不包含动作'泄漏控制'。",
+        "violated_rule": "职责:(企业应急处置组,泄漏控制)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 5,
+        "location": "步骤5：角色'企业疏散引导组'执行动作'人员疏散'",
+        "description": "职责错配：角色'企业疏散引导组'不包含动作'人员疏散'。",
+        "violated_rule": "职责:(企业疏散引导组,人员疏散)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 6,
+        "location": "步骤6：角色'企业警戒保卫组'执行动作'危险区划定'",
+        "description": "职责错配：角色'企业警戒保卫组'不包含动作'危险区划定'。",
+        "violated_rule": "职责:(企业警戒保卫组,危险区划定)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 7,
+        "location": "步骤7：角色'企业医疗救护组'执行动作'救护设点'",
+        "description": "职责错配：角色'企业医疗救护组'不包含动作'救护设点'。",
+        "violated_rule": "职责:(企业医疗救护组,救护设点)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 8,
+        "location": "步骤8：角色'企业应急指挥部'执行动作'事故上报'",
+        "description": "职责错配：角色'企业应急指挥部'不包含动作'事故上报'。",
+        "violated_rule": "职责:(企业应急指挥部,事故上报)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 9,
+        "location": "步骤9：角色'属地应急管理局'执行动作'启动响应'",
+        "description": "职责错配：角色'属地应急管理局'不包含动作'启动响应'。",
+        "violated_rule": "职责:(属地应急管理局,启动响应)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 11,
+        "location": "步骤11：角色'属地公安局'执行动作'交通管制'",
+        "description": "职责错配：角色'属地公安局'不包含动作'交通管制'。",
+        "violated_rule": "职责:(属地公安局,交通管制)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 12,
+        "location": "步骤12：角色'属地生态环境局'执行动作'环境监测'",
+        "description": "职责错配：角色'属地生态环境局'不包含动作'环境监测'。",
+        "violated_rule": "职责:(属地生态环境局,环境监测)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 13,
+        "location": "步骤13：角色'属地卫健委'执行动作'医疗救护'",
+        "description": "职责错配：角色'属地卫健委'不包含动作'医疗救护'。",
+        "violated_rule": "职责:(属地卫健委,医疗救护)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 14,
+        "location": "步骤14：角色'企业应急处置组'执行动作'污染源切断'",
+        "description": "职责错配：角色'企业应急处置组'不包含动作'污染源切断'。",
+        "violated_rule": "职责:(企业应急处置组,污染源切断)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 15,
+        "location": "步骤15：角色'企业洗消组'执行动作'防化洗消'",
+        "description": "职责错配：角色'企业洗消组'不包含动作'防化洗消'。",
+        "violated_rule": "职责:(企业洗消组,防化洗消)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 16,
+        "location": "步骤16：角色'现场指挥部'执行动作'统一指挥'",
+        "description": "职责错配：角色'现场指挥部'不包含动作'统一指挥'。",
+        "violated_rule": "职责:(现场指挥部,统一指挥)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 17,
+        "location": "步骤17：角色'属地街道办事处'执行动作'周边疏散'",
+        "description": "职责错配：角色'属地街道办事处'不包含动作'周边疏散'。",
+        "violated_rule": "职责:(属地街道办事处,周边疏散)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 18,
+        "location": "步骤18：角色'属地民政局'执行动作'安置救助'",
+        "description": "职责错配：角色'属地民政局'不包含动作'安置救助'。",
+        "violated_rule": "职责:(属地民政局,安置救助)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 19,
+        "location": "步骤19：角色'企业应急指挥部'执行动作'信息通报'",
+        "description": "职责错配：角色'企业应急指挥部'不包含动作'信息通报'。",
+        "violated_rule": "职责:(企业应急指挥部,信息通报)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 20,
+        "location": "步骤20：角色'属地宣传部'执行动作'宣传引导'",
+        "description": "职责错配：角色'属地宣传部'不包含动作'宣传引导'。",
+        "violated_rule": "职责:(属地宣传部,宣传引导)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 21,
+        "location": "步骤21：角色'属地生态环境局'执行动作'污染评估'",
+        "description": "职责错配：角色'属地生态环境局'不包含动作'污染评估'。",
+        "violated_rule": "职责:(属地生态环境局,污染评估)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 22,
+        "location": "步骤22：角色'企业应急处置组'执行动作'危害消除'",
+        "description": "职责错配：角色'企业应急处置组'不包含动作'危害消除'。",
+        "violated_rule": "职责:(企业应急处置组,危害消除)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 23,
+        "location": "步骤23：角色'企业设备抢修组'执行动作'设施抢修'",
+        "description": "职责错配：角色'企业设备抢修组'不包含动作'设施抢修'。",
+        "violated_rule": "职责:(企业设备抢修组,设施抢修)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 24,
+        "location": "步骤24：角色'属地生态环境局'执行动作'环境合格'",
+        "description": "职责错配：角色'属地生态环境局'不包含动作'环境合格'。",
+        "violated_rule": "职责:(属地生态环境局,环境合格)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 25,
+        "location": "步骤25：角色'现场指挥部'执行动作'撤除警戒'",
+        "description": "职责错配：角色'现场指挥部'不包含动作'撤除警戒'。",
+        "violated_rule": "职责:(现场指挥部,撤除警戒)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 26,
+        "location": "步骤26：角色'现场指挥部'执行动作'响应终止'",
+        "description": "职责错配：角色'现场指挥部'不包含动作'响应终止'。",
+        "violated_rule": "职责:(现场指挥部,响应终止)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 27,
+        "location": "步骤27：角色'企业应急指挥部'执行动作'善后处置'",
+        "description": "职责错配：角色'企业应急指挥部'不包含动作'善后处置'。",
+        "violated_rule": "职责:(企业应急指挥部,善后处置)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 28,
+        "location": "步骤28：角色'现场指挥部'执行动作'总结评估'",
+        "description": "职责错配：角色'现场指挥部'不包含动作'总结评估'。",
+        "violated_rule": "职责:(现场指挥部,总结评估)",
+        "severity": 3
+      }
+    ],
+    "script": {
+      "scenario_id": "S1",
+      "raw_text": "步骤1 | 07:55 | 企业中控室值班员 | 先期处置 | 中控室值班员通过可燃有毒气体报警系统发现储罐区T-102苯储罐区域浓度异常升高，立即通知当班巡检人员佩戴便携式检测仪前往现场核查，同时启动罐区固定喷淋系统进行预处置，并持续盯守DCS画面。 | 资源：便携式气体检测仪×2\n步骤2 | 07:58 | 企业当班巡检员 | 现场侦检 | 当班巡检员到达储罐区外围，使用便携式检测仪确认苯蒸气浓度超标，发现T-102储罐底部法兰处有液体持续泄漏并形成液池，伴有刺激性气味扩散，立即向中控室报告泄漏位置、介质和扩散方向。 | 资源：便携式气体检测仪×1，防化装备×2\n步骤3 | 08:00 | 企业应急指挥部 | 启动响应 | 企业应急指挥部接报后立即启动《危险化学品泄漏事故应急预案》一级响应，成立现场应急指挥部，由企业总经理任总指挥，通知各应急小组集结，同时向属地应急管理局、生态环境局和消防救援机构报告事故情况。 | 资源：卫星电话×1\n步骤4 | 08:03 | 企业应急处置组 | 泄漏控制 | 应急处置组佩戴正压式空气呼吸器和防化服进入罐区，尝试关闭T-102储罐底部法兰上游阀门，切断泄漏源；因阀门锈蚀未能完全关闭，泄漏仍在持续，随即利用围油栏和沙袋在泄漏液池外围构筑围堰，防止泄漏液体流入雨水管网和周边水体。 | 资源：防化装备×6，围油栏×4，沙袋×50\n步骤5 | 08:05 | 企业疏散引导组 | 人员疏散 | 疏散引导组按照预案设定的疏散路线，组织储罐区周边办公区、化验室及维修车间人员向上风向安全集合点撤离，逐人清点并登记，确保无人员滞留。 | 资源：扩音器×2，对讲机×4\n步骤6 | 08:06 | 企业警戒保卫组 | 危险区划定 | 警戒保卫组根据泄漏物质特性和气象条件，初步划定热区、温区和冷区，在罐区周边设置警戒带和警示标志，禁止无关人员和车辆进入，并在厂区大门设置引导点。 | 资源：警戒带×10，警示标志×8，对讲机×2\n步骤7 | 08:08 | 企业医疗救护组 | 救护设点 | 医疗救护组在上风向冷区设立临时医疗救护点，配备急救包和解毒药品，做好接诊可能中毒人员的准备，并安排救护车在厂区外待命。 | 资源：急救包×3，救护车×1，帐篷×1\n步骤8 | 08:10 | 企业应急指挥部 | 事故上报 | 企业应急指挥部向属地应急管理局、生态环境局、消防救援大队和属地街道办事处书面报告事故基本情况，包括泄漏介质、泄漏量、影响范围和已采取的先期处置措施，并请求外部救援力量增援。 | 资源：卫星电话×1，传真机×1\n步骤9 | 08:12 | 属地应急管理局 | 启动响应 | 属地应急管理局接报后启动危险化学品事故应急响应，成立现场指挥部，由局主要负责人任现场总指挥，通知公安、生态环境、卫健、消防等部门赶赴现场，统一协调指挥各救援力量。 | 资源：应急指挥车×1\n步骤10 | 08:15 | 消防救援组 | 现场侦检 | 消防救援大队到达现场后，根据现场侦检情况，出设泡沫水枪对泄漏液池进行覆盖，抑制苯蒸气挥发，同时对邻近储罐进行冷却保护，防止火源引燃和事故扩大。 | 资源：消防车×3，泡沫液×2，防化装备×8\n步骤11 | 08:18 | 属地公安局 | 交通管制 | 属地公安局在事故现场周边主要路口设置交通管制点，对厂区周边道路实施临时封闭，疏导过往车辆绕行，保障应急救援车辆和人员通行顺畅。 | 资源：警车×2，警戒带×6，交通标志牌×4\n步骤12 | 08:20 | 属地生态环境局 | 环境监测 | 属地生态环境局监测人员在下风向厂界外设置多个大气监测点和废水监测点，使用环境监测设备对苯蒸气浓度和周边水体进行连续监测，及时向现场指挥部报告监测数据。 | 资源：环境监测设备×4，无人机×1\n步骤13 | 08:22 | 属地卫健委 | 医疗救护 | 属地卫健委组织急救力量到达现场，在临时医疗救护点对可能接触泄漏化学品的员工进行检伤分类和初步诊治，对一名出现头晕恶心症状的员工进行现场急救并安排救护车转运至医院。 | 资源：救护车×2，急救包×5\n步骤14 | 08:25 | 企业应急处置组 | 污染源切断 | 企业应急处置组在消防掩护下，使用专用工具成功关闭T-102储罐底部法兰上游阀门，泄漏源被切断；随后使用防爆泵将围堰内泄漏液体转移至应急事故池，防止污染扩大。 | 资源：防爆泵×2，运输车辆×1，防化装备×4\n步骤15 | 08:30 | 企业洗消组 | 防化洗消 | 企业洗消组在温区设置洗消通道，对从热区撤出的救援人员和被污染的装备进行洗消，洗消废水统一收集至应急事故池，防止二次污染。 | 资源：洗消药剂×10，帐篷×2，防化装备×4\n步骤16 | 08:35 | 现场指挥部 | 统一指挥 | 现场指挥部召开第一次现场会商会，听取企业、消防、生态环境、卫健等部门情况汇报，研判泄漏处置进展和环境影响趋势，部署下一步泄漏物收集、环境监测和人员安置等工作。 | 资源：应急指挥车×1，卫星电话×1，发电机×1\n步骤17 | 08:40 | 属地街道办事处 | 周边疏散 | 属地街道办事处根据现场指挥部指令，组织厂区周边500米范围内居民进行有序疏散，引导居民前往临时安置点，并做好人员登记和情绪安抚工作。 | 资源：运输车辆×4，扩音器×3，帐篷×5\n步骤18 | 08:45 | 属地民政局 | 安置救助 | 属地民政局在临时安置点设置救助服务站，为疏散居民提供饮用水、食品、毛毯等基本生活物资，并安排工作人员做好登记和安抚工作。 | 资源：帐篷×5，饮用水×50，食品×100，毛毯×50\n步骤19 | 08:50 | 企业应急指挥部 | 信息通报 | 企业应急指挥部通过厂区广播和短信平台向全体员工通报事故处置进展，告知泄漏源已切断、环境监测持续开展，要求员工保持冷静、服从指挥，不传谣不信谣。 | 资源：广播系统×1，短信平台×1\n步骤20 | 08:55 | 属地宣传部 | 宣传引导 | 属地宣传部通过官方微博、微信公众号等渠道发布事故信息通报，说明事故基本情况、已采取的措施和周边环境监测开展情况，回应社会关切，引导舆论客观理性。 | 资源：计算机×2，照相机×1\n步骤21 | 09:00 | 属地生态环境局 | 污染评估 | 属地生态环境局根据连续监测数据，对事故周边大气、水体和土壤环境进行污染评估，编制环境监测报告，评估事故对周边环境的影响程度和范围。 | 资源：环境监测设备×4，无人机×1，计算机×2\n步骤22 | 09:10 | 企业应急处置组 | 危害消除 | 企业应急处置组使用吸附材料和中和药剂对罐区地面残留泄漏物进行彻底清理，清理产生的危险废物统一收集、分类贮存，交由有资质单位处置。 | 资源：吸附材料×20，中和药剂×10，运输车辆×2，防化装备×6\n步骤23 | 09:20 | 企业设备抢修组 | 设施抢修 | 企业设备抢修组对T-102储罐泄漏法兰进行更换和紧固，对罐区相关管道、阀门和仪表进行全面检查维修，确保设备设施恢复正常安全状态。 | 资源：维修工具×4，备用法兰×2，防化装备×4\n步骤24 | 09:30 | 属地生态环境局 | 环境合格 | 属地生态环境局对事故现场及周边大气、水体进行最终监测，确认苯蒸气浓度和废水指标均已降至安全限值以下，环境质量恢复正常，出具环境达标确认意见。 | 资源：环境监测设备×4\n步骤25 | 09:35 | 现场指挥部 | 撤除警戒 | 现场指挥部根据环境监测达标确认和现场处置完成情况，下令撤除事故现场警戒，恢复厂区周边道路交通，组织疏散居民有序返回。 | 资源：对讲机×4，扩音器×2\n步骤26 | 09:40 | 现场指挥部 | 响应终止 | 现场指挥部确认泄漏源已切断、泄漏物已清理、环境监测达标、人员全部撤离和安置妥当，宣布终止应急响应，转入后期处置和事故调查阶段。 | 资源：卫星电话×1\n步骤27 | 09:50 | 企业应急指挥部 | 善后处置 | 企业应急指挥部组织开展善后处置工作，包括受伤人员救治和抚恤、周边居民安置补偿、事故现场清理和生态恢复，配合政府部门开展事故调查。 | 资源：计算机×2，运输车辆×2\n步骤28 | 10:00 | 现场指挥部 | 总结评估 | 现场指挥部组织参演单位和专家召开演练总结评估会，对预警报警、应急响应、指挥协调、现场处置、环境监测、人员疏散等环节进行复盘评估，总结经验教训，提出预案修订和应急能力提升建议。 | 资源：投影仪×1，计算机×3",
+      "steps": [
+        {
+          "step_id": 1,
+          "time": "07:55",
+          "role": "企业中控室值班员",
+          "action": "先期处置",
+          "description": "中控室值班员通过可燃有毒气体报警系统发现储罐区T-102苯储罐区域浓度异常升高，立即通知当班巡检人员佩戴便携式检测仪前往现场核查，同时启动罐区固定喷淋系统进行预处置，并持续盯守DCS画面。",
+          "resources": [
+            {
+              "resource_type": "便携式气体检测仪",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "先期处置",
+          "action_grounded": true
+        },
+        {
+          "step_id": 2,
+          "time": "07:58",
+          "role": "企业当班巡检员",
+          "action": "现场侦检",
+          "description": "当班巡检员到达储罐区外围，使用便携式检测仪确认苯蒸气浓度超标，发现T-102储罐底部法兰处有液体持续泄漏并形成液池，伴有刺激性气味扩散，立即向中控室报告泄漏位置、介质和扩散方向。",
+          "resources": [
+            {
+              "resource_type": "便携式气体检测仪",
+              "quantity": 1
+            },
+            {
+              "resource_type": "防化装备",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "现场侦检",
+          "action_grounded": true
+        },
+        {
+          "step_id": 3,
+          "time": "08:00",
+          "role": "企业应急指挥部",
+          "action": "启动响应",
+          "description": "企业应急指挥部接报后立即启动《危险化学品泄漏事故应急预案》一级响应，成立现场应急指挥部，由企业总经理任总指挥，通知各应急小组集结，同时向属地应急管理局、生态环境局和消防救援机构报告事故情况。",
+          "resources": [
+            {
+              "resource_type": "卫星电话",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "启动响应",
+          "action_grounded": true
+        },
+        {
+          "step_id": 4,
+          "time": "08:03",
+          "role": "企业应急处置组",
+          "action": "泄漏控制",
+          "description": "应急处置组佩戴正压式空气呼吸器和防化服进入罐区，尝试关闭T-102储罐底部法兰上游阀门，切断泄漏源；因阀门锈蚀未能完全关闭，泄漏仍在持续，随即利用围油栏和沙袋在泄漏液池外围构筑围堰，防止泄漏液体流入雨水管网和周边水体。",
+          "resources": [
+            {
+              "resource_type": "防化装备",
+              "quantity": 6
+            },
+            {
+              "resource_type": "围油栏",
+              "quantity": 4
+            },
+            {
+              "resource_type": "沙袋",
+              "quantity": 50
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "泄漏控制",
+          "action_grounded": true
+        },
+        {
+          "step_id": 5,
+          "time": "08:05",
+          "role": "企业疏散引导组",
+          "action": "人员疏散",
+          "description": "疏散引导组按照预案设定的疏散路线，组织储罐区周边办公区、化验室及维修车间人员向上风向安全集合点撤离，逐人清点并登记，确保无人员滞留。",
+          "resources": [
+            {
+              "resource_type": "扩音器",
+              "quantity": 2
+            },
+            {
+              "resource_type": "对讲机",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "人员疏散",
+          "action_grounded": true
+        },
+        {
+          "step_id": 6,
+          "time": "08:06",
+          "role": "企业警戒保卫组",
+          "action": "危险区划定",
+          "description": "警戒保卫组根据泄漏物质特性和气象条件，初步划定热区、温区和冷区，在罐区周边设置警戒带和警示标志，禁止无关人员和车辆进入，并在厂区大门设置引导点。",
+          "resources": [
+            {
+              "resource_type": "警戒带",
+              "quantity": 10
+            },
+            {
+              "resource_type": "警示标志",
+              "quantity": 8
+            },
+            {
+              "resource_type": "对讲机",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "危险区划定",
+          "action_grounded": true
+        },
+        {
+          "step_id": 7,
+          "time": "08:08",
+          "role": "企业医疗救护组",
+          "action": "救护设点",
+          "description": "医疗救护组在上风向冷区设立临时医疗救护点，配备急救包和解毒药品，做好接诊可能中毒人员的准备，并安排救护车在厂区外待命。",
+          "resources": [
+            {
+              "resource_type": "急救包",
+              "quantity": 3
+            },
+            {
+              "resource_type": "救护车",
+              "quantity": 1
+            },
+            {
+              "resource_type": "帐篷",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "救护设点",
+          "action_grounded": true
+        },
+        {
+          "step_id": 8,
+          "time": "08:10",
+          "role": "企业应急指挥部",
+          "action": "事故上报",
+          "description": "企业应急指挥部向属地应急管理局、生态环境局、消防救援大队和属地街道办事处书面报告事故基本情况，包括泄漏介质、泄漏量、影响范围和已采取的先期处置措施，并请求外部救援力量增援。",
+          "resources": [
+            {
+              "resource_type": "卫星电话",
+              "quantity": 1
+            },
+            {
+              "resource_type": "传真机",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "事故上报",
+          "action_grounded": true
+        },
+        {
+          "step_id": 9,
+          "time": "08:12",
+          "role": "属地应急管理局",
+          "action": "启动响应",
+          "description": "属地应急管理局接报后启动危险化学品事故应急响应，成立现场指挥部，由局主要负责人任现场总指挥，通知公安、生态环境、卫健、消防等部门赶赴现场，统一协调指挥各救援力量。",
+          "resources": [
+            {
+              "resource_type": "应急指挥车",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "启动响应",
+          "action_grounded": true
+        },
+        {
+          "step_id": 10,
+          "time": "08:15",
+          "role": "消防救援组",
+          "action": "现场侦检",
+          "description": "消防救援大队到达现场后，根据现场侦检情况，出设泡沫水枪对泄漏液池进行覆盖，抑制苯蒸气挥发，同时对邻近储罐进行冷却保护，防止火源引燃和事故扩大。",
+          "resources": [
+            {
+              "resource_type": "消防车",
+              "quantity": 3
+            },
+            {
+              "resource_type": "泡沫液",
+              "quantity": 2
+            },
+            {
+              "resource_type": "防化装备",
+              "quantity": 8
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "抑蒸冷却",
+          "action_grounded": true
+        },
+        {
+          "step_id": 11,
+          "time": "08:18",
+          "role": "属地公安局",
+          "action": "交通管制",
+          "description": "属地公安局在事故现场周边主要路口设置交通管制点，对厂区周边道路实施临时封闭，疏导过往车辆绕行，保障应急救援车辆和人员通行顺畅。",
+          "resources": [
+            {
+              "resource_type": "警车",
+              "quantity": 2
+            },
+            {
+              "resource_type": "警戒带",
+              "quantity": 6
+            },
+            {
+              "resource_type": "交通标志牌",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "交通管制",
+          "action_grounded": true
+        },
+        {
+          "step_id": 12,
+          "time": "08:20",
+          "role": "属地生态环境局",
+          "action": "环境监测",
+          "description": "属地生态环境局监测人员在下风向厂界外设置多个大气监测点和废水监测点，使用环境监测设备对苯蒸气浓度和周边水体进行连续监测，及时向现场指挥部报告监测数据。",
+          "resources": [
+            {
+              "resource_type": "环境监测设备",
+              "quantity": 4
+            },
+            {
+              "resource_type": "无人机",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "环境监测",
+          "action_grounded": true
+        },
+        {
+          "step_id": 13,
+          "time": "08:22",
+          "role": "属地卫健委",
+          "action": "医疗救护",
+          "description": "属地卫健委组织急救力量到达现场，在临时医疗救护点对可能接触泄漏化学品的员工进行检伤分类和初步诊治，对一名出现头晕恶心症状的员工进行现场急救并安排救护车转运至医院。",
+          "resources": [
+            {
+              "resource_type": "救护车",
+              "quantity": 2
+            },
+            {
+              "resource_type": "急救包",
+              "quantity": 5
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "医疗救护",
+          "action_grounded": true
+        },
+        {
+          "step_id": 14,
+          "time": "08:25",
+          "role": "企业应急处置组",
+          "action": "污染源切断",
+          "description": "企业应急处置组在消防掩护下，使用专用工具成功关闭T-102储罐底部法兰上游阀门，泄漏源被切断；随后使用防爆泵将围堰内泄漏液体转移至应急事故池，防止污染扩大。",
+          "resources": [
+            {
+              "resource_type": "防爆泵",
+              "quantity": 2
+            },
+            {
+              "resource_type": "运输车辆",
+              "quantity": 1
+            },
+            {
+              "resource_type": "防化装备",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "污染源切断",
+          "action_grounded": true
+        },
+        {
+          "step_id": 15,
+          "time": "08:30",
+          "role": "企业洗消组",
+          "action": "防化洗消",
+          "description": "企业洗消组在温区设置洗消通道，对从热区撤出的救援人员和被污染的装备进行洗消，洗消废水统一收集至应急事故池，防止二次污染。",
+          "resources": [
+            {
+              "resource_type": "洗消药剂",
+              "quantity": 10
+            },
+            {
+              "resource_type": "帐篷",
+              "quantity": 2
+            },
+            {
+              "resource_type": "防化装备",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "防化洗消",
+          "action_grounded": true
+        },
+        {
+          "step_id": 16,
+          "time": "08:35",
+          "role": "现场指挥部",
+          "action": "统一指挥",
+          "description": "现场指挥部召开第一次现场会商会，听取企业、消防、生态环境、卫健等部门情况汇报，研判泄漏处置进展和环境影响趋势，部署下一步泄漏物收集、环境监测和人员安置等工作。",
+          "resources": [
+            {
+              "resource_type": "应急指挥车",
+              "quantity": 1
+            },
+            {
+              "resource_type": "卫星电话",
+              "quantity": 1
+            },
+            {
+              "resource_type": "发电机",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "统一指挥",
+          "action_grounded": true
+        },
+        {
+          "step_id": 17,
+          "time": "08:40",
+          "role": "属地街道办事处",
+          "action": "周边疏散",
+          "description": "属地街道办事处根据现场指挥部指令，组织厂区周边500米范围内居民进行有序疏散，引导居民前往临时安置点，并做好人员登记和情绪安抚工作。",
+          "resources": [
+            {
+              "resource_type": "运输车辆",
+              "quantity": 4
+            },
+            {
+              "resource_type": "扩音器",
+              "quantity": 3
+            },
+            {
+              "resource_type": "帐篷",
+              "quantity": 5
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "周边疏散",
+          "action_grounded": true
+        },
+        {
+          "step_id": 18,
+          "time": "08:45",
+          "role": "属地民政局",
+          "action": "安置救助",
+          "description": "属地民政局在临时安置点设置救助服务站，为疏散居民提供饮用水、食品、毛毯等基本生活物资，并安排工作人员做好登记和安抚工作。",
+          "resources": [
+            {
+              "resource_type": "帐篷",
+              "quantity": 5
+            },
+            {
+              "resource_type": "饮用水",
+              "quantity": 50
+            },
+            {
+              "resource_type": "食品",
+              "quantity": 100
+            },
+            {
+              "resource_type": "毛毯",
+              "quantity": 50
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "安置救助",
+          "action_grounded": true
+        },
+        {
+          "step_id": 19,
+          "time": "08:50",
+          "role": "企业应急指挥部",
+          "action": "信息通报",
+          "description": "企业应急指挥部通过厂区广播和短信平台向全体员工通报事故处置进展，告知泄漏源已切断、环境监测持续开展，要求员工保持冷静、服从指挥，不传谣不信谣。",
+          "resources": [
+            {
+              "resource_type": "广播系统",
+              "quantity": 1
+            },
+            {
+              "resource_type": "短信平台",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "信息通报",
+          "action_grounded": true
+        },
+        {
+          "step_id": 20,
+          "time": "08:55",
+          "role": "属地宣传部",
+          "action": "宣传引导",
+          "description": "属地宣传部通过官方微博、微信公众号等渠道发布事故信息通报，说明事故基本情况、已采取的措施和周边环境监测开展情况，回应社会关切，引导舆论客观理性。",
+          "resources": [
+            {
+              "resource_type": "计算机",
+              "quantity": 2
+            },
+            {
+              "resource_type": "照相机",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "宣传引导",
+          "action_grounded": true
+        },
+        {
+          "step_id": 21,
+          "time": "09:00",
+          "role": "属地生态环境局",
+          "action": "污染评估",
+          "description": "属地生态环境局根据连续监测数据，对事故周边大气、水体和土壤环境进行污染评估，编制环境监测报告，评估事故对周边环境的影响程度和范围。",
+          "resources": [
+            {
+              "resource_type": "环境监测设备",
+              "quantity": 4
+            },
+            {
+              "resource_type": "无人机",
+              "quantity": 1
+            },
+            {
+              "resource_type": "计算机",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "污染评估",
+          "action_grounded": true
+        },
+        {
+          "step_id": 22,
+          "time": "09:10",
+          "role": "企业应急处置组",
+          "action": "危害消除",
+          "description": "企业应急处置组使用吸附材料和中和药剂对罐区地面残留泄漏物进行彻底清理，清理产生的危险废物统一收集、分类贮存，交由有资质单位处置。",
+          "resources": [
+            {
+              "resource_type": "吸附材料",
+              "quantity": 20
+            },
+            {
+              "resource_type": "中和药剂",
+              "quantity": 10
+            },
+            {
+              "resource_type": "运输车辆",
+              "quantity": 2
+            },
+            {
+              "resource_type": "防化装备",
+              "quantity": 6
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "危害消除",
+          "action_grounded": true
+        },
+        {
+          "step_id": 23,
+          "time": "09:20",
+          "role": "企业设备抢修组",
+          "action": "设施抢修",
+          "description": "企业设备抢修组对T-102储罐泄漏法兰进行更换和紧固，对罐区相关管道、阀门和仪表进行全面检查维修，确保设备设施恢复正常安全状态。",
+          "resources": [
+            {
+              "resource_type": "维修工具",
+              "quantity": 4
+            },
+            {
+              "resource_type": "备用法兰",
+              "quantity": 2
+            },
+            {
+              "resource_type": "防化装备",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "设施抢修",
+          "action_grounded": true
+        },
+        {
+          "step_id": 24,
+          "time": "09:30",
+          "role": "属地生态环境局",
+          "action": "环境合格",
+          "description": "属地生态环境局对事故现场及周边大气、水体进行最终监测，确认苯蒸气浓度和废水指标均已降至安全限值以下，环境质量恢复正常，出具环境达标确认意见。",
+          "resources": [
+            {
+              "resource_type": "环境监测设备",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "环境合格",
+          "action_grounded": true
+        },
+        {
+          "step_id": 25,
+          "time": "09:35",
+          "role": "现场指挥部",
+          "action": "撤除警戒",
+          "description": "现场指挥部根据环境监测达标确认和现场处置完成情况，下令撤除事故现场警戒，恢复厂区周边道路交通，组织疏散居民有序返回。",
+          "resources": [
+            {
+              "resource_type": "对讲机",
+              "quantity": 4
+            },
+            {
+              "resource_type": "扩音器",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "撤除警戒",
+          "action_grounded": true
+        },
+        {
+          "step_id": 26,
+          "time": "09:40",
+          "role": "现场指挥部",
+          "action": "响应终止",
+          "description": "现场指挥部确认泄漏源已切断、泄漏物已清理、环境监测达标、人员全部撤离和安置妥当，宣布终止应急响应，转入后期处置和事故调查阶段。",
+          "resources": [
+            {
+              "resource_type": "卫星电话",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "响应终止",
+          "action_grounded": true
+        },
+        {
+          "step_id": 27,
+          "time": "09:50",
+          "role": "企业应急指挥部",
+          "action": "善后处置",
+          "description": "企业应急指挥部组织开展善后处置工作，包括受伤人员救治和抚恤、周边居民安置补偿、事故现场清理和生态恢复，配合政府部门开展事故调查。",
+          "resources": [
+            {
+              "resource_type": "计算机",
+              "quantity": 2
+            },
+            {
+              "resource_type": "运输车辆",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "善后处置",
+          "action_grounded": true
+        },
+        {
+          "step_id": 28,
+          "time": "10:00",
+          "role": "现场指挥部",
+          "action": "总结评估",
+          "description": "现场指挥部组织参演单位和专家召开演练总结评估会，对预警报警、应急响应、指挥协调、现场处置、环境监测、人员疏散等环节进行复盘评估，总结经验教训，提出预案修订和应急能力提升建议。",
+          "resources": [
+            {
+              "resource_type": "投影仪",
+              "quantity": 1
+            },
+            {
+              "resource_type": "计算机",
+              "quantity": 3
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "总结评估",
+          "action_grounded": true
+        }
+      ]
+    }
+  },
+  {
+    "iteration": 2,
+    "error_count": 64,
+    "deferred_error_count": 0,
+    "pending_error_count": 64,
+    "error_types": {
+      "temporal": 2,
+      "responsibility": 27,
+      "resource": 35
+    },
+    "hint_count": 2,
+    "total_constraints": 174,
+    "satisfied_constraints": 110,
+    "csr": 0.6322,
+    "errors": [
+      {
+        "error_type": "temporal",
+        "error_type_cn": "时序",
+        "step_id": 3,
+        "location": "动作'启动响应'（步骤3）出现在'事故上报'（步骤8）之前",
+        "description": "时序倒置：'事故上报'必须先于'启动响应'执行。",
+        "violated_rule": "时序:事故上报→启动响应",
+        "severity": 1
+      },
+      {
+        "error_type": "temporal_hint",
+        "error_type_cn": "temporal_hint",
+        "step_id": 12,
+        "location": "动作'环境监测'（步骤12）",
+        "description": "提示：前置动作'现场处置'未在脚本中出现。偏序模式下允许省略该中间环节，仅作提示、不计入错误。",
+        "violated_rule": "时序:现场处置→环境监测",
+        "severity": 1
+      },
+      {
+        "error_type": "temporal_hint",
+        "error_type_cn": "temporal_hint",
+        "step_id": 5,
+        "location": "动作'人员疏散'（步骤5）",
+        "description": "提示：前置动作'现场警戒'未在脚本中出现。偏序模式下允许省略该中间环节，仅作提示、不计入错误。",
+        "violated_rule": "时序:现场警戒→人员疏散",
+        "severity": 1
+      },
+      {
+        "error_type": "temporal",
+        "error_type_cn": "时序",
+        "step_id": 4,
+        "location": "动作'泄漏控制'（步骤4）出现在'污染源切断'（步骤14）之前",
+        "description": "时序倒置：'污染源切断'必须先于'泄漏控制'执行。",
+        "violated_rule": "时序:污染源切断→泄漏控制",
+        "severity": 1
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 1,
+        "location": "步骤1 资源'便携式气体检测仪'",
+        "description": "资源类型'便携式气体检测仪'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 2,
+        "location": "步骤2 资源'便携式气体检测仪'",
+        "description": "资源类型'便携式气体检测仪'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 4,
+        "location": "步骤4 资源'沙袋'",
+        "description": "资源类型'沙袋'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 4,
+        "location": "步骤4 资源'吸附材料'",
+        "description": "资源类型'吸附材料'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 5,
+        "location": "步骤5 资源'扩音器'",
+        "description": "资源类型'扩音器'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 5,
+        "location": "步骤5 资源'对讲机'",
+        "description": "资源类型'对讲机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 6,
+        "location": "步骤6 资源'警戒带'",
+        "description": "资源类型'警戒带'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 6,
+        "location": "步骤6 资源'警示标志'",
+        "description": "资源类型'警示标志'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 6,
+        "location": "步骤6 资源'对讲机'",
+        "description": "资源类型'对讲机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 8,
+        "location": "步骤8 资源'传真机'",
+        "description": "资源类型'传真机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 9,
+        "location": "步骤9 资源'应急指挥车'",
+        "description": "资源类型'应急指挥车'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 10,
+        "location": "步骤10 资源'泡沫液'",
+        "description": "资源类型'泡沫液'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 11,
+        "location": "步骤11 资源'警车'",
+        "description": "资源类型'警车'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 11,
+        "location": "步骤11 资源'警戒带'",
+        "description": "资源类型'警戒带'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 11,
+        "location": "步骤11 资源'交通标志牌'",
+        "description": "资源类型'交通标志牌'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 14,
+        "location": "步骤14 资源'防爆泵'",
+        "description": "资源类型'防爆泵'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 16,
+        "location": "步骤16 资源'应急指挥车'",
+        "description": "资源类型'应急指挥车'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 17,
+        "location": "步骤17 资源'扩音器'",
+        "description": "资源类型'扩音器'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 18,
+        "location": "步骤18 资源'饮用水'",
+        "description": "资源类型'饮用水'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 18,
+        "location": "步骤18 资源'食品'",
+        "description": "资源类型'食品'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 18,
+        "location": "步骤18 资源'毛毯'",
+        "description": "资源类型'毛毯'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 19,
+        "location": "步骤19 资源'广播系统'",
+        "description": "资源类型'广播系统'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 19,
+        "location": "步骤19 资源'短信平台'",
+        "description": "资源类型'短信平台'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 20,
+        "location": "步骤20 资源'计算机'",
+        "description": "资源类型'计算机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 20,
+        "location": "步骤20 资源'照相机'",
+        "description": "资源类型'照相机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 21,
+        "location": "步骤21 资源'计算机'",
+        "description": "资源类型'计算机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 22,
+        "location": "步骤22 资源'吸附材料'",
+        "description": "资源类型'吸附材料'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 22,
+        "location": "步骤22 资源'中和药剂'",
+        "description": "资源类型'中和药剂'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 23,
+        "location": "步骤23 资源'维修工具'",
+        "description": "资源类型'维修工具'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 23,
+        "location": "步骤23 资源'备用法兰'",
+        "description": "资源类型'备用法兰'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 25,
+        "location": "步骤25 资源'对讲机'",
+        "description": "资源类型'对讲机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 25,
+        "location": "步骤25 资源'扩音器'",
+        "description": "资源类型'扩音器'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 27,
+        "location": "步骤27 资源'计算机'",
+        "description": "资源类型'计算机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 28,
+        "location": "步骤28 资源'投影仪'",
+        "description": "资源类型'投影仪'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "resource",
+        "error_type_cn": "资源",
+        "step_id": 28,
+        "location": "步骤28 资源'计算机'",
+        "description": "资源类型'计算机'不在本地定义的资源约束清单中（合法资源类型：卫星电话, 发电机, 围油栏, 帐篷, 急救包, 救护车, 无人机, 洗消药剂, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+        "violated_rule": "资源约束:资源类型必须在约束清单内",
+        "severity": 2
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 1,
+        "location": "步骤1：角色'企业中控室值班员'执行动作'台风预警'",
+        "description": "职责错配：角色'企业中控室值班员'不包含动作'台风预警'。",
+        "violated_rule": "职责:(企业中控室值班员,台风预警)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 2,
+        "location": "步骤2：角色'企业当班巡检员'执行动作'现场侦检'",
+        "description": "职责错配：角色'企业当班巡检员'不包含动作'现场侦检'。",
+        "violated_rule": "职责:(企业当班巡检员,现场侦检)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 3,
+        "location": "步骤3：角色'企业应急指挥部'执行动作'启动响应'",
+        "description": "职责错配：角色'企业应急指挥部'不包含动作'启动响应'。",
+        "violated_rule": "职责:(企业应急指挥部,启动响应)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 4,
+        "location": "步骤4：角色'企业应急处置组'执行动作'泄漏控制'",
+        "description": "职责错配：角色'企业应急处置组'不包含动作'泄漏控制'。",
+        "violated_rule": "职责:(企业应急处置组,泄漏控制)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 5,
+        "location": "步骤5：角色'企业疏散引导组'执行动作'人员疏散'",
+        "description": "职责错配：角色'企业疏散引导组'不包含动作'人员疏散'。",
+        "violated_rule": "职责:(企业疏散引导组,人员疏散)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 6,
+        "location": "步骤6：角色'企业警戒保卫组'执行动作'危险区划定'",
+        "description": "职责错配：角色'企业警戒保卫组'不包含动作'危险区划定'。",
+        "violated_rule": "职责:(企业警戒保卫组,危险区划定)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 7,
+        "location": "步骤7：角色'企业医疗救护组'执行动作'救护设点'",
+        "description": "职责错配：角色'企业医疗救护组'不包含动作'救护设点'。",
+        "violated_rule": "职责:(企业医疗救护组,救护设点)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 8,
+        "location": "步骤8：角色'企业应急指挥部'执行动作'事故上报'",
+        "description": "职责错配：角色'企业应急指挥部'不包含动作'事故上报'。",
+        "violated_rule": "职责:(企业应急指挥部,事故上报)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 9,
+        "location": "步骤9：角色'属地应急管理局'执行动作'启动响应'",
+        "description": "职责错配：角色'属地应急管理局'不包含动作'启动响应'。",
+        "violated_rule": "职责:(属地应急管理局,启动响应)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 11,
+        "location": "步骤11：角色'属地公安局'执行动作'交通管制'",
+        "description": "职责错配：角色'属地公安局'不包含动作'交通管制'。",
+        "violated_rule": "职责:(属地公安局,交通管制)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 12,
+        "location": "步骤12：角色'属地生态环境局'执行动作'环境监测'",
+        "description": "职责错配：角色'属地生态环境局'不包含动作'环境监测'。",
+        "violated_rule": "职责:(属地生态环境局,环境监测)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 13,
+        "location": "步骤13：角色'属地卫健委'执行动作'医疗救护'",
+        "description": "职责错配：角色'属地卫健委'不包含动作'医疗救护'。",
+        "violated_rule": "职责:(属地卫健委,医疗救护)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 14,
+        "location": "步骤14：角色'企业应急处置组'执行动作'污染源切断'",
+        "description": "职责错配：角色'企业应急处置组'不包含动作'污染源切断'。",
+        "violated_rule": "职责:(企业应急处置组,污染源切断)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 15,
+        "location": "步骤15：角色'企业洗消组'执行动作'防化洗消'",
+        "description": "职责错配：角色'企业洗消组'不包含动作'防化洗消'。",
+        "violated_rule": "职责:(企业洗消组,防化洗消)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 16,
+        "location": "步骤16：角色'现场指挥部'执行动作'统一指挥'",
+        "description": "职责错配：角色'现场指挥部'不包含动作'统一指挥'。",
+        "violated_rule": "职责:(现场指挥部,统一指挥)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 17,
+        "location": "步骤17：角色'属地街道办事处'执行动作'周边疏散'",
+        "description": "职责错配：角色'属地街道办事处'不包含动作'周边疏散'。",
+        "violated_rule": "职责:(属地街道办事处,周边疏散)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 18,
+        "location": "步骤18：角色'属地民政局'执行动作'安置救助'",
+        "description": "职责错配：角色'属地民政局'不包含动作'安置救助'。",
+        "violated_rule": "职责:(属地民政局,安置救助)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 19,
+        "location": "步骤19：角色'企业应急指挥部'执行动作'信息通报'",
+        "description": "职责错配：角色'企业应急指挥部'不包含动作'信息通报'。",
+        "violated_rule": "职责:(企业应急指挥部,信息通报)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 20,
+        "location": "步骤20：角色'属地宣传部'执行动作'宣传引导'",
+        "description": "职责错配：角色'属地宣传部'不包含动作'宣传引导'。",
+        "violated_rule": "职责:(属地宣传部,宣传引导)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 21,
+        "location": "步骤21：角色'属地生态环境局'执行动作'污染评估'",
+        "description": "职责错配：角色'属地生态环境局'不包含动作'污染评估'。",
+        "violated_rule": "职责:(属地生态环境局,污染评估)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 22,
+        "location": "步骤22：角色'企业应急处置组'执行动作'危害消除'",
+        "description": "职责错配：角色'企业应急处置组'不包含动作'危害消除'。",
+        "violated_rule": "职责:(企业应急处置组,危害消除)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 23,
+        "location": "步骤23：角色'企业设备抢修组'执行动作'设施抢修'",
+        "description": "职责错配：角色'企业设备抢修组'不包含动作'设施抢修'。",
+        "violated_rule": "职责:(企业设备抢修组,设施抢修)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 24,
+        "location": "步骤24：角色'属地生态环境局'执行动作'环境合格'",
+        "description": "职责错配：角色'属地生态环境局'不包含动作'环境合格'。",
+        "violated_rule": "职责:(属地生态环境局,环境合格)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 25,
+        "location": "步骤25：角色'现场指挥部'执行动作'撤除警戒'",
+        "description": "职责错配：角色'现场指挥部'不包含动作'撤除警戒'。",
+        "violated_rule": "职责:(现场指挥部,撤除警戒)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 26,
+        "location": "步骤26：角色'现场指挥部'执行动作'响应终止'",
+        "description": "职责错配：角色'现场指挥部'不包含动作'响应终止'。",
+        "violated_rule": "职责:(现场指挥部,响应终止)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 27,
+        "location": "步骤27：角色'企业善后工作组'执行动作'善后处置'",
+        "description": "职责错配：角色'企业善后工作组'不包含动作'善后处置'。",
+        "violated_rule": "职责:(企业善后工作组,善后处置)",
+        "severity": 3
+      },
+      {
+        "error_type": "responsibility",
+        "error_type_cn": "职责",
+        "step_id": 28,
+        "location": "步骤28：角色'现场指挥部'执行动作'总结评估'",
+        "description": "职责错配：角色'现场指挥部'不包含动作'总结评估'。",
+        "violated_rule": "职责:(现场指挥部,总结评估)",
+        "severity": 3
+      }
+    ],
+    "script": {
+      "scenario_id": "S1",
+      "raw_text": "步骤1 | 07:55 | 企业中控室值班员 | 台风预警 | 中控室值班员通过可燃有毒气体报警系统发现储罐区T-102苯储罐区域浓度异常升高，立即通知当班巡检人员佩戴便携式检测仪前往现场核查，同时向企业应急指挥部报告并持续盯守DCS画面，不直接操作罐区固定喷淋系统。 | 资源：便携式气体检测仪×2\n步骤2 | 07:58 | 企业当班巡检员 | 现场侦检 | 当班巡检员到达储罐区外围，使用便携式检测仪确认苯蒸气浓度超标，发现T-102储罐底部法兰处有液体持续泄漏并形成液池，伴有刺激性气味扩散，立即向中控室报告泄漏位置、介质和扩散方向，并撤至安全区域待命。 | 资源：便携式气体检测仪×1，防化装备×2\n步骤3 | 08:00 | 企业应急指挥部 | 启动响应 | 企业应急指挥部接报后立即启动《危险化学品泄漏事故应急预案》一级响应，成立现场应急指挥部，由企业总经理任总指挥，通知各应急小组集结，同时向属地应急管理局、生态环境局和消防救援机构报告事故情况。 | 资源：卫星电话×1\n步骤4 | 08:03 | 企业应急处置组 | 泄漏控制 | 应急处置组佩戴正压式空气呼吸器和防化服进入罐区，在上风向设置安全撤退路线后，尝试关闭T-102储罐底部法兰上游阀门，切断泄漏源；因阀门锈蚀未能完全关闭，泄漏仍在持续，随即利用沙袋和吸附材料在泄漏液池外围构筑围堰，防止泄漏液体流入雨水管网和周边水体，人员保持在安全距离外轮换作业。 | 资源：防化装备×6，沙袋×50，吸附材料×10\n步骤5 | 08:05 | 企业疏散引导组 | 人员疏散 | 疏散引导组按照预案设定的疏散路线，组织储罐区周边办公区、化验室及维修车间人员向上风向安全集合点撤离，逐人清点并登记，确保无人员滞留。 | 资源：扩音器×2，对讲机×4\n步骤6 | 08:06 | 企业警戒保卫组 | 危险区划定 | 警戒保卫组根据泄漏物质特性和气象条件，初步划定热区、温区和冷区，在罐区周边设置警戒带和警示标志，禁止无关人员和车辆进入，并在厂区大门设置引导点。 | 资源：警戒带×10，警示标志×8，对讲机×2\n步骤7 | 08:08 | 企业医疗救护组 | 救护设点 | 医疗救护组在上风向冷区设立临时医疗救护点，配备急救包和解毒药品，做好接诊可能中毒人员的准备，并安排企业救护车在厂区外待命。 | 资源：急救包×3，救护车×1，帐篷×1\n步骤8 | 08:10 | 企业应急指挥部 | 事故上报 | 企业应急指挥部向属地应急管理局、生态环境局、消防救援大队和属地街道办事处书面报告事故基本情况，包括泄漏介质、泄漏量、影响范围和已采取的先期处置措施，并请求外部救援力量增援。 | 资源：卫星电话×1，传真机×1\n步骤9 | 08:12 | 属地应急管理局 | 启动响应 | 属地应急管理局接报后启动危险化学品事故应急响应，成立属地应急救援指挥部，由局主要负责人任总指挥，派出现场指挥组赶赴现场，通知公安、生态环境、卫健、消防等部门赶赴现场，统一协调指挥各救援力量，并与企业现场应急指挥部对接。 | 资源：应急指挥车×1\n步骤10 | 08:15 | 消防救援组 | 现场侦检 | 消防救援大队到达现场后，先与现场指挥部对接并开展现场侦检，确认泄漏介质、浓度和扩散范围，随后出设泡沫水枪对泄漏液池进行覆盖，抑制苯蒸气挥发，同时对邻近储罐进行冷却保护，防止火源引燃和事故扩大。 | 资源：消防车×3，泡沫液×2，防化装备×8\n步骤11 | 08:18 | 属地公安局 | 交通管制 | 属地公安局在事故现场周边主要路口设置交通管制点，对厂区周边道路实施临时封闭，疏导过往车辆绕行，保障应急救援车辆和人员通行顺畅。 | 资源：警车×2，警戒带×6，交通标志牌×4\n步骤12 | 08:20 | 属地生态环境局 | 环境监测 | 属地生态环境局监测人员在下风向厂界外设置多个大气监测点和废水监测点，使用环境监测设备对苯蒸气浓度和周边水体进行连续监测，及时向现场指挥部报告监测数据。 | 资源：环境监测设备×4，无人机×1\n步骤13 | 08:22 | 属地卫健委 | 医疗救护 | 属地卫健委组织急救力量到达现场，在临时医疗救护点对可能接触泄漏化学品的员工进行检伤分类和初步诊治，对一名出现头晕恶心症状的员工进行现场急救，并使用属地救护车转运至医院，避免与企业救护车资源冲突。 | 资源：救护车×2，急救包×5\n步骤14 | 08:25 | 企业应急处置组 | 污染源切断 | 企业应急处置组在消防掩护下，使用专用工具成功关闭T-102储罐底部法兰上游阀门，泄漏源被切断；随后使用防爆泵将围堰内泄漏液体转移至应急事故池，防止污染扩大。 | 资源：防爆泵×2，运输车辆×1，防化装备×4\n步骤15 | 08:30 | 企业洗消组 | 防化洗消 | 企业洗消组在温区设置洗消通道，对从热区撤出的救援人员和被污染的装备进行洗消，洗消废水统一收集至应急事故池，防止二次污染。 | 资源：洗消药剂×10，帐篷×2，防化装备×4\n步骤16 | 08:35 | 现场指挥部 | 统一指挥 | 现场指挥部召开第一次现场会商会，听取企业、消防、生态环境、卫健等部门情况汇报，研判泄漏处置进展和环境影响趋势，部署下一步泄漏物收集、环境监测和人员安置等工作，明确属地指挥部与企业指挥部的指挥关系。 | 资源：应急指挥车×1，卫星电话×1，发电机×1\n步骤17 | 08:40 | 属地街道办事处 | 周边疏散 | 属地街道办事处根据现场指挥部指令和环保部门监测数据，组织厂区周边500米范围内居民进行有序疏散，引导居民前往临时安置点，并做好人员登记和情绪安抚工作。 | 资源：运输车辆×4，扩音器×3，帐篷×5\n步骤18 | 08:45 | 属地民政局 | 安置救助 | 属地民政局在临时安置点设置救助服务站，为疏散居民提供饮用水、食品、毛毯等基本生活物资，并安排工作人员做好登记和安抚工作。 | 资源：帐篷×5，饮用水×50，食品×100，毛毯×50\n步骤19 | 08:50 | 企业应急指挥部 | 信息通报 | 企业应急指挥部通过厂区广播和短信平台向全体员工通报事故处置进展，告知泄漏源已切断、环境监测持续开展，要求员工保持冷静、服从指挥，不传谣不信谣。 | 资源：广播系统×1，短信平台×1\n步骤20 | 08:55 | 属地宣传部 | 宣传引导 | 属地宣传部通过官方微博、微信公众号等渠道发布事故信息通报，说明事故基本情况、已采取的措施和周边环境监测开展情况，回应社会关切，引导舆论客观理性。 | 资源：计算机×2，照相机×1\n步骤21 | 09:00 | 属地生态环境局 | 污染评估 | 属地生态环境局根据连续监测数据，对事故周边大气、水体和土壤环境进行污染评估，编制环境监测报告，评估事故对周边环境的影响程度和范围。 | 资源：环境监测设备×4，无人机×1，计算机×2\n步骤22 | 09:10 | 企业应急处置组 | 危害消除 | 企业应急处置组使用吸附材料和中和药剂对罐区地面残留泄漏物进行彻底清理，清理产生的危险废物统一收集、分类贮存，交由有资质单位处置。 | 资源：吸附材料×20，中和药剂×10，运输车辆×2，防化装备×6\n步骤23 | 09:20 | 企业设备抢修组 | 设施抢修 | 企业设备抢修组对T-102储罐泄漏法兰进行更换和紧固，对罐区相关管道、阀门和仪表进行全面检查维修，确保设备设施恢复正常安全状态。 | 资源：维修工具×4，备用法兰×2，防化装备×4\n步骤24 | 09:30 | 属地生态环境局 | 环境合格 | 属地生态环境局对事故现场及周边大气、水体进行最终监测，确认苯蒸气浓度和废水指标均已降至安全限值以下，环境质量恢复正常，出具环境达标确认意见并报送现场指挥部。 | 资源：环境监测设备×4\n步骤25 | 09:35 | 现场指挥部 | 撤除警戒 | 现场指挥部根据环境监测达标确认、卫健部门人员健康状况评估和现场处置完成情况，经属地政府批准后，下令撤除事故现场警戒，恢复厂区周边道路交通，组织疏散居民有序返回。 | 资源：对讲机×4，扩音器×2\n步骤26 | 09:40 | 现场指挥部 | 响应终止 | 现场指挥部确认泄漏源已切断、泄漏物已清理、环境监测达标、人员安置妥当且疏散居民已有序返回，宣布终止应急响应，转入后期处置和事故调查阶段。 | 资源：卫星电话×1\n步骤27 | 09:50 | 企业善后工作组 | 善后处置 | 企业善后工作组组织开展善后处置工作，包括受伤人员救治和抚恤、周边居民安置补偿、事故现场清理和生态恢复，配合政府部门开展事故调查。 | 资源：计算机×2，运输车辆×2\n步骤28 | 10:00 | 现场指挥部 | 总结评估 | 现场指挥部组织参演单位和专家召开演练总结评估会，对预警报警、应急响应、指挥协调、现场处置、环境监测、人员疏散等环节进行复盘评估，总结经验教训，提出预案修订和应急能力提升建议。 | 资源：投影仪×1，计算机×3",
+      "steps": [
+        {
+          "step_id": 1,
+          "time": "07:55",
+          "role": "企业中控室值班员",
+          "action": "台风预警",
+          "description": "中控室值班员通过可燃有毒气体报警系统发现储罐区T-102苯储罐区域浓度异常升高，立即通知当班巡检人员佩戴便携式检测仪前往现场核查，同时向企业应急指挥部报告并持续盯守DCS画面，不直接操作罐区固定喷淋系统。",
+          "resources": [
+            {
+              "resource_type": "便携式气体检测仪",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "先期预警",
+          "action_grounded": true
+        },
+        {
+          "step_id": 2,
+          "time": "07:58",
+          "role": "企业当班巡检员",
+          "action": "现场侦检",
+          "description": "当班巡检员到达储罐区外围，使用便携式检测仪确认苯蒸气浓度超标，发现T-102储罐底部法兰处有液体持续泄漏并形成液池，伴有刺激性气味扩散，立即向中控室报告泄漏位置、介质和扩散方向，并撤至安全区域待命。",
+          "resources": [
+            {
+              "resource_type": "便携式气体检测仪",
+              "quantity": 1
+            },
+            {
+              "resource_type": "防化装备",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "现场侦检",
+          "action_grounded": true
+        },
+        {
+          "step_id": 3,
+          "time": "08:00",
+          "role": "企业应急指挥部",
+          "action": "启动响应",
+          "description": "企业应急指挥部接报后立即启动《危险化学品泄漏事故应急预案》一级响应，成立现场应急指挥部，由企业总经理任总指挥，通知各应急小组集结，同时向属地应急管理局、生态环境局和消防救援机构报告事故情况。",
+          "resources": [
+            {
+              "resource_type": "卫星电话",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "启动响应",
+          "action_grounded": true
+        },
+        {
+          "step_id": 4,
+          "time": "08:03",
+          "role": "企业应急处置组",
+          "action": "泄漏控制",
+          "description": "应急处置组佩戴正压式空气呼吸器和防化服进入罐区，在上风向设置安全撤退路线后，尝试关闭T-102储罐底部法兰上游阀门，切断泄漏源；因阀门锈蚀未能完全关闭，泄漏仍在持续，随即利用沙袋和吸附材料在泄漏液池外围构筑围堰，防止泄漏液体流入雨水管网和周边水体，人员保持在安全距离外轮换作业。",
+          "resources": [
+            {
+              "resource_type": "防化装备",
+              "quantity": 6
+            },
+            {
+              "resource_type": "沙袋",
+              "quantity": 50
+            },
+            {
+              "resource_type": "吸附材料",
+              "quantity": 10
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "泄漏控制",
+          "action_grounded": true
+        },
+        {
+          "step_id": 5,
+          "time": "08:05",
+          "role": "企业疏散引导组",
+          "action": "人员疏散",
+          "description": "疏散引导组按照预案设定的疏散路线，组织储罐区周边办公区、化验室及维修车间人员向上风向安全集合点撤离，逐人清点并登记，确保无人员滞留。",
+          "resources": [
+            {
+              "resource_type": "扩音器",
+              "quantity": 2
+            },
+            {
+              "resource_type": "对讲机",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "人员疏散",
+          "action_grounded": true
+        },
+        {
+          "step_id": 6,
+          "time": "08:06",
+          "role": "企业警戒保卫组",
+          "action": "危险区划定",
+          "description": "警戒保卫组根据泄漏物质特性和气象条件，初步划定热区、温区和冷区，在罐区周边设置警戒带和警示标志，禁止无关人员和车辆进入，并在厂区大门设置引导点。",
+          "resources": [
+            {
+              "resource_type": "警戒带",
+              "quantity": 10
+            },
+            {
+              "resource_type": "警示标志",
+              "quantity": 8
+            },
+            {
+              "resource_type": "对讲机",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "危险区划定",
+          "action_grounded": true
+        },
+        {
+          "step_id": 7,
+          "time": "08:08",
+          "role": "企业医疗救护组",
+          "action": "救护设点",
+          "description": "医疗救护组在上风向冷区设立临时医疗救护点，配备急救包和解毒药品，做好接诊可能中毒人员的准备，并安排企业救护车在厂区外待命。",
+          "resources": [
+            {
+              "resource_type": "急救包",
+              "quantity": 3
+            },
+            {
+              "resource_type": "救护车",
+              "quantity": 1
+            },
+            {
+              "resource_type": "帐篷",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "救护设点",
+          "action_grounded": true
+        },
+        {
+          "step_id": 8,
+          "time": "08:10",
+          "role": "企业应急指挥部",
+          "action": "事故上报",
+          "description": "企业应急指挥部向属地应急管理局、生态环境局、消防救援大队和属地街道办事处书面报告事故基本情况，包括泄漏介质、泄漏量、影响范围和已采取的先期处置措施，并请求外部救援力量增援。",
+          "resources": [
+            {
+              "resource_type": "卫星电话",
+              "quantity": 1
+            },
+            {
+              "resource_type": "传真机",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "事故上报",
+          "action_grounded": true
+        },
+        {
+          "step_id": 9,
+          "time": "08:12",
+          "role": "属地应急管理局",
+          "action": "启动响应",
+          "description": "属地应急管理局接报后启动危险化学品事故应急响应，成立属地应急救援指挥部，由局主要负责人任总指挥，派出现场指挥组赶赴现场，通知公安、生态环境、卫健、消防等部门赶赴现场，统一协调指挥各救援力量，并与企业现场应急指挥部对接。",
+          "resources": [
+            {
+              "resource_type": "应急指挥车",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "启动响应",
+          "action_grounded": true
+        },
+        {
+          "step_id": 10,
+          "time": "08:15",
+          "role": "消防救援组",
+          "action": "现场侦检",
+          "description": "消防救援大队到达现场后，先与现场指挥部对接并开展现场侦检，确认泄漏介质、浓度和扩散范围，随后出设泡沫水枪对泄漏液池进行覆盖，抑制苯蒸气挥发，同时对邻近储罐进行冷却保护，防止火源引燃和事故扩大。",
+          "resources": [
+            {
+              "resource_type": "消防车",
+              "quantity": 3
+            },
+            {
+              "resource_type": "泡沫液",
+              "quantity": 2
+            },
+            {
+              "resource_type": "防化装备",
+              "quantity": 8
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "现场侦检",
+          "action_grounded": true
+        },
+        {
+          "step_id": 11,
+          "time": "08:18",
+          "role": "属地公安局",
+          "action": "交通管制",
+          "description": "属地公安局在事故现场周边主要路口设置交通管制点，对厂区周边道路实施临时封闭，疏导过往车辆绕行，保障应急救援车辆和人员通行顺畅。",
+          "resources": [
+            {
+              "resource_type": "警车",
+              "quantity": 2
+            },
+            {
+              "resource_type": "警戒带",
+              "quantity": 6
+            },
+            {
+              "resource_type": "交通标志牌",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "交通管制",
+          "action_grounded": true
+        },
+        {
+          "step_id": 12,
+          "time": "08:20",
+          "role": "属地生态环境局",
+          "action": "环境监测",
+          "description": "属地生态环境局监测人员在下风向厂界外设置多个大气监测点和废水监测点，使用环境监测设备对苯蒸气浓度和周边水体进行连续监测，及时向现场指挥部报告监测数据。",
+          "resources": [
+            {
+              "resource_type": "环境监测设备",
+              "quantity": 4
+            },
+            {
+              "resource_type": "无人机",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "环境监测",
+          "action_grounded": true
+        },
+        {
+          "step_id": 13,
+          "time": "08:22",
+          "role": "属地卫健委",
+          "action": "医疗救护",
+          "description": "属地卫健委组织急救力量到达现场，在临时医疗救护点对可能接触泄漏化学品的员工进行检伤分类和初步诊治，对一名出现头晕恶心症状的员工进行现场急救，并使用属地救护车转运至医院，避免与企业救护车资源冲突。",
+          "resources": [
+            {
+              "resource_type": "救护车",
+              "quantity": 2
+            },
+            {
+              "resource_type": "急救包",
+              "quantity": 5
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "医疗救护",
+          "action_grounded": true
+        },
+        {
+          "step_id": 14,
+          "time": "08:25",
+          "role": "企业应急处置组",
+          "action": "污染源切断",
+          "description": "企业应急处置组在消防掩护下，使用专用工具成功关闭T-102储罐底部法兰上游阀门，泄漏源被切断；随后使用防爆泵将围堰内泄漏液体转移至应急事故池，防止污染扩大。",
+          "resources": [
+            {
+              "resource_type": "防爆泵",
+              "quantity": 2
+            },
+            {
+              "resource_type": "运输车辆",
+              "quantity": 1
+            },
+            {
+              "resource_type": "防化装备",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "污染源切断",
+          "action_grounded": true
+        },
+        {
+          "step_id": 15,
+          "time": "08:30",
+          "role": "企业洗消组",
+          "action": "防化洗消",
+          "description": "企业洗消组在温区设置洗消通道，对从热区撤出的救援人员和被污染的装备进行洗消，洗消废水统一收集至应急事故池，防止二次污染。",
+          "resources": [
+            {
+              "resource_type": "洗消药剂",
+              "quantity": 10
+            },
+            {
+              "resource_type": "帐篷",
+              "quantity": 2
+            },
+            {
+              "resource_type": "防化装备",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "防化洗消",
+          "action_grounded": true
+        },
+        {
+          "step_id": 16,
+          "time": "08:35",
+          "role": "现场指挥部",
+          "action": "统一指挥",
+          "description": "现场指挥部召开第一次现场会商会，听取企业、消防、生态环境、卫健等部门情况汇报，研判泄漏处置进展和环境影响趋势，部署下一步泄漏物收集、环境监测和人员安置等工作，明确属地指挥部与企业指挥部的指挥关系。",
+          "resources": [
+            {
+              "resource_type": "应急指挥车",
+              "quantity": 1
+            },
+            {
+              "resource_type": "卫星电话",
+              "quantity": 1
+            },
+            {
+              "resource_type": "发电机",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "统一指挥",
+          "action_grounded": true
+        },
+        {
+          "step_id": 17,
+          "time": "08:40",
+          "role": "属地街道办事处",
+          "action": "周边疏散",
+          "description": "属地街道办事处根据现场指挥部指令和环保部门监测数据，组织厂区周边500米范围内居民进行有序疏散，引导居民前往临时安置点，并做好人员登记和情绪安抚工作。",
+          "resources": [
+            {
+              "resource_type": "运输车辆",
+              "quantity": 4
+            },
+            {
+              "resource_type": "扩音器",
+              "quantity": 3
+            },
+            {
+              "resource_type": "帐篷",
+              "quantity": 5
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "周边疏散",
+          "action_grounded": true
+        },
+        {
+          "step_id": 18,
+          "time": "08:45",
+          "role": "属地民政局",
+          "action": "安置救助",
+          "description": "属地民政局在临时安置点设置救助服务站，为疏散居民提供饮用水、食品、毛毯等基本生活物资，并安排工作人员做好登记和安抚工作。",
+          "resources": [
+            {
+              "resource_type": "帐篷",
+              "quantity": 5
+            },
+            {
+              "resource_type": "饮用水",
+              "quantity": 50
+            },
+            {
+              "resource_type": "食品",
+              "quantity": 100
+            },
+            {
+              "resource_type": "毛毯",
+              "quantity": 50
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "安置救助",
+          "action_grounded": true
+        },
+        {
+          "step_id": 19,
+          "time": "08:50",
+          "role": "企业应急指挥部",
+          "action": "信息通报",
+          "description": "企业应急指挥部通过厂区广播和短信平台向全体员工通报事故处置进展，告知泄漏源已切断、环境监测持续开展，要求员工保持冷静、服从指挥，不传谣不信谣。",
+          "resources": [
+            {
+              "resource_type": "广播系统",
+              "quantity": 1
+            },
+            {
+              "resource_type": "短信平台",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "信息通报",
+          "action_grounded": true
+        },
+        {
+          "step_id": 20,
+          "time": "08:55",
+          "role": "属地宣传部",
+          "action": "宣传引导",
+          "description": "属地宣传部通过官方微博、微信公众号等渠道发布事故信息通报，说明事故基本情况、已采取的措施和周边环境监测开展情况，回应社会关切，引导舆论客观理性。",
+          "resources": [
+            {
+              "resource_type": "计算机",
+              "quantity": 2
+            },
+            {
+              "resource_type": "照相机",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "宣传引导",
+          "action_grounded": true
+        },
+        {
+          "step_id": 21,
+          "time": "09:00",
+          "role": "属地生态环境局",
+          "action": "污染评估",
+          "description": "属地生态环境局根据连续监测数据，对事故周边大气、水体和土壤环境进行污染评估，编制环境监测报告，评估事故对周边环境的影响程度和范围。",
+          "resources": [
+            {
+              "resource_type": "环境监测设备",
+              "quantity": 4
+            },
+            {
+              "resource_type": "无人机",
+              "quantity": 1
+            },
+            {
+              "resource_type": "计算机",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "污染评估",
+          "action_grounded": true
+        },
+        {
+          "step_id": 22,
+          "time": "09:10",
+          "role": "企业应急处置组",
+          "action": "危害消除",
+          "description": "企业应急处置组使用吸附材料和中和药剂对罐区地面残留泄漏物进行彻底清理，清理产生的危险废物统一收集、分类贮存，交由有资质单位处置。",
+          "resources": [
+            {
+              "resource_type": "吸附材料",
+              "quantity": 20
+            },
+            {
+              "resource_type": "中和药剂",
+              "quantity": 10
+            },
+            {
+              "resource_type": "运输车辆",
+              "quantity": 2
+            },
+            {
+              "resource_type": "防化装备",
+              "quantity": 6
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "危害消除",
+          "action_grounded": true
+        },
+        {
+          "step_id": 23,
+          "time": "09:20",
+          "role": "企业设备抢修组",
+          "action": "设施抢修",
+          "description": "企业设备抢修组对T-102储罐泄漏法兰进行更换和紧固，对罐区相关管道、阀门和仪表进行全面检查维修，确保设备设施恢复正常安全状态。",
+          "resources": [
+            {
+              "resource_type": "维修工具",
+              "quantity": 4
+            },
+            {
+              "resource_type": "备用法兰",
+              "quantity": 2
+            },
+            {
+              "resource_type": "防化装备",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "设施抢修",
+          "action_grounded": true
+        },
+        {
+          "step_id": 24,
+          "time": "09:30",
+          "role": "属地生态环境局",
+          "action": "环境合格",
+          "description": "属地生态环境局对事故现场及周边大气、水体进行最终监测，确认苯蒸气浓度和废水指标均已降至安全限值以下，环境质量恢复正常，出具环境达标确认意见并报送现场指挥部。",
+          "resources": [
+            {
+              "resource_type": "环境监测设备",
+              "quantity": 4
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "环境合格",
+          "action_grounded": true
+        },
+        {
+          "step_id": 25,
+          "time": "09:35",
+          "role": "现场指挥部",
+          "action": "撤除警戒",
+          "description": "现场指挥部根据环境监测达标确认、卫健部门人员健康状况评估和现场处置完成情况，经属地政府批准后，下令撤除事故现场警戒，恢复厂区周边道路交通，组织疏散居民有序返回。",
+          "resources": [
+            {
+              "resource_type": "对讲机",
+              "quantity": 4
+            },
+            {
+              "resource_type": "扩音器",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "撤除警戒",
+          "action_grounded": true
+        },
+        {
+          "step_id": 26,
+          "time": "09:40",
+          "role": "现场指挥部",
+          "action": "响应终止",
+          "description": "现场指挥部确认泄漏源已切断、泄漏物已清理、环境监测达标、人员安置妥当且疏散居民已有序返回，宣布终止应急响应，转入后期处置和事故调查阶段。",
+          "resources": [
+            {
+              "resource_type": "卫星电话",
+              "quantity": 1
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "响应终止",
+          "action_grounded": true
+        },
+        {
+          "step_id": 27,
+          "time": "09:50",
+          "role": "企业善后工作组",
+          "action": "善后处置",
+          "description": "企业善后工作组组织开展善后处置工作，包括受伤人员救治和抚恤、周边居民安置补偿、事故现场清理和生态恢复，配合政府部门开展事故调查。",
+          "resources": [
+            {
+              "resource_type": "计算机",
+              "quantity": 2
+            },
+            {
+              "resource_type": "运输车辆",
+              "quantity": 2
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "善后处置",
+          "action_grounded": true
+        },
+        {
+          "step_id": 28,
+          "time": "10:00",
+          "role": "现场指挥部",
+          "action": "总结评估",
+          "description": "现场指挥部组织参演单位和专家召开演练总结评估会，对预警报警、应急响应、指挥协调、现场处置、环境监测、人员疏散等环节进行复盘评估，总结经验教训，提出预案修订和应急能力提升建议。",
+          "resources": [
+            {
+              "resource_type": "投影仪",
+              "quantity": 1
+            },
+            {
+              "resource_type": "计算机",
+              "quantity": 3
+            }
+          ],
+          "raw_text": "",
+          "action_raw": "总结评估",
+          "action_grounded": true
+        }
+      ]
+    }
+  }
+]

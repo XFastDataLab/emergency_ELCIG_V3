@@ -1,0 +1,223 @@
+{
+  "sample_id": "S3-B001",
+  "scenario": "S3",
+  "profile": "resource_overlap_boundary",
+  "variant": 0,
+  "mutations": [
+    "overlapping_occupation_with_different_start_times"
+  ],
+  "boundary_case": true,
+  "annotation_source": "人工设计的资源占用区间边界用例，标注先于检测生成",
+  "annotation_reason": "10:05至10:30两项任务同时占用挖掘机：4+4=8>6。",
+  "miss_reason": "并发检查只合并完全相同的开始时间字符串，不读取描述中的结束时间和占用时长，漏掉不同开始时间下的区间重叠。",
+  "script": {
+    "scenario_id": "S3",
+    "raw_text": "步骤1 | 08:00 | 气象/监测组 | 灾害预警 | 资源：无\n步骤2 | 08:03 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 08:06 | 工程抢险组 | 安全确认 | 资源：无\n步骤4 | 08:09 | 交通管制组 | 现场警戒 | 资源：无\n步骤5 | 08:12 | 应急指挥部 | 启动响应 | 资源：无\n步骤6 | 08:15 | 社区/基层 | 危险区排查 | 资源：无\n步骤7 | 08:18 | 交通管制组 | 交通管制 | 资源：无\n步骤8 | 08:21 | 市应急局 | 应急队伍集结 | 资源：无\n步骤9 | 08:24 | 区政府 | 人员疏散 | 资源：无\n步骤10 | 08:27 | 社区/基层 | 人员转移 | 资源：无\n步骤11 | 08:30 | 气象/监测组 | 隐患监测 | 资源：无\n步骤12 | 08:33 | 工程抢险组 | 现场处置 | 资源：无\n步骤13 | 08:36 | 工程抢险组 | 救援搜救 | 资源：无\n步骤14 | 08:39 | 环境监测组 | 环境监测 | 资源：无\n步骤15 | 08:42 | 医疗救护组 | 医疗救护 | 资源：无\n步骤16 | 10:00 | 工程抢险组 | 救援搜救 | A区任务从10:00至10:30连续独占挖掘机4台，期间不能调拨或共用。 | 资源：挖掘机×4\n步骤17 | 10:05 | 工程抢险组 | 救援搜救 | B区任务从10:05至10:35连续独占挖掘机4台，期间不能调拨或共用。 | 资源：挖掘机×4",
+    "steps": [
+      {
+        "step_id": 1,
+        "time": "08:00",
+        "role": "气象/监测组",
+        "action": "灾害预警",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 2,
+        "time": "08:03",
+        "role": "企业负责人",
+        "action": "事故上报",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 3,
+        "time": "08:06",
+        "role": "工程抢险组",
+        "action": "安全确认",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 4,
+        "time": "08:09",
+        "role": "交通管制组",
+        "action": "现场警戒",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 5,
+        "time": "08:12",
+        "role": "应急指挥部",
+        "action": "启动响应",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 6,
+        "time": "08:15",
+        "role": "社区/基层",
+        "action": "危险区排查",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 7,
+        "time": "08:18",
+        "role": "交通管制组",
+        "action": "交通管制",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 8,
+        "time": "08:21",
+        "role": "市应急局",
+        "action": "应急队伍集结",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 9,
+        "time": "08:24",
+        "role": "区政府",
+        "action": "人员疏散",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 10,
+        "time": "08:27",
+        "role": "社区/基层",
+        "action": "人员转移",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 11,
+        "time": "08:30",
+        "role": "气象/监测组",
+        "action": "隐患监测",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 12,
+        "time": "08:33",
+        "role": "工程抢险组",
+        "action": "现场处置",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 13,
+        "time": "08:36",
+        "role": "工程抢险组",
+        "action": "救援搜救",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 14,
+        "time": "08:39",
+        "role": "环境监测组",
+        "action": "环境监测",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 15,
+        "time": "08:42",
+        "role": "医疗救护组",
+        "action": "医疗救护",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 16,
+        "time": "10:00",
+        "role": "工程抢险组",
+        "action": "救援搜救",
+        "description": "A区任务从10:00至10:30连续独占挖掘机4台，期间不能调拨或共用。",
+        "resources": [
+          {
+            "resource_type": "挖掘机",
+            "quantity": 4
+          }
+        ],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 17,
+        "time": "10:05",
+        "role": "工程抢险组",
+        "action": "救援搜救",
+        "description": "B区任务从10:05至10:35连续独占挖掘机4台，期间不能调拨或共用。",
+        "resources": [
+          {
+            "resource_type": "挖掘机",
+            "quantity": 4
+          }
+        ],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      }
+    ]
+  },
+  "expected_errors": [
+    {
+      "error_type": "resource",
+      "step_id": 16,
+      "violated_rule": "资源并发:挖掘机<= 6"
+    }
+  ]
+}

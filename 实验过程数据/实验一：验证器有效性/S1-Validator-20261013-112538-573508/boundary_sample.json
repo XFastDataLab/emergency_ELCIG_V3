@@ -1,0 +1,179 @@
+{
+  "sample_id": "S1-B001",
+  "scenario": "S1",
+  "profile": "resource_boundary",
+  "variant": 0,
+  "mutations": [
+    "split_same_resource_in_one_step",
+    "omit_step_time"
+  ],
+  "annotation_source": "人工设计的资源聚合边界用例，标注在验证器运行前按总量计算",
+  "annotation_reason": "同一步骤消防车需求应合并：3+3=6>5，违反单任务资源上限。",
+  "miss_reason": "单任务检查未合并同类资源条目；时间为空的步骤又跳过并发聚合。",
+  "boundary_case": true,
+  "script": {
+    "scenario_id": "S1",
+    "raw_text": "步骤1 | 08:00 | 企业负责人 | 事故上报 | 资源：无\n步骤2 | （未指定时间） | 消防救援组 | 灭火处置 | 同一次灭火任务同时部署两支队伍：A区申请消防车3辆，B区另申请消防车3辆，两批独立追加、不能共用；合计6辆，现有库存5辆。未填写具体执行时间。 | 资源：消防车×3，消防车×3\n步骤3 | 08:06 | 交通管制组 | 现场警戒 | 资源：无\n步骤4 | 08:09 | 企业负责人 | 信息通报 | 资源：无\n步骤5 | 08:12 | 应急指挥部 | 启动响应 | 资源：无\n步骤6 | 08:15 | 防化处置组 | 污染源切断 | 资源：无\n步骤7 | 08:18 | 应急指挥部 | 资源调配 | 资源：无\n步骤8 | 08:21 | 防化处置组 | 泄漏控制 | 资源：无\n步骤9 | 08:24 | 疏散引导组 | 人员疏散 | 资源：无\n步骤10 | 08:27 | 市应急局 | 应急队伍集结 | 资源：无\n步骤11 | 08:30 | 防化处置组 | 防化洗消 | 资源：无\n步骤12 | 08:33 | 工程抢险组 | 现场处置 | 资源：无\n步骤13 | 08:36 | 环境监测组 | 环境监测 | 资源：无",
+    "steps": [
+      {
+        "step_id": 1,
+        "time": "08:00",
+        "role": "企业负责人",
+        "action": "事故上报",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 2,
+        "time": null,
+        "role": "消防救援组",
+        "action": "灭火处置",
+        "description": "同一次灭火任务同时部署两支队伍：A区申请消防车3辆，B区另申请消防车3辆，两批独立追加、不能共用；合计6辆，现有库存5辆。未填写具体执行时间。",
+        "resources": [
+          {
+            "resource_type": "消防车",
+            "quantity": 3
+          },
+          {
+            "resource_type": "消防车",
+            "quantity": 3
+          }
+        ],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 3,
+        "time": "08:06",
+        "role": "交通管制组",
+        "action": "现场警戒",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 4,
+        "time": "08:09",
+        "role": "企业负责人",
+        "action": "信息通报",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 5,
+        "time": "08:12",
+        "role": "应急指挥部",
+        "action": "启动响应",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 6,
+        "time": "08:15",
+        "role": "防化处置组",
+        "action": "污染源切断",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 7,
+        "time": "08:18",
+        "role": "应急指挥部",
+        "action": "资源调配",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 8,
+        "time": "08:21",
+        "role": "防化处置组",
+        "action": "泄漏控制",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 9,
+        "time": "08:24",
+        "role": "疏散引导组",
+        "action": "人员疏散",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 10,
+        "time": "08:27",
+        "role": "市应急局",
+        "action": "应急队伍集结",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 11,
+        "time": "08:30",
+        "role": "防化处置组",
+        "action": "防化洗消",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 12,
+        "time": "08:33",
+        "role": "工程抢险组",
+        "action": "现场处置",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      },
+      {
+        "step_id": 13,
+        "time": "08:36",
+        "role": "环境监测组",
+        "action": "环境监测",
+        "description": "",
+        "resources": [],
+        "raw_text": "",
+        "action_raw": "",
+        "action_grounded": true
+      }
+    ]
+  },
+  "expected_errors": [
+    {
+      "error_type": "resource",
+      "step_id": 2,
+      "violated_rule": "资源:消防车<= 5"
+    }
+  ]
+}

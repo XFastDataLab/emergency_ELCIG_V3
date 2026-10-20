@@ -1,0 +1,656 @@
+{
+  "method": "RAG-LLM",
+  "method_key": "RAG",
+  "scenario": "S2",
+  "scenario_name": "台风灾害",
+  "repeat": 1,
+  "use_rag": true,
+  "use_validator": false,
+  "initial_errors": 5,
+  "final_errors": 5,
+  "err": 0.0,
+  "eredr": 0.0,
+  "eredr_defined": true,
+  "csr": 0.9342,
+  "total_final": 76,
+  "satisfied": 71,
+  "iterations": 0,
+  "error_curve": [
+    5
+  ],
+  "detected_error_curve": [
+    5
+  ],
+  "history": [
+    {
+      "iteration": 0,
+      "error_count": 5,
+      "deferred_error_count": 0,
+      "pending_error_count": 5,
+      "error_types": {
+        "temporal": 0,
+        "responsibility": 0,
+        "resource": 5
+      },
+      "hint_count": 2,
+      "total_constraints": 76,
+      "satisfied_constraints": 71,
+      "csr": 0.9342,
+      "errors": [
+        {
+          "error_type": "temporal_hint",
+          "error_type_cn": "temporal_hint",
+          "step_id": 3,
+          "location": "动作'启动响应'（步骤3）",
+          "description": "提示：前置动作'事故上报'未在脚本中出现。偏序模式下允许省略该中间环节，仅作提示、不计入错误。",
+          "violated_rule": "时序:事故上报→启动响应",
+          "severity": 1
+        },
+        {
+          "error_type": "temporal_hint",
+          "error_type_cn": "temporal_hint",
+          "step_id": 18,
+          "location": "动作'安置救助'（步骤18）",
+          "description": "提示：前置动作'人员疏散'未在脚本中出现。偏序模式下允许省略该中间环节，仅作提示、不计入错误。",
+          "violated_rule": "时序:人员疏散→安置救助",
+          "severity": 1
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 17,
+          "location": "步骤17 资源'帐篷'",
+          "description": "单任务资源超配：需求 50 > 可用 30。",
+          "violated_rule": "资源:帐篷<= 30",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 20,
+          "location": "步骤20 资源'发电机'",
+          "description": "单任务资源超配：需求 10 > 可用 6。",
+          "violated_rule": "资源:发电机<= 6",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 21,
+          "location": "步骤21 资源'排水泵'",
+          "description": "单任务资源超配：需求 10 > 可用 8。",
+          "violated_rule": "资源:排水泵<= 8",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 27,
+          "location": "步骤27 资源'发电机'",
+          "description": "单任务资源超配：需求 10 > 可用 6。",
+          "violated_rule": "资源:发电机<= 6",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 29,
+          "location": "步骤29 资源'救护车'",
+          "description": "单任务资源超配：需求 5 > 可用 3。",
+          "violated_rule": "资源:救护车<= 3",
+          "severity": 2
+        }
+      ],
+      "script": {
+        "scenario_id": "S2",
+        "raw_text": "步骤1 | （未指定时间） | 市气象局 | 台风预警 | 密切监视热带气旋发展动态，发布台风预警信息，及时向市防指和各成员单位通报预报信息，做好发布台风预警准备。 | 资源：无\n步骤2 | （未指定时间） | 应急指挥部 | 会商研判 | 组织气象、水利、海洋、资源规划等部门进行会商研判，分析台风发展趋势及可能影响，决定启动防台风应急响应级别。 | 资源：无\n步骤3 | （未指定时间） | 应急指挥部 | 启动响应 | 根据会商研判结果，启动防台风应急响应，成立现场指挥部，统一指挥协调各成员单位开展防御工作。 | 资源：无\n步骤4 | （未指定时间） | 市海洋局 | 船只回港 | 统计出海渔船与人员数量，向厦门籍海上作业渔船发布台风预警信息，与渔船上的人员保持联系，提醒做好防台风工作，督促所有船只回港避风。 | 资源：无\n步骤5 | （未指定时间） | 厦门海事局 | 船员上岸 | 加强对所辖海域内船舶或其相关方播发台风信息和预警，加强船舶动态监控，组织船员上岸避险。 | 资源：无\n步骤6 | （未指定时间） | 厦门港口局 | 船舶停航 | 向所辖港口码头、渡口发布台风预警信息，督促做好防台风工作，落实船舶停航措施。 | 资源：无\n步骤7 | （未指定时间） | 市海洋局 | 海上管控 | 加强海上作业管控，禁止一切海上活动，确保所有船只和人员撤离上岸。 | 资源：无\n步骤8 | （未指定时间） | 市文旅局 | 景区关闭 | 发布台风预警信息，关闭沿海景区、景点，疏散游客，确保人员安全。 | 资源：无\n步骤9 | （未指定时间） | 市教育局 | 停课指令 | 发布停课指令，通知全市学校、幼儿园停课，确保学生安全。 | 资源：无\n步骤10 | （未指定时间） | 市教育局 | 学校停课 | 督促各学校落实停课措施，做好留校学生安全管理。 | 资源：无\n步骤11 | （未指定时间） | 市建设局 | 工地停工 | 向全市房屋建筑和市政基础设施工程在建工地、物业小区发布台风预警和防御工作要求，督促所有在建工地停工，落实度汛安全防护措施。 | 资源：无\n步骤12 | （未指定时间） | 市交通局 | 公交停运 | 根据台风影响情况，适时停运公交线路，确保运营安全。 | 资源：无\n步骤13 | （未指定时间） | 市交警支队 | 交通管制 | 做好交通易涝点预判，对沿海道路、桥梁、隧道等实施交通管制，做好应急处置准备。 | 资源：无\n步骤14 | （未指定时间） | 市交通局 | 桥梁关闭 | 加强管辖道路、大桥、隧道、BRT、地铁、高架等重点部位巡查，根据台风影响适时关闭桥梁。 | 资源：无\n步骤15 | （未指定时间） | 区政府 | 人员转移 | 组织沿海区域、低洼地带、地质灾害隐患点等危险区域人员转移，确保应转尽转。 | 资源：无\n步骤16 | （未指定时间） | 社区/基层 | 人员转移 | 组织社区工作人员引导群众有序转移至安全区域。 | 资源：无\n步骤17 | （未指定时间） | 市应急局 | 安置点开放 | 开放避灾安置点，做好安置人员登记、食宿保障和安全管理。 | 资源：帐篷×50，急救包×20\n步骤18 | （未指定时间） | 区政府 | 安置救助 | 做好转移人员的安置救助工作，提供基本生活保障，确保受灾群众有饭吃、有水喝、有住处。 | 资源：无\n步骤19 | （未指定时间） | 市应急局 | 应急队伍集结 | 集结各类应急抢险救援队伍，做好装备、物资准备，随时投入抢险救援。 | 资源：无\n步骤20 | （未指定时间） | 市应急局 | 资源调配 | 调配冲锋舟、发电机、排水泵、卫星电话等应急物资，确保抢险救援需要。 | 资源：冲锋舟×5，发电机×10，排水泵×8，卫星电话×5\n步骤21 | （未指定时间） | 市市政园林局 | 排涝作业 | 组织排水队伍和排水泵等设备，对城市易涝点、低洼地带开展排涝作业。 | 资源：排水泵×10，抢修车辆×5\n步骤22 | （未指定时间） | 市水利局 | 水库调度 | 做好水库防洪调度准备工作，指导督促在建水利工程落实度汛安全防护措施。 | 资源：无\n步骤23 | （未指定时间） | 市资源规划局 | 隐患监测 | 指导、督促地质灾害隐患排查，做好防御准备，加强地质灾害隐患点监测。 | 资源：无\n步骤24 | （未指定时间） | 区政府 | 险情巡查 | 组织对沿海区域、低洼地带、地质灾害隐患点、危旧房屋等开展险情巡查，发现险情及时处置并报告。 | 资源：无人机×2\n步骤25 | （未指定时间） | 市消防救援支队 | 险情处置 | 对巡查发现或群众报告的险情进行应急处置，排除安全隐患。 | 资源：消防车×3\n步骤26 | （未指定时间） | 市市政园林局 | 设施抢修 | 组织抢修队伍对受损的供水、供气、道路等市政设施进行抢修，尽快恢复城市运行。 | 资源：挖掘机×2，抢修车辆×5，吊装设备×2\n步骤27 | （未指定时间） | 国网厦门供电公司 | 电力保障 | 组织电力抢修队伍，保障重要用户和居民基本用电，尽快修复受损电力设施。 | 资源：发电机×10，抢修车辆×5\n步骤28 | （未指定时间） | 市通信管理局 | 通信保障 | 组织通信运营商保障通信畅通，修复受损通信设施，确保应急指挥通信需要。 | 资源：卫星电话×10\n步骤29 | （未指定时间） | 市卫健委 | 医疗救护 | 组织医疗队赴一线开展医疗救助，做好伤员救治和转运工作。 | 资源：救护车×5，急救包×30\n步骤30 | （未指定时间） | 市卫健委 | 卫生防疫 | 组织防疫消杀队伍，做好灾后卫生防疫工作，防止疫情发生。 | 资源：无\n步骤31 | （未指定时间） | 市公安局 | 治安维护 | 加强灾区治安巡逻，维护社会秩序，保障抢险救灾工作顺利进行。 | 资源：无\n步骤32 | （未指定时间） | 市委宣传部 | 宣传引导 | 组织新闻媒体加大宣传力度，及时发布台风预警信息和防御指引，做好抢险救灾宣传工作。 | 资源：无\n步骤33 | （未指定时间） | 市委网信办 | 舆情管控 | 加强网络舆情监测和管控，及时回应社会关切，防止谣言传播。 | 资源：无\n步骤34 | （未指定时间） | 市应急局 | 灾情统计 | 收集、统计、核实灾情信息，及时上报市防指和上级部门。 | 资源：无\n步骤35 | （未指定时间） | 市气象局 | 影响解除 | 发布台风影响解除信息，确认台风警报解除。 | 资源：无\n步骤36 | （未指定时间） | 应急指挥部 | 响应终止 | 根据台风影响情况和会商研判结果，宣布终止防台风应急响应。 | 资源：无\n步骤37 | （未指定时间） | 区政府 | 灾情稳定 | 组织开展灾后恢复重建工作，确保灾区社会稳定。 | 资源：无\n步骤38 | （未指定时间） | 市应急局 | 灾损评估 | 组织对灾害损失进行全面评估，为灾后恢复重建提供依据。 | 资源：无\n步骤39 | （未指定时间） | 区政府 | 复工复课 | 组织恢复正常生产生活秩序，学校复课，企业复工复业。 | 资源：无\n步骤40 | （未指定时间） | 市海洋局 | 渔船出港 | 根据台风影响解除情况，通知渔船可以出港恢复生产作业。 | 资源：无",
+        "steps": [
+          {
+            "step_id": 1,
+            "time": null,
+            "role": "市气象局",
+            "action": "台风预警",
+            "description": "密切监视热带气旋发展动态，发布台风预警信息，及时向市防指和各成员单位通报预报信息，做好发布台风预警准备。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "台风预警",
+            "action_grounded": true
+          },
+          {
+            "step_id": 2,
+            "time": null,
+            "role": "应急指挥部",
+            "action": "会商研判",
+            "description": "组织气象、水利、海洋、资源规划等部门进行会商研判，分析台风发展趋势及可能影响，决定启动防台风应急响应级别。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "会商研判",
+            "action_grounded": true
+          },
+          {
+            "step_id": 3,
+            "time": null,
+            "role": "应急指挥部",
+            "action": "启动响应",
+            "description": "根据会商研判结果，启动防台风应急响应，成立现场指挥部，统一指挥协调各成员单位开展防御工作。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "启动响应",
+            "action_grounded": true
+          },
+          {
+            "step_id": 4,
+            "time": null,
+            "role": "市海洋局",
+            "action": "船只回港",
+            "description": "统计出海渔船与人员数量，向厦门籍海上作业渔船发布台风预警信息，与渔船上的人员保持联系，提醒做好防台风工作，督促所有船只回港避风。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "船只回港",
+            "action_grounded": true
+          },
+          {
+            "step_id": 5,
+            "time": null,
+            "role": "厦门海事局",
+            "action": "船员上岸",
+            "description": "加强对所辖海域内船舶或其相关方播发台风信息和预警，加强船舶动态监控，组织船员上岸避险。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "船员上岸",
+            "action_grounded": true
+          },
+          {
+            "step_id": 6,
+            "time": null,
+            "role": "厦门港口局",
+            "action": "船舶停航",
+            "description": "向所辖港口码头、渡口发布台风预警信息，督促做好防台风工作，落实船舶停航措施。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "船舶停航",
+            "action_grounded": true
+          },
+          {
+            "step_id": 7,
+            "time": null,
+            "role": "市海洋局",
+            "action": "海上管控",
+            "description": "加强海上作业管控，禁止一切海上活动，确保所有船只和人员撤离上岸。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "海上管控",
+            "action_grounded": true
+          },
+          {
+            "step_id": 8,
+            "time": null,
+            "role": "市文旅局",
+            "action": "景区关闭",
+            "description": "发布台风预警信息，关闭沿海景区、景点，疏散游客，确保人员安全。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "景区关闭",
+            "action_grounded": true
+          },
+          {
+            "step_id": 9,
+            "time": null,
+            "role": "市教育局",
+            "action": "停课指令",
+            "description": "发布停课指令，通知全市学校、幼儿园停课，确保学生安全。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "停课指令",
+            "action_grounded": true
+          },
+          {
+            "step_id": 10,
+            "time": null,
+            "role": "市教育局",
+            "action": "学校停课",
+            "description": "督促各学校落实停课措施，做好留校学生安全管理。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "学校停课",
+            "action_grounded": true
+          },
+          {
+            "step_id": 11,
+            "time": null,
+            "role": "市建设局",
+            "action": "工地停工",
+            "description": "向全市房屋建筑和市政基础设施工程在建工地、物业小区发布台风预警和防御工作要求，督促所有在建工地停工，落实度汛安全防护措施。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "工地停工",
+            "action_grounded": true
+          },
+          {
+            "step_id": 12,
+            "time": null,
+            "role": "市交通局",
+            "action": "公交停运",
+            "description": "根据台风影响情况，适时停运公交线路，确保运营安全。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "公交停运",
+            "action_grounded": true
+          },
+          {
+            "step_id": 13,
+            "time": null,
+            "role": "市交警支队",
+            "action": "交通管制",
+            "description": "做好交通易涝点预判，对沿海道路、桥梁、隧道等实施交通管制，做好应急处置准备。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "交通管制",
+            "action_grounded": true
+          },
+          {
+            "step_id": 14,
+            "time": null,
+            "role": "市交通局",
+            "action": "桥梁关闭",
+            "description": "加强管辖道路、大桥、隧道、BRT、地铁、高架等重点部位巡查，根据台风影响适时关闭桥梁。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "桥梁关闭",
+            "action_grounded": true
+          },
+          {
+            "step_id": 15,
+            "time": null,
+            "role": "区政府",
+            "action": "人员转移",
+            "description": "组织沿海区域、低洼地带、地质灾害隐患点等危险区域人员转移，确保应转尽转。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "人员转移",
+            "action_grounded": true
+          },
+          {
+            "step_id": 16,
+            "time": null,
+            "role": "社区/基层",
+            "action": "人员转移",
+            "description": "组织社区工作人员引导群众有序转移至安全区域。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "人员转移引导",
+            "action_grounded": true
+          },
+          {
+            "step_id": 17,
+            "time": null,
+            "role": "市应急局",
+            "action": "安置点开放",
+            "description": "开放避灾安置点，做好安置人员登记、食宿保障和安全管理。",
+            "resources": [
+              {
+                "resource_type": "帐篷",
+                "quantity": 50
+              },
+              {
+                "resource_type": "急救包",
+                "quantity": 20
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "安置点开放",
+            "action_grounded": true
+          },
+          {
+            "step_id": 18,
+            "time": null,
+            "role": "区政府",
+            "action": "安置救助",
+            "description": "做好转移人员的安置救助工作，提供基本生活保障，确保受灾群众有饭吃、有水喝、有住处。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "安置救助",
+            "action_grounded": true
+          },
+          {
+            "step_id": 19,
+            "time": null,
+            "role": "市应急局",
+            "action": "应急队伍集结",
+            "description": "集结各类应急抢险救援队伍，做好装备、物资准备，随时投入抢险救援。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "应急队伍集结",
+            "action_grounded": true
+          },
+          {
+            "step_id": 20,
+            "time": null,
+            "role": "市应急局",
+            "action": "资源调配",
+            "description": "调配冲锋舟、发电机、排水泵、卫星电话等应急物资，确保抢险救援需要。",
+            "resources": [
+              {
+                "resource_type": "冲锋舟",
+                "quantity": 5
+              },
+              {
+                "resource_type": "发电机",
+                "quantity": 10
+              },
+              {
+                "resource_type": "排水泵",
+                "quantity": 8
+              },
+              {
+                "resource_type": "卫星电话",
+                "quantity": 5
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "资源调配",
+            "action_grounded": true
+          },
+          {
+            "step_id": 21,
+            "time": null,
+            "role": "市市政园林局",
+            "action": "排涝作业",
+            "description": "组织排水队伍和排水泵等设备，对城市易涝点、低洼地带开展排涝作业。",
+            "resources": [
+              {
+                "resource_type": "排水泵",
+                "quantity": 10
+              },
+              {
+                "resource_type": "抢修车辆",
+                "quantity": 5
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "排涝作业",
+            "action_grounded": true
+          },
+          {
+            "step_id": 22,
+            "time": null,
+            "role": "市水利局",
+            "action": "水库调度",
+            "description": "做好水库防洪调度准备工作，指导督促在建水利工程落实度汛安全防护措施。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "水库调度",
+            "action_grounded": true
+          },
+          {
+            "step_id": 23,
+            "time": null,
+            "role": "市资源规划局",
+            "action": "隐患监测",
+            "description": "指导、督促地质灾害隐患排查，做好防御准备，加强地质灾害隐患点监测。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "隐患监测",
+            "action_grounded": true
+          },
+          {
+            "step_id": 24,
+            "time": null,
+            "role": "区政府",
+            "action": "险情巡查",
+            "description": "组织对沿海区域、低洼地带、地质灾害隐患点、危旧房屋等开展险情巡查，发现险情及时处置并报告。",
+            "resources": [
+              {
+                "resource_type": "无人机",
+                "quantity": 2
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "险情巡查",
+            "action_grounded": true
+          },
+          {
+            "step_id": 25,
+            "time": null,
+            "role": "市消防救援支队",
+            "action": "险情处置",
+            "description": "对巡查发现或群众报告的险情进行应急处置，排除安全隐患。",
+            "resources": [
+              {
+                "resource_type": "消防车",
+                "quantity": 3
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "险情处置",
+            "action_grounded": true
+          },
+          {
+            "step_id": 26,
+            "time": null,
+            "role": "市市政园林局",
+            "action": "设施抢修",
+            "description": "组织抢修队伍对受损的供水、供气、道路等市政设施进行抢修，尽快恢复城市运行。",
+            "resources": [
+              {
+                "resource_type": "挖掘机",
+                "quantity": 2
+              },
+              {
+                "resource_type": "抢修车辆",
+                "quantity": 5
+              },
+              {
+                "resource_type": "吊装设备",
+                "quantity": 2
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "设施抢修",
+            "action_grounded": true
+          },
+          {
+            "step_id": 27,
+            "time": null,
+            "role": "国网厦门供电公司",
+            "action": "电力保障",
+            "description": "组织电力抢修队伍，保障重要用户和居民基本用电，尽快修复受损电力设施。",
+            "resources": [
+              {
+                "resource_type": "发电机",
+                "quantity": 10
+              },
+              {
+                "resource_type": "抢修车辆",
+                "quantity": 5
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "电力保障",
+            "action_grounded": true
+          },
+          {
+            "step_id": 28,
+            "time": null,
+            "role": "市通信管理局",
+            "action": "通信保障",
+            "description": "组织通信运营商保障通信畅通，修复受损通信设施，确保应急指挥通信需要。",
+            "resources": [
+              {
+                "resource_type": "卫星电话",
+                "quantity": 10
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "通信保障",
+            "action_grounded": true
+          },
+          {
+            "step_id": 29,
+            "time": null,
+            "role": "市卫健委",
+            "action": "医疗救护",
+            "description": "组织医疗队赴一线开展医疗救助，做好伤员救治和转运工作。",
+            "resources": [
+              {
+                "resource_type": "救护车",
+                "quantity": 5
+              },
+              {
+                "resource_type": "急救包",
+                "quantity": 30
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "医疗救护",
+            "action_grounded": true
+          },
+          {
+            "step_id": 30,
+            "time": null,
+            "role": "市卫健委",
+            "action": "卫生防疫",
+            "description": "组织防疫消杀队伍，做好灾后卫生防疫工作，防止疫情发生。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "卫生防疫",
+            "action_grounded": true
+          },
+          {
+            "step_id": 31,
+            "time": null,
+            "role": "市公安局",
+            "action": "治安维护",
+            "description": "加强灾区治安巡逻，维护社会秩序，保障抢险救灾工作顺利进行。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "治安维护",
+            "action_grounded": true
+          },
+          {
+            "step_id": 32,
+            "time": null,
+            "role": "市委宣传部",
+            "action": "宣传引导",
+            "description": "组织新闻媒体加大宣传力度，及时发布台风预警信息和防御指引，做好抢险救灾宣传工作。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "宣传引导",
+            "action_grounded": true
+          },
+          {
+            "step_id": 33,
+            "time": null,
+            "role": "市委网信办",
+            "action": "舆情管控",
+            "description": "加强网络舆情监测和管控，及时回应社会关切，防止谣言传播。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "舆情管控",
+            "action_grounded": true
+          },
+          {
+            "step_id": 34,
+            "time": null,
+            "role": "市应急局",
+            "action": "灾情统计",
+            "description": "收集、统计、核实灾情信息，及时上报市防指和上级部门。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "灾情统计",
+            "action_grounded": true
+          },
+          {
+            "step_id": 35,
+            "time": null,
+            "role": "市气象局",
+            "action": "影响解除",
+            "description": "发布台风影响解除信息，确认台风警报解除。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "影响解除",
+            "action_grounded": true
+          },
+          {
+            "step_id": 36,
+            "time": null,
+            "role": "应急指挥部",
+            "action": "响应终止",
+            "description": "根据台风影响情况和会商研判结果，宣布终止防台风应急响应。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "响应终止",
+            "action_grounded": true
+          },
+          {
+            "step_id": 37,
+            "time": null,
+            "role": "区政府",
+            "action": "灾情稳定",
+            "description": "组织开展灾后恢复重建工作，确保灾区社会稳定。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "灾情稳定",
+            "action_grounded": true
+          },
+          {
+            "step_id": 38,
+            "time": null,
+            "role": "市应急局",
+            "action": "灾损评估",
+            "description": "组织对灾害损失进行全面评估，为灾后恢复重建提供依据。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "灾损评估",
+            "action_grounded": true
+          },
+          {
+            "step_id": 39,
+            "time": null,
+            "role": "区政府",
+            "action": "复工复课",
+            "description": "组织恢复正常生产生活秩序，学校复课，企业复工复业。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "复工复课",
+            "action_grounded": true
+          },
+          {
+            "step_id": 40,
+            "time": null,
+            "role": "市海洋局",
+            "action": "渔船出港",
+            "description": "根据台风影响解除情况，通知渔船可以出港恢复生产作业。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "渔船出港",
+            "action_grounded": true
+          }
+        ]
+      }
+    }
+  ],
+  "knowledge": "【参考｜3.厦门市防汛防台风应急预案.pdf】\n公厅、市政府办公厅联合发文通知全市相关单位取消休假，投入\n\n到防台抗台救灾工作中。\n\n7.4 Ⅰ级应急响应\n\n启动条件：\n\n（1）市气象局发布台风Ⅰ级预警，经会商研判强台风及以上\n\n等级的热带气旋将影响或登陆我市，需要启动Ⅰ级应急响应。\n\n（2）其他需要启动Ⅰ级应急响应的情况。\n\n— 64 —\n\n\f7.4.1 强台风影响\n\n指挥与协调：\n\n（1）总指挥：到市防指坐镇指挥，加强工作部署和防御调度。\n\n（2）第一副总指挥，市政府办、应急、气象部门副总指挥：\n\n到市防指协助总指挥开展工作。\n\n（3）市防指工作组：各工作组密切配合，加强各项防御工作\n\n协同联动。\n\n（4）各区各成员单位：各区安排一名党政主要领导或区防指\n\n总指挥进驻区防指值守指挥。各级责任人全部上岗到位，全面落\n\n实各项防御措施，发现灾险情及时处理并报告。市防指各成员单\n\n【参考｜3.厦门市防汛防台风应急预案.pdf】\n局、市建设局、市交通局、市水利局、市文旅局、市应急局、市\n\n海洋局、市市政园林局、厦门港口局、市执法局、厦门海事局等\n\n相关成员单位加强值班，密切关注台风发展趋势，随时准备做好\n\n进一步防范应对工作。\n\n台风应急响应期间，防御暴雨的措施同步参照本预案第 6 条\n\n暴雨灾害应急响应措施执行，防御暴雨应急响应等级更高时，同\n\n时启动防御暴雨应急响应。根据台风发展变化情况，市防指适时\n\n调整防御台风应急响应级别和管制措施，各主管部门相应调整相\n\n关管制措施，同时报市防指。\n\n— 51 —\n\n\f防御台风应急响应全市各区统一启动、调整和结束。\n\n7.1 Ⅳ级应急响应\n\n启动条件：\n\n（1）市气象局发布台风Ⅳ级预警，经会商研判热带气旋将影\n\n响我市，需要启动Ⅳ级应急响应。\n\n（2）其他需要启动Ⅳ级应急响应的情况。\n\n指挥与协调：\n\n【参考｜3.厦门市防汛防台风应急预案.pdf】\n门负责。各区各成员单位把工作重点转入救灾恢复重建工作，做\n\n— 50 —\n\n\f好灾民安置、救助，组织医疗队赴一线开展医疗救助和防疫消杀，\n\n尽快修复灾区水、电、气、通讯、道路等基础设施，尽快恢复生\n\n产、生活秩序。\n\n（5）灾情稳定后，市减灾委组织对灾害损失进行全面评估，\n\n相关部门做好灾后人员救助和安置工作。\n\n（6）市委宣传部组织新闻媒体加大宣传力度，做好抢险救灾\n\n宣传工作。\n\n7 台风灾害应急响应\n\n市气象局发布重要天气预警报告我国附近洋面有热带气旋\n\n或台风生成，经会商暂不启动防御台风应急响应期间，市气象局\n\n加强气象监测预报，及时向市防指和各成员单位通报预报信息，\n\n做好发布台风预警准备。市、区防汛办及市公安局、市资源规划\n\n局、市建设局、市交通局、市水利局、市文旅局、市应急局、市\n\n海洋局、市市政园林局、厦门港口局、市执法局、厦门海事局等\n\n【参考｜3.厦门市防汛防台风应急预案.pdf】\n岗指挥。各区各成员单位及时核实、更新防御工作动态和受灾情\n\n况。\n\n响应行动：\n\n在强台风防御工作基础上，进一步做好以下工作：\n\n（1）市防指提请市委或市政府主要领导召开各成员单位主\n\n要领导和专家以及各区参加的会商部署会，研究部署防御工作。\n\n— 67 —\n\n\f（2）市防指发出防御超强台风的通知，研究宣布进入紧急防\n\n汛期、发布“三停一休”动员令，号召全社会做好防汛救灾工作。\n\n（3）市气象局每隔 1 小时作出台风预测预报，及时作出台\n\n风可能登陆地点、时间、移动路径、风雨量级和风险等级的预报，\n\n厦门海洋环境预报台加密海洋灾害的监测预警，每隔 1 小时作出\n\n风暴潮预测预报、通报实测潮位，市水文局及时作出山洪灾害预\n\n测预报，并报市委办公厅、市政府办公厅、市防汛办。\n\n（4）市防指提请市委、市政府主要领导安排市领导分赴基层\n\n指导督促防台风工作。\n\n【参考｜3.厦门市防汛防台风应急预案.pdf】\n（5）市海洋局统计出海渔船与人员数量，向厦门籍海上作业\n\n渔船发布台风预警信息，与渔船上的人员保持联系，提醒做好防\n\n— 53 —\n\n\f台风工作。\n\n（6）厦门港口局向所辖港口码头、渡口发布台风预警信息，\n\n督促做好防台风工作。\n\n（7）厦门海事局加强对所辖海域内船舶或其相关方播发台\n\n风信息和预警，加强船舶动态监控。\n\n（8）市公安局交警支队做好交通易涝点预判，做好应急处置\n\n准备。\n\n（9）市资源规划局指导、督促地质灾害隐患排查，做好防御\n\n准备。\n\n（10）市建设局向全市房屋建筑和市政基础设施工程在建工\n\n地、物业小区发布台风预警和防御工作要求。\n\n（11）市交通局加强管辖道路、大桥、隧道、BRT、地铁、高\n\n架等重点部位巡查。\n\n（12）市水利局做好水库防洪调度准备工作，指导督促在建\n\n水利工程落实度汛安全防护措施。",
+  "draft_id": "S2-RAG-LLM-1014-1638-shared_RAG_draft",
+  "draft_hash": "b0d10bde3dba39ce0365bd30c161e83fa1d878826c505774e77b9e8402c5d1cd",
+  "shared_source_dir": "D:\\czb\\work\\标准化建设\\code\\emergency_ELCIG_V3\\output\\S2-RAG-LLM-1014-1638\\shared_RAG_draft",
+  "output_dir": "D:\\czb\\work\\标准化建设\\code\\emergency_ELCIG_V3\\output\\S2-RAG-LLM-1014-1638",
+  "shared_draft_copy": "D:\\czb\\work\\标准化建设\\code\\emergency_ELCIG_V3\\output\\S2-RAG-LLM-1014-1638\\shared_RAG_draft",
+  "zero_error_success": false,
+  "initial_steps": 40,
+  "final_steps": 40,
+  "generation_seconds": 20.338521599769592,
+  "generation_cost": {
+    "llm_calls": 1,
+    "llm_seconds": 19.10705770039931,
+    "response_characters": 8228
+  },
+  "refinement_seconds": 0.0038711000233888626,
+  "initial_action_retention": 1.0,
+  "end_to_end_seconds": 20.34239269979298,
+  "refinement_cost": {
+    "llm_calls": 0,
+    "llm_seconds": 0,
+    "response_characters": 0
+  }
+}

@@ -1,0 +1,66 @@
+# =====================================================================
+# 应急脚本迭代生成（ELCIG）实验配置
+# 论文：面向执行逻辑自洽的应急演练脚本迭代生成方法
+# 消融实验的两个核心开关：use_rag / use_validator
+# =====================================================================
+
+experiment:
+  scenarios: [S1, S2, S3]   # S1 危化品泄漏 / S2 台风灾害 / S3 地质灾害
+  max_iterations: 5         # 最大迭代轮次 T_max
+  save_intermediate: true   # 是否保存每轮脚本
+  validator_target_errors: 10  # 验证器有效性实验注入的已知错误数下限（>=8 更有说服力；可用 --errors N 覆盖）
+
+# ---- 消融开关 1：是否使用 RAG 外部知识库（WeKnora）----
+rag:
+  use_rag: true
+  provider: weknora
+  base_url: "http://113.46.176.252:8580/api/v1"   # WeKnora 服务地址（/api/v1 已含）
+  api_key: "${WEKNORA_API_KEY}"              # 从环境变量读取，见 .env.example
+  knowledge_base_id: "2802451b-a15e-412c-9fb2-c0b103efaea8"           # 目标知识库 ID（也可填 knowledge_base_ids 列表）
+  knowledge_base_ids: []                     # 若需跨库检索，填此项（与 knowledge_base_id 二选一）
+  top_k: 5                                   # 每条查询召回条数
+  max_context_chunks: 12                     # 多路检索合并后的最大片段数（防止上下文过长）
+  resource_urls: "handle"                    # handle(默认) / public
+
+# ---- 消融开关 2：是否使用规则验证器（符号约束引擎）----
+validator:
+  use_validator: true
+  # 职责校验严格度：
+  #   responsibility_strict: false（默认）-> 白名单之外、且非明确矛盾的组合仅提示，不计入硬错误（防误报）
+  #   responsibility_strict: true         -> 白名单之外一律判职责错配（论文基线 / 消融对照，保留原行为）
+  responsibility_strict: true
+  # 时序校验严格度：
+  #   temporal_strict: false（默认）-> 偏序宽容模式：仅校验「在场步骤」的先后；某中间前置缺失仅提示，
+  #       不计入硬错误/CSR（应急流程允许省略某些中间环节，如链 1→2→3→4 可没有 3，只要 1、2 在 4 之前）
+  #   temporal_strict: true         -> 经典链式模式：前置动作缺失即报时序硬错（论文基线 / 消融对照）
+  temporal_strict: false
+
+# ---- 大语言模型（OpenAI 兼容接口，默认 DeepSeek）----
+llm:
+  base_url: "https://ark.cn-beijing.volces.com/api/v3"
+  api_key: "${DEEPSEEK_API_KEY}"
+  model: "deepseek-v4-flash-ga-260731"
+  temperature: 0.3
+  timeout: 90
+
+# ---- 修正策略 ----
+#   rule_feedback : 基于规则验证器的结构化反馈做定向修正（ELCIG 本文方法）
+#   self_refine   : 模型自我评审 + 自我修正（复现 Self-Refine 基线，不依赖外部规则）
+correction:
+  mode: rule_feedback
+
+# ---- 生成期动作语义接地（将模型自由动作映射到“我们提供的标准动作”本体）----
+# 作用：生成时把每个 step 的动作自动语义映射到提供的 action，方便后续验证器校验；
+#       若语义不同（标准动作本体无对应），则自动生成一个 4 字精简动作描述。
+# 本地约束来源：动作本体由 rules/responsibility.py + rules/registry.py 的别名自动推导；
+#               资源约束由 rules/resource.py 定义；时序约束由 rules/temporal.py 定义。
+action_grounding:
+  use_llm: false            # false=确定性接地（别名+词汇-语义匹配，可复现）；true=额外走一次 LLM 语义映射
+  similarity_threshold: 0.34  # 词汇-语义匹配阈值（低于此值视为“语义不同”，转自动生成4字动作）
+  # 可选：显式“提供”各场景的标准动作清单，覆盖自动推导的本体（不填则用规则自动推导）。
+  # 例：{S1: ["事故上报","启动响应","泄漏控制", ...]}
+  provided_actions: {}
+
+
+output:
+  results_dir: "results"

@@ -1,0 +1,3403 @@
+{
+  "scenario": "S2",
+  "scenario_name": "台风灾害",
+  "samples": 13,
+  "clean_samples": 2,
+  "error_samples": 11,
+  "injected_errors": 73,
+  "detected_errors": 72,
+  "detected_injected_errors": 72,
+  "missed_errors": 1,
+  "ledr": 0.9863,
+  "by_type": {
+    "temporal": {
+      "injected_errors": 17,
+      "detected_errors": 16,
+      "detected_injected_errors": 16,
+      "missed_errors": 1,
+      "ledr": 0.9412
+    },
+    "responsibility": {
+      "injected_errors": 28,
+      "detected_errors": 28,
+      "detected_injected_errors": 28,
+      "missed_errors": 0,
+      "ledr": 1.0
+    },
+    "resource": {
+      "injected_errors": 28,
+      "detected_errors": 28,
+      "detected_injected_errors": 28,
+      "missed_errors": 0,
+      "ledr": 1.0
+    }
+  },
+  "strict": true,
+  "temporal_strict": false,
+  "cases": [
+    {
+      "sample_id": "S2-0001",
+      "scenario": "S2",
+      "profile": 0,
+      "variant": 0,
+      "mutations": [],
+      "dataset_version": "local-multiple-errors-v2",
+      "injection_plan": {
+        "temporal_pairs": [
+          3,
+          2
+        ],
+        "responsibility_steps": [
+          5,
+          4
+        ],
+        "resource_single_tasks": 2,
+        "resource_unknown_types": 2
+      },
+      "annotation_source": "人工设计错误模板的确定性参数化标注，未经人工逐条复核",
+      "script": {
+        "scenario_id": "S2",
+        "raw_text": "步骤1 | 06:00 | 气象/监测组 | 台风预警 | 资源：无\n步骤2 | 06:03 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 06:06 | 市气象局 | 会商研判 | 资源：无\n步骤4 | 06:09 | 应急指挥部 | 启动响应 | 资源：无\n步骤5 | 06:12 | 海事/海上救援 | 船只回港 | 资源：无\n步骤6 | 06:15 | 社区/基层 | 人员转移 | 资源：无\n步骤7 | 06:18 | 疏散引导组 | 安置点开放 | 资源：无\n步骤8 | 06:21 | 社区/基层 | 险情巡查 | 资源：无\n步骤9 | 06:24 | 工程抢险组 | 险情处置 | 资源：无\n步骤10 | 06:27 | 工程抢险组 | 排涝作业 | 资源：无\n步骤11 | 06:30 | 交通管制组 | 交通管制 | 资源：冲锋舟×6",
+        "steps": [
+          {
+            "step_id": 1,
+            "time": "06:00",
+            "role": "气象/监测组",
+            "action": "台风预警",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 2,
+            "time": "06:03",
+            "role": "企业负责人",
+            "action": "事故上报",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 3,
+            "time": "06:06",
+            "role": "市气象局",
+            "action": "会商研判",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 4,
+            "time": "06:09",
+            "role": "应急指挥部",
+            "action": "启动响应",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 5,
+            "time": "06:12",
+            "role": "海事/海上救援",
+            "action": "船只回港",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 6,
+            "time": "06:15",
+            "role": "社区/基层",
+            "action": "人员转移",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 7,
+            "time": "06:18",
+            "role": "疏散引导组",
+            "action": "安置点开放",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 8,
+            "time": "06:21",
+            "role": "社区/基层",
+            "action": "险情巡查",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 9,
+            "time": "06:24",
+            "role": "工程抢险组",
+            "action": "险情处置",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 10,
+            "time": "06:27",
+            "role": "工程抢险组",
+            "action": "排涝作业",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 11,
+            "time": "06:30",
+            "role": "交通管制组",
+            "action": "交通管制",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "冲锋舟",
+                "quantity": 6
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          }
+        ]
+      },
+      "expected_errors": [],
+      "detected_errors": [],
+      "injected_error_count": 0,
+      "detected_error_count": 0,
+      "detected_injected_errors": 0,
+      "missed_errors": 0,
+      "missed_error_details": [],
+      "additional_error_details": []
+    },
+    {
+      "sample_id": "S2-0002",
+      "scenario": "S2",
+      "profile": 1,
+      "variant": 0,
+      "mutations": [
+        "local_timestamp_swaps"
+      ],
+      "dataset_version": "local-multiple-errors-v2",
+      "injection_plan": {
+        "temporal_pairs": [
+          3,
+          2
+        ],
+        "responsibility_steps": [
+          5,
+          4
+        ],
+        "resource_single_tasks": 2,
+        "resource_unknown_types": 2
+      },
+      "annotation_source": "人工设计错误模板的确定性参数化标注，未经人工逐条复核",
+      "script": {
+        "scenario_id": "S2",
+        "raw_text": "步骤1 | 06:00 | 气象/监测组 | 台风预警 | 资源：无\n步骤2 | 06:03 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 06:09 | 市气象局 | 会商研判 | 资源：无\n步骤4 | 06:06 | 应急指挥部 | 启动响应 | 资源：无\n步骤5 | 06:15 | 海事/海上救援 | 船只回港 | 资源：无\n步骤6 | 06:12 | 社区/基层 | 人员转移 | 资源：无\n步骤7 | 06:18 | 疏散引导组 | 安置点开放 | 资源：无\n步骤8 | 06:24 | 社区/基层 | 险情巡查 | 资源：无\n步骤9 | 06:21 | 工程抢险组 | 险情处置 | 资源：无\n步骤10 | 06:27 | 工程抢险组 | 排涝作业 | 资源：无\n步骤11 | 06:30 | 交通管制组 | 交通管制 | 资源：冲锋舟×6",
+        "steps": [
+          {
+            "step_id": 1,
+            "time": "06:00",
+            "role": "气象/监测组",
+            "action": "台风预警",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 2,
+            "time": "06:03",
+            "role": "企业负责人",
+            "action": "事故上报",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 3,
+            "time": "06:09",
+            "role": "市气象局",
+            "action": "会商研判",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 4,
+            "time": "06:06",
+            "role": "应急指挥部",
+            "action": "启动响应",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 5,
+            "time": "06:15",
+            "role": "海事/海上救援",
+            "action": "船只回港",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 6,
+            "time": "06:12",
+            "role": "社区/基层",
+            "action": "人员转移",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 7,
+            "time": "06:18",
+            "role": "疏散引导组",
+            "action": "安置点开放",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 8,
+            "time": "06:24",
+            "role": "社区/基层",
+            "action": "险情巡查",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 9,
+            "time": "06:21",
+            "role": "工程抢险组",
+            "action": "险情处置",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 10,
+            "time": "06:27",
+            "role": "工程抢险组",
+            "action": "排涝作业",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 11,
+            "time": "06:30",
+            "role": "交通管制组",
+            "action": "交通管制",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "冲锋舟",
+                "quantity": 6
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          }
+        ]
+      },
+      "expected_errors": [
+        {
+          "error_type": "temporal",
+          "step_id": 4,
+          "violated_rule": "时序:会商研判→启动响应"
+        },
+        {
+          "error_type": "temporal",
+          "step_id": 6,
+          "violated_rule": "时序:船只回港→人员转移"
+        },
+        {
+          "error_type": "temporal",
+          "step_id": 9,
+          "violated_rule": "时序:险情巡查→险情处置"
+        }
+      ],
+      "detected_errors": [
+        {
+          "error_type": "temporal",
+          "error_type_cn": "时序",
+          "step_id": 6,
+          "location": "'船只回港'(06:15) 与 '人员转移'(06:12)",
+          "description": "时间冲突：'船只回港'(06:15) 晚于 '人员转移'(06:12)，违反时序约束。",
+          "violated_rule": "时序:船只回港→人员转移",
+          "severity": 1
+        },
+        {
+          "error_type": "temporal",
+          "error_type_cn": "时序",
+          "step_id": 9,
+          "location": "'险情巡查'(06:24) 与 '险情处置'(06:21)",
+          "description": "时间冲突：'险情巡查'(06:24) 晚于 '险情处置'(06:21)，违反时序约束。",
+          "violated_rule": "时序:险情巡查→险情处置",
+          "severity": 1
+        },
+        {
+          "error_type": "temporal",
+          "error_type_cn": "时序",
+          "step_id": 4,
+          "location": "'会商研判'(06:09) 与 '启动响应'(06:06)",
+          "description": "时间冲突：'会商研判'(06:09) 晚于 '启动响应'(06:06)，违反时序约束。",
+          "violated_rule": "时序:会商研判→启动响应",
+          "severity": 1
+        }
+      ],
+      "injected_error_count": 3,
+      "detected_error_count": 3,
+      "detected_injected_errors": 3,
+      "missed_errors": 0,
+      "missed_error_details": [],
+      "additional_error_details": []
+    },
+    {
+      "sample_id": "S2-0003",
+      "scenario": "S2",
+      "profile": 2,
+      "variant": 0,
+      "mutations": [
+        "multiple_explicit_responsibility_conflicts"
+      ],
+      "dataset_version": "local-multiple-errors-v2",
+      "injection_plan": {
+        "temporal_pairs": [
+          3,
+          2
+        ],
+        "responsibility_steps": [
+          5,
+          4
+        ],
+        "resource_single_tasks": 2,
+        "resource_unknown_types": 2
+      },
+      "annotation_source": "人工设计错误模板的确定性参数化标注，未经人工逐条复核",
+      "script": {
+        "scenario_id": "S2",
+        "raw_text": "步骤1 | 06:00 | 气象/监测组 | 台风预警 | 资源：无\n步骤2 | 06:03 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 06:06 | 市气象局 | 会商研判 | 资源：无\n步骤4 | 06:09 | 医疗救护组 | 启动响应 | 资源：无\n步骤5 | 06:12 | 应急指挥部 | 船只回港 | 资源：无\n步骤6 | 06:15 | 交通管制组 | 人员转移 | 资源：无\n步骤7 | 06:18 | 气象/监测组 | 安置点开放 | 资源：无\n步骤8 | 06:21 | 企业负责人 | 险情巡查 | 资源：无\n步骤9 | 06:24 | 工程抢险组 | 险情处置 | 资源：无\n步骤10 | 06:27 | 工程抢险组 | 排涝作业 | 资源：无\n步骤11 | 06:30 | 交通管制组 | 交通管制 | 资源：冲锋舟×6",
+        "steps": [
+          {
+            "step_id": 1,
+            "time": "06:00",
+            "role": "气象/监测组",
+            "action": "台风预警",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 2,
+            "time": "06:03",
+            "role": "企业负责人",
+            "action": "事故上报",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 3,
+            "time": "06:06",
+            "role": "市气象局",
+            "action": "会商研判",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 4,
+            "time": "06:09",
+            "role": "医疗救护组",
+            "action": "启动响应",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 5,
+            "time": "06:12",
+            "role": "应急指挥部",
+            "action": "船只回港",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 6,
+            "time": "06:15",
+            "role": "交通管制组",
+            "action": "人员转移",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 7,
+            "time": "06:18",
+            "role": "气象/监测组",
+            "action": "安置点开放",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 8,
+            "time": "06:21",
+            "role": "企业负责人",
+            "action": "险情巡查",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 9,
+            "time": "06:24",
+            "role": "工程抢险组",
+            "action": "险情处置",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 10,
+            "time": "06:27",
+            "role": "工程抢险组",
+            "action": "排涝作业",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 11,
+            "time": "06:30",
+            "role": "交通管制组",
+            "action": "交通管制",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "冲锋舟",
+                "quantity": 6
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          }
+        ]
+      },
+      "expected_errors": [
+        {
+          "error_type": "responsibility",
+          "step_id": 4,
+          "violated_rule": "职责:(医疗救护组,启动响应)"
+        },
+        {
+          "error_type": "responsibility",
+          "step_id": 5,
+          "violated_rule": "职责:(应急指挥部,船只回港)"
+        },
+        {
+          "error_type": "responsibility",
+          "step_id": 6,
+          "violated_rule": "职责:(交通管制组,人员转移)"
+        },
+        {
+          "error_type": "responsibility",
+          "step_id": 7,
+          "violated_rule": "职责:(气象/监测组,安置点开放)"
+        },
+        {
+          "error_type": "responsibility",
+          "step_id": 8,
+          "violated_rule": "职责:(企业负责人,险情巡查)"
+        }
+      ],
+      "detected_errors": [
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 4,
+          "location": "步骤4：角色'医疗救护组'执行动作'启动响应'",
+          "description": "职责错配：角色'医疗救护组'不包含动作'启动响应'。",
+          "violated_rule": "职责:(医疗救护组,启动响应)",
+          "severity": 3
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 5,
+          "location": "步骤5：角色'应急指挥部'执行动作'船只回港'",
+          "description": "职责错配：角色'应急指挥部'不包含动作'船只回港'。",
+          "violated_rule": "职责:(应急指挥部,船只回港)",
+          "severity": 3
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 6,
+          "location": "步骤6：角色'交通管制组'执行动作'人员转移'",
+          "description": "职责错配：角色'交通管制组'不包含动作'人员转移'。",
+          "violated_rule": "职责:(交通管制组,人员转移)",
+          "severity": 3
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 7,
+          "location": "步骤7：角色'气象/监测组'执行动作'安置点开放'",
+          "description": "职责错配：角色'气象/监测组'不包含动作'安置点开放'。",
+          "violated_rule": "职责:(气象/监测组,安置点开放)",
+          "severity": 3
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 8,
+          "location": "步骤8：角色'企业负责人'执行动作'险情巡查'",
+          "description": "职责错配：角色'企业负责人'不包含动作'险情巡查'。",
+          "violated_rule": "职责:(企业负责人,险情巡查)",
+          "severity": 3
+        }
+      ],
+      "injected_error_count": 5,
+      "detected_error_count": 5,
+      "detected_injected_errors": 5,
+      "missed_errors": 0,
+      "missed_error_details": [],
+      "additional_error_details": []
+    },
+    {
+      "sample_id": "S2-0004",
+      "scenario": "S2",
+      "profile": 3,
+      "variant": 0,
+      "mutations": [
+        "local_timestamp_swaps",
+        "multiple_explicit_responsibility_conflicts"
+      ],
+      "dataset_version": "local-multiple-errors-v2",
+      "injection_plan": {
+        "temporal_pairs": [
+          3,
+          2
+        ],
+        "responsibility_steps": [
+          5,
+          4
+        ],
+        "resource_single_tasks": 2,
+        "resource_unknown_types": 2
+      },
+      "annotation_source": "人工设计错误模板的确定性参数化标注，未经人工逐条复核",
+      "script": {
+        "scenario_id": "S2",
+        "raw_text": "步骤1 | 06:00 | 气象/监测组 | 台风预警 | 资源：无\n步骤2 | 06:03 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 06:09 | 市气象局 | 会商研判 | 资源：无\n步骤4 | 06:06 | 应急指挥部 | 启动响应 | 资源：无\n步骤5 | 06:15 | 应急指挥部 | 船只回港 | 资源：无\n步骤6 | 06:12 | 交通管制组 | 人员转移 | 资源：无\n步骤7 | 06:18 | 气象/监测组 | 安置点开放 | 资源：无\n步骤8 | 06:24 | 企业负责人 | 险情巡查 | 资源：无\n步骤9 | 06:21 | 交通管制组 | 险情处置 | 资源：无\n步骤10 | 06:27 | 工程抢险组 | 排涝作业 | 资源：无\n步骤11 | 06:30 | 交通管制组 | 交通管制 | 资源：冲锋舟×6",
+        "steps": [
+          {
+            "step_id": 1,
+            "time": "06:00",
+            "role": "气象/监测组",
+            "action": "台风预警",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 2,
+            "time": "06:03",
+            "role": "企业负责人",
+            "action": "事故上报",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 3,
+            "time": "06:09",
+            "role": "市气象局",
+            "action": "会商研判",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 4,
+            "time": "06:06",
+            "role": "应急指挥部",
+            "action": "启动响应",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 5,
+            "time": "06:15",
+            "role": "应急指挥部",
+            "action": "船只回港",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 6,
+            "time": "06:12",
+            "role": "交通管制组",
+            "action": "人员转移",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 7,
+            "time": "06:18",
+            "role": "气象/监测组",
+            "action": "安置点开放",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 8,
+            "time": "06:24",
+            "role": "企业负责人",
+            "action": "险情巡查",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 9,
+            "time": "06:21",
+            "role": "交通管制组",
+            "action": "险情处置",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 10,
+            "time": "06:27",
+            "role": "工程抢险组",
+            "action": "排涝作业",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 11,
+            "time": "06:30",
+            "role": "交通管制组",
+            "action": "交通管制",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "冲锋舟",
+                "quantity": 6
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          }
+        ]
+      },
+      "expected_errors": [
+        {
+          "error_type": "temporal",
+          "step_id": 4,
+          "violated_rule": "时序:会商研判→启动响应"
+        },
+        {
+          "error_type": "temporal",
+          "step_id": 6,
+          "violated_rule": "时序:船只回港→人员转移"
+        },
+        {
+          "error_type": "temporal",
+          "step_id": 9,
+          "violated_rule": "时序:险情巡查→险情处置"
+        },
+        {
+          "error_type": "responsibility",
+          "step_id": 5,
+          "violated_rule": "职责:(应急指挥部,船只回港)"
+        },
+        {
+          "error_type": "responsibility",
+          "step_id": 6,
+          "violated_rule": "职责:(交通管制组,人员转移)"
+        },
+        {
+          "error_type": "responsibility",
+          "step_id": 7,
+          "violated_rule": "职责:(气象/监测组,安置点开放)"
+        },
+        {
+          "error_type": "responsibility",
+          "step_id": 8,
+          "violated_rule": "职责:(企业负责人,险情巡查)"
+        },
+        {
+          "error_type": "responsibility",
+          "step_id": 9,
+          "violated_rule": "职责:(交通管制组,险情处置)"
+        }
+      ],
+      "detected_errors": [
+        {
+          "error_type": "temporal",
+          "error_type_cn": "时序",
+          "step_id": 6,
+          "location": "'船只回港'(06:15) 与 '人员转移'(06:12)",
+          "description": "时间冲突：'船只回港'(06:15) 晚于 '人员转移'(06:12)，违反时序约束。",
+          "violated_rule": "时序:船只回港→人员转移",
+          "severity": 1
+        },
+        {
+          "error_type": "temporal",
+          "error_type_cn": "时序",
+          "step_id": 9,
+          "location": "'险情巡查'(06:24) 与 '险情处置'(06:21)",
+          "description": "时间冲突：'险情巡查'(06:24) 晚于 '险情处置'(06:21)，违反时序约束。",
+          "violated_rule": "时序:险情巡查→险情处置",
+          "severity": 1
+        },
+        {
+          "error_type": "temporal",
+          "error_type_cn": "时序",
+          "step_id": 4,
+          "location": "'会商研判'(06:09) 与 '启动响应'(06:06)",
+          "description": "时间冲突：'会商研判'(06:09) 晚于 '启动响应'(06:06)，违反时序约束。",
+          "violated_rule": "时序:会商研判→启动响应",
+          "severity": 1
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 5,
+          "location": "步骤5：角色'应急指挥部'执行动作'船只回港'",
+          "description": "职责错配：角色'应急指挥部'不包含动作'船只回港'。",
+          "violated_rule": "职责:(应急指挥部,船只回港)",
+          "severity": 3
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 6,
+          "location": "步骤6：角色'交通管制组'执行动作'人员转移'",
+          "description": "职责错配：角色'交通管制组'不包含动作'人员转移'。",
+          "violated_rule": "职责:(交通管制组,人员转移)",
+          "severity": 3
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 7,
+          "location": "步骤7：角色'气象/监测组'执行动作'安置点开放'",
+          "description": "职责错配：角色'气象/监测组'不包含动作'安置点开放'。",
+          "violated_rule": "职责:(气象/监测组,安置点开放)",
+          "severity": 3
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 8,
+          "location": "步骤8：角色'企业负责人'执行动作'险情巡查'",
+          "description": "职责错配：角色'企业负责人'不包含动作'险情巡查'。",
+          "violated_rule": "职责:(企业负责人,险情巡查)",
+          "severity": 3
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 9,
+          "location": "步骤9：角色'交通管制组'执行动作'险情处置'",
+          "description": "职责错配：角色'交通管制组'不包含动作'险情处置'。",
+          "violated_rule": "职责:(交通管制组,险情处置)",
+          "severity": 3
+        }
+      ],
+      "injected_error_count": 8,
+      "detected_error_count": 8,
+      "detected_injected_errors": 8,
+      "missed_errors": 0,
+      "missed_error_details": [],
+      "additional_error_details": []
+    },
+    {
+      "sample_id": "S2-0005",
+      "scenario": "S2",
+      "profile": 4,
+      "variant": 0,
+      "mutations": [
+        "multiple_single_task_over_capacity",
+        "unknown_resource_types",
+        "two_task_concurrency"
+      ],
+      "dataset_version": "local-multiple-errors-v2",
+      "injection_plan": {
+        "temporal_pairs": [
+          3,
+          2
+        ],
+        "responsibility_steps": [
+          5,
+          4
+        ],
+        "resource_single_tasks": 2,
+        "resource_unknown_types": 2
+      },
+      "annotation_source": "人工设计错误模板的确定性参数化标注，未经人工逐条复核",
+      "script": {
+        "scenario_id": "S2",
+        "raw_text": "步骤1 | 06:00 | 气象/监测组 | 台风预警 | 资源：无\n步骤2 | 06:03 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 06:06 | 市气象局 | 会商研判 | 资源：无\n步骤4 | 06:09 | 应急指挥部 | 启动响应 | 资源：无\n步骤5 | 06:12 | 海事/海上救援 | 船只回港 | 资源：帐篷×31\n步骤6 | 06:15 | 社区/基层 | 人员转移 | 资源：急救包×51\n步骤7 | 06:18 | 疏散引导组 | 安置点开放 | 资源：未登记测试装备1×1\n步骤8 | 06:21 | 社区/基层 | 险情巡查 | 资源：未登记测试装备2×1\n步骤9 | 06:24 | 工程抢险组 | 险情处置 | 资源：无\n步骤10 | 06:27 | 工程抢险组 | 排涝作业 | 资源：无\n步骤11 | 06:30 | 交通管制组 | 交通管制 | 资源：无\n步骤12 | 23:00 | 交通管制组 | 交通管制 | 资源：抢修车辆×4\n步骤13 | 23:00 | 交通管制组 | 交通管制 | 资源：抢修车辆×4",
+        "steps": [
+          {
+            "step_id": 1,
+            "time": "06:00",
+            "role": "气象/监测组",
+            "action": "台风预警",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 2,
+            "time": "06:03",
+            "role": "企业负责人",
+            "action": "事故上报",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 3,
+            "time": "06:06",
+            "role": "市气象局",
+            "action": "会商研判",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 4,
+            "time": "06:09",
+            "role": "应急指挥部",
+            "action": "启动响应",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 5,
+            "time": "06:12",
+            "role": "海事/海上救援",
+            "action": "船只回港",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "帐篷",
+                "quantity": 31
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 6,
+            "time": "06:15",
+            "role": "社区/基层",
+            "action": "人员转移",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "急救包",
+                "quantity": 51
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 7,
+            "time": "06:18",
+            "role": "疏散引导组",
+            "action": "安置点开放",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "未登记测试装备1",
+                "quantity": 1
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 8,
+            "time": "06:21",
+            "role": "社区/基层",
+            "action": "险情巡查",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "未登记测试装备2",
+                "quantity": 1
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 9,
+            "time": "06:24",
+            "role": "工程抢险组",
+            "action": "险情处置",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 10,
+            "time": "06:27",
+            "role": "工程抢险组",
+            "action": "排涝作业",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 11,
+            "time": "06:30",
+            "role": "交通管制组",
+            "action": "交通管制",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 12,
+            "time": "23:00",
+            "role": "交通管制组",
+            "action": "交通管制",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "抢修车辆",
+                "quantity": 4
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 13,
+            "time": "23:00",
+            "role": "交通管制组",
+            "action": "交通管制",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "抢修车辆",
+                "quantity": 4
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          }
+        ]
+      },
+      "expected_errors": [
+        {
+          "error_type": "resource",
+          "step_id": 5,
+          "violated_rule": "资源:帐篷<= 30"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 5,
+          "violated_rule": "资源并发:帐篷<= 30"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 6,
+          "violated_rule": "资源:急救包<= 50"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 6,
+          "violated_rule": "资源并发:急救包<= 50"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 7,
+          "violated_rule": "资源约束:资源类型必须在约束清单内"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 8,
+          "violated_rule": "资源约束:资源类型必须在约束清单内"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 12,
+          "violated_rule": "资源并发:抢修车辆<= 6"
+        }
+      ],
+      "detected_errors": [
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 7,
+          "location": "步骤7 资源'未登记测试装备1'",
+          "description": "资源类型'未登记测试装备1'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 抢修车辆, 挖掘机, 排水泵, 救护车, 无人机, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+          "violated_rule": "资源约束:资源类型必须在约束清单内",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 8,
+          "location": "步骤8 资源'未登记测试装备2'",
+          "description": "资源类型'未登记测试装备2'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 抢修车辆, 挖掘机, 排水泵, 救护车, 无人机, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+          "violated_rule": "资源约束:资源类型必须在约束清单内",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 5,
+          "location": "步骤5 资源'帐篷'",
+          "description": "单任务资源超配：需求 31 > 可用 30。",
+          "violated_rule": "资源:帐篷<= 30",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 6,
+          "location": "步骤6 资源'急救包'",
+          "description": "单任务资源超配：需求 51 > 可用 50。",
+          "violated_rule": "资源:急救包<= 50",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 5,
+          "location": "时间窗口 06:12 资源'帐篷'",
+          "description": "并发资源竞争：窗口内总需求 31 > 可用 30。",
+          "violated_rule": "资源并发:帐篷<= 30",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 6,
+          "location": "时间窗口 06:15 资源'急救包'",
+          "description": "并发资源竞争：窗口内总需求 51 > 可用 50。",
+          "violated_rule": "资源并发:急救包<= 50",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 12,
+          "location": "时间窗口 23:00 资源'抢修车辆'",
+          "description": "并发资源竞争：窗口内总需求 8 > 可用 6。",
+          "violated_rule": "资源并发:抢修车辆<= 6",
+          "severity": 2
+        }
+      ],
+      "injected_error_count": 7,
+      "detected_error_count": 7,
+      "detected_injected_errors": 7,
+      "missed_errors": 0,
+      "missed_error_details": [],
+      "additional_error_details": []
+    },
+    {
+      "sample_id": "S2-0006",
+      "scenario": "S2",
+      "profile": 5,
+      "variant": 0,
+      "mutations": [
+        "local_timestamp_swaps",
+        "multiple_single_task_over_capacity",
+        "unknown_resource_types",
+        "two_task_concurrency"
+      ],
+      "dataset_version": "local-multiple-errors-v2",
+      "injection_plan": {
+        "temporal_pairs": [
+          3,
+          2
+        ],
+        "responsibility_steps": [
+          5,
+          4
+        ],
+        "resource_single_tasks": 2,
+        "resource_unknown_types": 2
+      },
+      "annotation_source": "人工设计错误模板的确定性参数化标注，未经人工逐条复核",
+      "script": {
+        "scenario_id": "S2",
+        "raw_text": "步骤1 | 06:00 | 气象/监测组 | 台风预警 | 资源：无\n步骤2 | 06:03 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 06:09 | 市气象局 | 会商研判 | 资源：无\n步骤4 | 06:06 | 应急指挥部 | 启动响应 | 资源：无\n步骤5 | 06:15 | 海事/海上救援 | 船只回港 | 资源：无\n步骤6 | 06:12 | 社区/基层 | 人员转移 | 资源：急救包×51\n步骤7 | 06:18 | 疏散引导组 | 安置点开放 | 资源：抢修车辆×7\n步骤8 | 06:24 | 社区/基层 | 险情巡查 | 资源：未登记测试装备1×1\n步骤9 | 06:21 | 工程抢险组 | 险情处置 | 资源：未登记测试装备2×1\n步骤10 | 06:27 | 工程抢险组 | 排涝作业 | 资源：无\n步骤11 | 06:30 | 交通管制组 | 交通管制 | 资源：无\n步骤12 | 23:00 | 交通管制组 | 交通管制 | 资源：挖掘机×3\n步骤13 | 23:00 | 交通管制组 | 交通管制 | 资源：挖掘机×3",
+        "steps": [
+          {
+            "step_id": 1,
+            "time": "06:00",
+            "role": "气象/监测组",
+            "action": "台风预警",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 2,
+            "time": "06:03",
+            "role": "企业负责人",
+            "action": "事故上报",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 3,
+            "time": "06:09",
+            "role": "市气象局",
+            "action": "会商研判",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 4,
+            "time": "06:06",
+            "role": "应急指挥部",
+            "action": "启动响应",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 5,
+            "time": "06:15",
+            "role": "海事/海上救援",
+            "action": "船只回港",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 6,
+            "time": "06:12",
+            "role": "社区/基层",
+            "action": "人员转移",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "急救包",
+                "quantity": 51
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 7,
+            "time": "06:18",
+            "role": "疏散引导组",
+            "action": "安置点开放",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "抢修车辆",
+                "quantity": 7
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 8,
+            "time": "06:24",
+            "role": "社区/基层",
+            "action": "险情巡查",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "未登记测试装备1",
+                "quantity": 1
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 9,
+            "time": "06:21",
+            "role": "工程抢险组",
+            "action": "险情处置",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "未登记测试装备2",
+                "quantity": 1
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 10,
+            "time": "06:27",
+            "role": "工程抢险组",
+            "action": "排涝作业",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 11,
+            "time": "06:30",
+            "role": "交通管制组",
+            "action": "交通管制",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 12,
+            "time": "23:00",
+            "role": "交通管制组",
+            "action": "交通管制",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "挖掘机",
+                "quantity": 3
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 13,
+            "time": "23:00",
+            "role": "交通管制组",
+            "action": "交通管制",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "挖掘机",
+                "quantity": 3
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          }
+        ]
+      },
+      "expected_errors": [
+        {
+          "error_type": "temporal",
+          "step_id": 4,
+          "violated_rule": "时序:会商研判→启动响应"
+        },
+        {
+          "error_type": "temporal",
+          "step_id": 6,
+          "violated_rule": "时序:船只回港→人员转移"
+        },
+        {
+          "error_type": "temporal",
+          "step_id": 9,
+          "violated_rule": "时序:险情巡查→险情处置"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 6,
+          "violated_rule": "资源:急救包<= 50"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 6,
+          "violated_rule": "资源并发:急救包<= 50"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 7,
+          "violated_rule": "资源:抢修车辆<= 6"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 7,
+          "violated_rule": "资源并发:抢修车辆<= 6"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 8,
+          "violated_rule": "资源约束:资源类型必须在约束清单内"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 9,
+          "violated_rule": "资源约束:资源类型必须在约束清单内"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 12,
+          "violated_rule": "资源并发:挖掘机<= 4"
+        }
+      ],
+      "detected_errors": [
+        {
+          "error_type": "temporal",
+          "error_type_cn": "时序",
+          "step_id": 6,
+          "location": "'船只回港'(06:15) 与 '人员转移'(06:12)",
+          "description": "时间冲突：'船只回港'(06:15) 晚于 '人员转移'(06:12)，违反时序约束。",
+          "violated_rule": "时序:船只回港→人员转移",
+          "severity": 1
+        },
+        {
+          "error_type": "temporal",
+          "error_type_cn": "时序",
+          "step_id": 9,
+          "location": "'险情巡查'(06:24) 与 '险情处置'(06:21)",
+          "description": "时间冲突：'险情巡查'(06:24) 晚于 '险情处置'(06:21)，违反时序约束。",
+          "violated_rule": "时序:险情巡查→险情处置",
+          "severity": 1
+        },
+        {
+          "error_type": "temporal",
+          "error_type_cn": "时序",
+          "step_id": 4,
+          "location": "'会商研判'(06:09) 与 '启动响应'(06:06)",
+          "description": "时间冲突：'会商研判'(06:09) 晚于 '启动响应'(06:06)，违反时序约束。",
+          "violated_rule": "时序:会商研判→启动响应",
+          "severity": 1
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 8,
+          "location": "步骤8 资源'未登记测试装备1'",
+          "description": "资源类型'未登记测试装备1'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 抢修车辆, 挖掘机, 排水泵, 救护车, 无人机, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+          "violated_rule": "资源约束:资源类型必须在约束清单内",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 9,
+          "location": "步骤9 资源'未登记测试装备2'",
+          "description": "资源类型'未登记测试装备2'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 抢修车辆, 挖掘机, 排水泵, 救护车, 无人机, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+          "violated_rule": "资源约束:资源类型必须在约束清单内",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 6,
+          "location": "步骤6 资源'急救包'",
+          "description": "单任务资源超配：需求 51 > 可用 50。",
+          "violated_rule": "资源:急救包<= 50",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 7,
+          "location": "步骤7 资源'抢修车辆'",
+          "description": "单任务资源超配：需求 7 > 可用 6。",
+          "violated_rule": "资源:抢修车辆<= 6",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 6,
+          "location": "时间窗口 06:12 资源'急救包'",
+          "description": "并发资源竞争：窗口内总需求 51 > 可用 50。",
+          "violated_rule": "资源并发:急救包<= 50",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 7,
+          "location": "时间窗口 06:18 资源'抢修车辆'",
+          "description": "并发资源竞争：窗口内总需求 7 > 可用 6。",
+          "violated_rule": "资源并发:抢修车辆<= 6",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 12,
+          "location": "时间窗口 23:00 资源'挖掘机'",
+          "description": "并发资源竞争：窗口内总需求 6 > 可用 4。",
+          "violated_rule": "资源并发:挖掘机<= 4",
+          "severity": 2
+        }
+      ],
+      "injected_error_count": 10,
+      "detected_error_count": 10,
+      "detected_injected_errors": 10,
+      "missed_errors": 0,
+      "missed_error_details": [],
+      "additional_error_details": []
+    },
+    {
+      "sample_id": "S2-0007",
+      "scenario": "S2",
+      "profile": 6,
+      "variant": 0,
+      "mutations": [
+        "multiple_explicit_responsibility_conflicts",
+        "multiple_single_task_over_capacity",
+        "unknown_resource_types",
+        "two_task_concurrency"
+      ],
+      "dataset_version": "local-multiple-errors-v2",
+      "injection_plan": {
+        "temporal_pairs": [
+          3,
+          2
+        ],
+        "responsibility_steps": [
+          5,
+          4
+        ],
+        "resource_single_tasks": 2,
+        "resource_unknown_types": 2
+      },
+      "annotation_source": "人工设计错误模板的确定性参数化标注，未经人工逐条复核",
+      "script": {
+        "scenario_id": "S2",
+        "raw_text": "步骤1 | 06:00 | 应急指挥部 | 台风预警 | 资源：无\n步骤2 | 06:03 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 06:06 | 市气象局 | 会商研判 | 资源：无\n步骤4 | 06:09 | 应急指挥部 | 启动响应 | 资源：无\n步骤5 | 06:12 | 海事/海上救援 | 船只回港 | 资源：无\n步骤6 | 06:15 | 社区/基层 | 人员转移 | 资源：无\n步骤7 | 06:18 | 疏散引导组 | 安置点开放 | 资源：抢修车辆×7\n步骤8 | 06:21 | 企业负责人 | 险情巡查 | 资源：挖掘机×5\n步骤9 | 06:24 | 交通管制组 | 险情处置 | 资源：未登记测试装备1×1\n步骤10 | 06:27 | 企业负责人 | 排涝作业 | 资源：未登记测试装备2×1\n步骤11 | 06:30 | 医疗救护组 | 交通管制 | 资源：无\n步骤12 | 23:00 | 交通管制组 | 交通管制 | 资源：排水泵×5\n步骤13 | 23:00 | 交通管制组 | 交通管制 | 资源：排水泵×5",
+        "steps": [
+          {
+            "step_id": 1,
+            "time": "06:00",
+            "role": "应急指挥部",
+            "action": "台风预警",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 2,
+            "time": "06:03",
+            "role": "企业负责人",
+            "action": "事故上报",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 3,
+            "time": "06:06",
+            "role": "市气象局",
+            "action": "会商研判",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 4,
+            "time": "06:09",
+            "role": "应急指挥部",
+            "action": "启动响应",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 5,
+            "time": "06:12",
+            "role": "海事/海上救援",
+            "action": "船只回港",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 6,
+            "time": "06:15",
+            "role": "社区/基层",
+            "action": "人员转移",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 7,
+            "time": "06:18",
+            "role": "疏散引导组",
+            "action": "安置点开放",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "抢修车辆",
+                "quantity": 7
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 8,
+            "time": "06:21",
+            "role": "企业负责人",
+            "action": "险情巡查",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "挖掘机",
+                "quantity": 5
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 9,
+            "time": "06:24",
+            "role": "交通管制组",
+            "action": "险情处置",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "未登记测试装备1",
+                "quantity": 1
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 10,
+            "time": "06:27",
+            "role": "企业负责人",
+            "action": "排涝作业",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "未登记测试装备2",
+                "quantity": 1
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 11,
+            "time": "06:30",
+            "role": "医疗救护组",
+            "action": "交通管制",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 12,
+            "time": "23:00",
+            "role": "交通管制组",
+            "action": "交通管制",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "排水泵",
+                "quantity": 5
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 13,
+            "time": "23:00",
+            "role": "交通管制组",
+            "action": "交通管制",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "排水泵",
+                "quantity": 5
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          }
+        ]
+      },
+      "expected_errors": [
+        {
+          "error_type": "responsibility",
+          "step_id": 8,
+          "violated_rule": "职责:(企业负责人,险情巡查)"
+        },
+        {
+          "error_type": "responsibility",
+          "step_id": 9,
+          "violated_rule": "职责:(交通管制组,险情处置)"
+        },
+        {
+          "error_type": "responsibility",
+          "step_id": 10,
+          "violated_rule": "职责:(企业负责人,排涝作业)"
+        },
+        {
+          "error_type": "responsibility",
+          "step_id": 11,
+          "violated_rule": "职责:(医疗救护组,交通管制)"
+        },
+        {
+          "error_type": "responsibility",
+          "step_id": 1,
+          "violated_rule": "职责:(应急指挥部,台风预警)"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 7,
+          "violated_rule": "资源:抢修车辆<= 6"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 7,
+          "violated_rule": "资源并发:抢修车辆<= 6"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 8,
+          "violated_rule": "资源:挖掘机<= 4"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 8,
+          "violated_rule": "资源并发:挖掘机<= 4"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 9,
+          "violated_rule": "资源约束:资源类型必须在约束清单内"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 10,
+          "violated_rule": "资源约束:资源类型必须在约束清单内"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 12,
+          "violated_rule": "资源并发:排水泵<= 8"
+        }
+      ],
+      "detected_errors": [
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 9,
+          "location": "步骤9 资源'未登记测试装备1'",
+          "description": "资源类型'未登记测试装备1'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 抢修车辆, 挖掘机, 排水泵, 救护车, 无人机, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+          "violated_rule": "资源约束:资源类型必须在约束清单内",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 10,
+          "location": "步骤10 资源'未登记测试装备2'",
+          "description": "资源类型'未登记测试装备2'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 抢修车辆, 挖掘机, 排水泵, 救护车, 无人机, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+          "violated_rule": "资源约束:资源类型必须在约束清单内",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 7,
+          "location": "步骤7 资源'抢修车辆'",
+          "description": "单任务资源超配：需求 7 > 可用 6。",
+          "violated_rule": "资源:抢修车辆<= 6",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 8,
+          "location": "步骤8 资源'挖掘机'",
+          "description": "单任务资源超配：需求 5 > 可用 4。",
+          "violated_rule": "资源:挖掘机<= 4",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 7,
+          "location": "时间窗口 06:18 资源'抢修车辆'",
+          "description": "并发资源竞争：窗口内总需求 7 > 可用 6。",
+          "violated_rule": "资源并发:抢修车辆<= 6",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 8,
+          "location": "时间窗口 06:21 资源'挖掘机'",
+          "description": "并发资源竞争：窗口内总需求 5 > 可用 4。",
+          "violated_rule": "资源并发:挖掘机<= 4",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 12,
+          "location": "时间窗口 23:00 资源'排水泵'",
+          "description": "并发资源竞争：窗口内总需求 10 > 可用 8。",
+          "violated_rule": "资源并发:排水泵<= 8",
+          "severity": 2
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 1,
+          "location": "步骤1：角色'应急指挥部'执行动作'台风预警'",
+          "description": "职责错配：角色'应急指挥部'不包含动作'台风预警'。",
+          "violated_rule": "职责:(应急指挥部,台风预警)",
+          "severity": 3
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 8,
+          "location": "步骤8：角色'企业负责人'执行动作'险情巡查'",
+          "description": "职责错配：角色'企业负责人'不包含动作'险情巡查'。",
+          "violated_rule": "职责:(企业负责人,险情巡查)",
+          "severity": 3
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 9,
+          "location": "步骤9：角色'交通管制组'执行动作'险情处置'",
+          "description": "职责错配：角色'交通管制组'不包含动作'险情处置'。",
+          "violated_rule": "职责:(交通管制组,险情处置)",
+          "severity": 3
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 10,
+          "location": "步骤10：角色'企业负责人'执行动作'排涝作业'",
+          "description": "职责错配：角色'企业负责人'不包含动作'排涝作业'。",
+          "violated_rule": "职责:(企业负责人,排涝作业)",
+          "severity": 3
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 11,
+          "location": "步骤11：角色'医疗救护组'执行动作'交通管制'",
+          "description": "职责错配：角色'医疗救护组'不包含动作'交通管制'。",
+          "violated_rule": "职责:(医疗救护组,交通管制)",
+          "severity": 3
+        }
+      ],
+      "injected_error_count": 12,
+      "detected_error_count": 12,
+      "detected_injected_errors": 12,
+      "missed_errors": 0,
+      "missed_error_details": [],
+      "additional_error_details": []
+    },
+    {
+      "sample_id": "S2-0008",
+      "scenario": "S2",
+      "profile": 7,
+      "variant": 0,
+      "mutations": [
+        "local_timestamp_swaps",
+        "multiple_explicit_responsibility_conflicts",
+        "multiple_single_task_over_capacity",
+        "unknown_resource_types",
+        "two_task_concurrency"
+      ],
+      "dataset_version": "local-multiple-errors-v2",
+      "injection_plan": {
+        "temporal_pairs": [
+          3,
+          2
+        ],
+        "responsibility_steps": [
+          5,
+          4
+        ],
+        "resource_single_tasks": 2,
+        "resource_unknown_types": 2
+      },
+      "annotation_source": "人工设计错误模板的确定性参数化标注，未经人工逐条复核",
+      "script": {
+        "scenario_id": "S2",
+        "raw_text": "步骤1 | 06:00 | 应急指挥部 | 台风预警 | 资源：无\n步骤2 | 06:03 | 环境监测组 | 事故上报 | 资源：无\n步骤3 | 06:09 | 市气象局 | 会商研判 | 资源：无\n步骤4 | 06:06 | 应急指挥部 | 启动响应 | 资源：无\n步骤5 | 06:15 | 海事/海上救援 | 船只回港 | 资源：无\n步骤6 | 06:12 | 社区/基层 | 人员转移 | 资源：无\n步骤7 | 06:18 | 疏散引导组 | 安置点开放 | 资源：无\n步骤8 | 06:24 | 社区/基层 | 险情巡查 | 资源：挖掘机×5\n步骤9 | 06:21 | 交通管制组 | 险情处置 | 资源：排水泵×9\n步骤10 | 06:27 | 企业负责人 | 排涝作业 | 资源：未登记测试装备1×1\n步骤11 | 06:30 | 医疗救护组 | 交通管制 | 资源：未登记测试装备2×1\n步骤12 | 23:00 | 交通管制组 | 交通管制 | 资源：救护车×2\n步骤13 | 23:00 | 交通管制组 | 交通管制 | 资源：救护车×2",
+        "steps": [
+          {
+            "step_id": 1,
+            "time": "06:00",
+            "role": "应急指挥部",
+            "action": "台风预警",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 2,
+            "time": "06:03",
+            "role": "环境监测组",
+            "action": "事故上报",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 3,
+            "time": "06:09",
+            "role": "市气象局",
+            "action": "会商研判",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 4,
+            "time": "06:06",
+            "role": "应急指挥部",
+            "action": "启动响应",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 5,
+            "time": "06:15",
+            "role": "海事/海上救援",
+            "action": "船只回港",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 6,
+            "time": "06:12",
+            "role": "社区/基层",
+            "action": "人员转移",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 7,
+            "time": "06:18",
+            "role": "疏散引导组",
+            "action": "安置点开放",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 8,
+            "time": "06:24",
+            "role": "社区/基层",
+            "action": "险情巡查",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "挖掘机",
+                "quantity": 5
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 9,
+            "time": "06:21",
+            "role": "交通管制组",
+            "action": "险情处置",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "排水泵",
+                "quantity": 9
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 10,
+            "time": "06:27",
+            "role": "企业负责人",
+            "action": "排涝作业",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "未登记测试装备1",
+                "quantity": 1
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 11,
+            "time": "06:30",
+            "role": "医疗救护组",
+            "action": "交通管制",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "未登记测试装备2",
+                "quantity": 1
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 12,
+            "time": "23:00",
+            "role": "交通管制组",
+            "action": "交通管制",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "救护车",
+                "quantity": 2
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 13,
+            "time": "23:00",
+            "role": "交通管制组",
+            "action": "交通管制",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "救护车",
+                "quantity": 2
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          }
+        ]
+      },
+      "expected_errors": [
+        {
+          "error_type": "temporal",
+          "step_id": 4,
+          "violated_rule": "时序:会商研判→启动响应"
+        },
+        {
+          "error_type": "temporal",
+          "step_id": 6,
+          "violated_rule": "时序:船只回港→人员转移"
+        },
+        {
+          "error_type": "temporal",
+          "step_id": 9,
+          "violated_rule": "时序:险情巡查→险情处置"
+        },
+        {
+          "error_type": "responsibility",
+          "step_id": 9,
+          "violated_rule": "职责:(交通管制组,险情处置)"
+        },
+        {
+          "error_type": "responsibility",
+          "step_id": 10,
+          "violated_rule": "职责:(企业负责人,排涝作业)"
+        },
+        {
+          "error_type": "responsibility",
+          "step_id": 11,
+          "violated_rule": "职责:(医疗救护组,交通管制)"
+        },
+        {
+          "error_type": "responsibility",
+          "step_id": 1,
+          "violated_rule": "职责:(应急指挥部,台风预警)"
+        },
+        {
+          "error_type": "responsibility",
+          "step_id": 2,
+          "violated_rule": "职责:(环境监测组,事故上报)"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 8,
+          "violated_rule": "资源:挖掘机<= 4"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 8,
+          "violated_rule": "资源并发:挖掘机<= 4"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 9,
+          "violated_rule": "资源:排水泵<= 8"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 9,
+          "violated_rule": "资源并发:排水泵<= 8"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 10,
+          "violated_rule": "资源约束:资源类型必须在约束清单内"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 11,
+          "violated_rule": "资源约束:资源类型必须在约束清单内"
+        },
+        {
+          "error_type": "resource",
+          "step_id": 12,
+          "violated_rule": "资源并发:救护车<= 3"
+        }
+      ],
+      "detected_errors": [
+        {
+          "error_type": "temporal",
+          "error_type_cn": "时序",
+          "step_id": 6,
+          "location": "'船只回港'(06:15) 与 '人员转移'(06:12)",
+          "description": "时间冲突：'船只回港'(06:15) 晚于 '人员转移'(06:12)，违反时序约束。",
+          "violated_rule": "时序:船只回港→人员转移",
+          "severity": 1
+        },
+        {
+          "error_type": "temporal",
+          "error_type_cn": "时序",
+          "step_id": 9,
+          "location": "'险情巡查'(06:24) 与 '险情处置'(06:21)",
+          "description": "时间冲突：'险情巡查'(06:24) 晚于 '险情处置'(06:21)，违反时序约束。",
+          "violated_rule": "时序:险情巡查→险情处置",
+          "severity": 1
+        },
+        {
+          "error_type": "temporal",
+          "error_type_cn": "时序",
+          "step_id": 4,
+          "location": "'会商研判'(06:09) 与 '启动响应'(06:06)",
+          "description": "时间冲突：'会商研判'(06:09) 晚于 '启动响应'(06:06)，违反时序约束。",
+          "violated_rule": "时序:会商研判→启动响应",
+          "severity": 1
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 10,
+          "location": "步骤10 资源'未登记测试装备1'",
+          "description": "资源类型'未登记测试装备1'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 抢修车辆, 挖掘机, 排水泵, 救护车, 无人机, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+          "violated_rule": "资源约束:资源类型必须在约束清单内",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 11,
+          "location": "步骤11 资源'未登记测试装备2'",
+          "description": "资源类型'未登记测试装备2'不在本地定义的资源约束清单中（合法资源类型：冲锋舟, 卫星电话, 发电机, 吊装设备, 帐篷, 急救包, 抢修车辆, 挖掘机, 排水泵, 救护车, 无人机, 消防车, 环境监测设备, 运输车辆, 防化装备），属资源配置错误。",
+          "violated_rule": "资源约束:资源类型必须在约束清单内",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 8,
+          "location": "步骤8 资源'挖掘机'",
+          "description": "单任务资源超配：需求 5 > 可用 4。",
+          "violated_rule": "资源:挖掘机<= 4",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 9,
+          "location": "步骤9 资源'排水泵'",
+          "description": "单任务资源超配：需求 9 > 可用 8。",
+          "violated_rule": "资源:排水泵<= 8",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 8,
+          "location": "时间窗口 06:24 资源'挖掘机'",
+          "description": "并发资源竞争：窗口内总需求 5 > 可用 4。",
+          "violated_rule": "资源并发:挖掘机<= 4",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 9,
+          "location": "时间窗口 06:21 资源'排水泵'",
+          "description": "并发资源竞争：窗口内总需求 9 > 可用 8。",
+          "violated_rule": "资源并发:排水泵<= 8",
+          "severity": 2
+        },
+        {
+          "error_type": "resource",
+          "error_type_cn": "资源",
+          "step_id": 12,
+          "location": "时间窗口 23:00 资源'救护车'",
+          "description": "并发资源竞争：窗口内总需求 4 > 可用 3。",
+          "violated_rule": "资源并发:救护车<= 3",
+          "severity": 2
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 1,
+          "location": "步骤1：角色'应急指挥部'执行动作'台风预警'",
+          "description": "职责错配：角色'应急指挥部'不包含动作'台风预警'。",
+          "violated_rule": "职责:(应急指挥部,台风预警)",
+          "severity": 3
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 2,
+          "location": "步骤2：角色'环境监测组'执行动作'事故上报'",
+          "description": "职责错配：角色'环境监测组'不包含动作'事故上报'。",
+          "violated_rule": "职责:(环境监测组,事故上报)",
+          "severity": 3
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 9,
+          "location": "步骤9：角色'交通管制组'执行动作'险情处置'",
+          "description": "职责错配：角色'交通管制组'不包含动作'险情处置'。",
+          "violated_rule": "职责:(交通管制组,险情处置)",
+          "severity": 3
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 10,
+          "location": "步骤10：角色'企业负责人'执行动作'排涝作业'",
+          "description": "职责错配：角色'企业负责人'不包含动作'排涝作业'。",
+          "violated_rule": "职责:(企业负责人,排涝作业)",
+          "severity": 3
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 11,
+          "location": "步骤11：角色'医疗救护组'执行动作'交通管制'",
+          "description": "职责错配：角色'医疗救护组'不包含动作'交通管制'。",
+          "violated_rule": "职责:(医疗救护组,交通管制)",
+          "severity": 3
+        }
+      ],
+      "injected_error_count": 15,
+      "detected_error_count": 15,
+      "detected_injected_errors": 15,
+      "missed_errors": 0,
+      "missed_error_details": [],
+      "additional_error_details": []
+    },
+    {
+      "sample_id": "S2-0009",
+      "scenario": "S2",
+      "profile": 0,
+      "variant": 1,
+      "mutations": [],
+      "dataset_version": "local-multiple-errors-v2",
+      "injection_plan": {
+        "temporal_pairs": [
+          3,
+          2
+        ],
+        "responsibility_steps": [
+          5,
+          4
+        ],
+        "resource_single_tasks": 2,
+        "resource_unknown_types": 2
+      },
+      "annotation_source": "人工设计错误模板的确定性参数化标注，未经人工逐条复核",
+      "script": {
+        "scenario_id": "S2",
+        "raw_text": "步骤1 | 06:01 | 气象/监测组 | 台风预警 | 资源：无\n步骤2 | 06:04 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 06:07 | 市气象局 | 会商研判 | 资源：无\n步骤4 | 06:10 | 应急指挥部 | 启动响应 | 资源：无\n步骤5 | 06:13 | 海事/海上救援 | 船只回港 | 资源：无\n步骤6 | 06:16 | 社区/基层 | 人员转移 | 资源：无\n步骤7 | 06:19 | 疏散引导组 | 安置点开放 | 资源：无\n步骤8 | 06:22 | 社区/基层 | 险情巡查 | 资源：无\n步骤9 | 06:25 | 工程抢险组 | 险情处置 | 资源：无\n步骤10 | 06:28 | 工程抢险组 | 排涝作业 | 资源：无\n步骤11 | 06:31 | 交通管制组 | 交通管制 | 资源：卫星电话×10",
+        "steps": [
+          {
+            "step_id": 1,
+            "time": "06:01",
+            "role": "气象/监测组",
+            "action": "台风预警",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 2,
+            "time": "06:04",
+            "role": "企业负责人",
+            "action": "事故上报",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 3,
+            "time": "06:07",
+            "role": "市气象局",
+            "action": "会商研判",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 4,
+            "time": "06:10",
+            "role": "应急指挥部",
+            "action": "启动响应",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 5,
+            "time": "06:13",
+            "role": "海事/海上救援",
+            "action": "船只回港",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 6,
+            "time": "06:16",
+            "role": "社区/基层",
+            "action": "人员转移",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 7,
+            "time": "06:19",
+            "role": "疏散引导组",
+            "action": "安置点开放",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 8,
+            "time": "06:22",
+            "role": "社区/基层",
+            "action": "险情巡查",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 9,
+            "time": "06:25",
+            "role": "工程抢险组",
+            "action": "险情处置",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 10,
+            "time": "06:28",
+            "role": "工程抢险组",
+            "action": "排涝作业",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 11,
+            "time": "06:31",
+            "role": "交通管制组",
+            "action": "交通管制",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "卫星电话",
+                "quantity": 10
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          }
+        ]
+      },
+      "expected_errors": [],
+      "detected_errors": [],
+      "injected_error_count": 0,
+      "detected_error_count": 0,
+      "detected_injected_errors": 0,
+      "missed_errors": 0,
+      "missed_error_details": [],
+      "additional_error_details": []
+    },
+    {
+      "sample_id": "S2-0010",
+      "scenario": "S2",
+      "profile": 1,
+      "variant": 1,
+      "mutations": [
+        "local_step_swaps"
+      ],
+      "dataset_version": "local-multiple-errors-v2",
+      "injection_plan": {
+        "temporal_pairs": [
+          3,
+          2
+        ],
+        "responsibility_steps": [
+          5,
+          4
+        ],
+        "resource_single_tasks": 2,
+        "resource_unknown_types": 2
+      },
+      "annotation_source": "人工设计错误模板的确定性参数化标注，未经人工逐条复核",
+      "script": {
+        "scenario_id": "S2",
+        "raw_text": "步骤1 | 06:01 | 气象/监测组 | 台风预警 | 资源：无\n步骤2 | 06:04 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 06:07 | 市气象局 | 会商研判 | 资源：无\n步骤4 | 06:10 | 应急指挥部 | 启动响应 | 资源：无\n步骤5 | 06:16 | 社区/基层 | 人员转移 | 资源：无\n步骤6 | 06:13 | 海事/海上救援 | 船只回港 | 资源：无\n步骤7 | 06:19 | 疏散引导组 | 安置点开放 | 资源：无\n步骤8 | 06:25 | 工程抢险组 | 险情处置 | 资源：无\n步骤9 | 06:22 | 社区/基层 | 险情巡查 | 资源：无\n步骤10 | 06:28 | 工程抢险组 | 排涝作业 | 资源：无\n步骤11 | 06:31 | 交通管制组 | 交通管制 | 资源：卫星电话×10",
+        "steps": [
+          {
+            "step_id": 1,
+            "time": "06:01",
+            "role": "气象/监测组",
+            "action": "台风预警",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 2,
+            "time": "06:04",
+            "role": "企业负责人",
+            "action": "事故上报",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 3,
+            "time": "06:07",
+            "role": "市气象局",
+            "action": "会商研判",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 4,
+            "time": "06:10",
+            "role": "应急指挥部",
+            "action": "启动响应",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 5,
+            "time": "06:16",
+            "role": "社区/基层",
+            "action": "人员转移",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 6,
+            "time": "06:13",
+            "role": "海事/海上救援",
+            "action": "船只回港",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 7,
+            "time": "06:19",
+            "role": "疏散引导组",
+            "action": "安置点开放",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 8,
+            "time": "06:25",
+            "role": "工程抢险组",
+            "action": "险情处置",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 9,
+            "time": "06:22",
+            "role": "社区/基层",
+            "action": "险情巡查",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 10,
+            "time": "06:28",
+            "role": "工程抢险组",
+            "action": "排涝作业",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 11,
+            "time": "06:31",
+            "role": "交通管制组",
+            "action": "交通管制",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "卫星电话",
+                "quantity": 10
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          }
+        ]
+      },
+      "expected_errors": [
+        {
+          "error_type": "temporal",
+          "step_id": 5,
+          "violated_rule": "时序:船只回港→人员转移"
+        },
+        {
+          "error_type": "temporal",
+          "step_id": 8,
+          "violated_rule": "时序:险情巡查→险情处置"
+        }
+      ],
+      "detected_errors": [
+        {
+          "error_type": "temporal",
+          "error_type_cn": "时序",
+          "step_id": 5,
+          "location": "动作'人员转移'（步骤5）出现在'船只回港'（步骤6）之前",
+          "description": "时序倒置：'船只回港'必须先于'人员转移'执行。",
+          "violated_rule": "时序:船只回港→人员转移",
+          "severity": 1
+        },
+        {
+          "error_type": "temporal",
+          "error_type_cn": "时序",
+          "step_id": 8,
+          "location": "动作'险情处置'（步骤8）出现在'险情巡查'（步骤9）之前",
+          "description": "时序倒置：'险情巡查'必须先于'险情处置'执行。",
+          "violated_rule": "时序:险情巡查→险情处置",
+          "severity": 1
+        }
+      ],
+      "injected_error_count": 2,
+      "detected_error_count": 2,
+      "detected_injected_errors": 2,
+      "missed_errors": 0,
+      "missed_error_details": [],
+      "additional_error_details": []
+    },
+    {
+      "sample_id": "S2-0011",
+      "scenario": "S2",
+      "profile": 2,
+      "variant": 1,
+      "mutations": [
+        "multiple_explicit_responsibility_conflicts"
+      ],
+      "dataset_version": "local-multiple-errors-v2",
+      "injection_plan": {
+        "temporal_pairs": [
+          3,
+          2
+        ],
+        "responsibility_steps": [
+          5,
+          4
+        ],
+        "resource_single_tasks": 2,
+        "resource_unknown_types": 2
+      },
+      "annotation_source": "人工设计错误模板的确定性参数化标注，未经人工逐条复核",
+      "script": {
+        "scenario_id": "S2",
+        "raw_text": "步骤1 | 06:01 | 气象/监测组 | 台风预警 | 资源：无\n步骤2 | 06:04 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 06:07 | 市气象局 | 会商研判 | 资源：无\n步骤4 | 06:10 | 应急指挥部 | 启动响应 | 资源：无\n步骤5 | 06:13 | 应急指挥部 | 船只回港 | 资源：无\n步骤6 | 06:16 | 交通管制组 | 人员转移 | 资源：无\n步骤7 | 06:19 | 气象/监测组 | 安置点开放 | 资源：无\n步骤8 | 06:22 | 企业负责人 | 险情巡查 | 资源：无\n步骤9 | 06:25 | 工程抢险组 | 险情处置 | 资源：无\n步骤10 | 06:28 | 工程抢险组 | 排涝作业 | 资源：无\n步骤11 | 06:31 | 交通管制组 | 交通管制 | 资源：卫星电话×10",
+        "steps": [
+          {
+            "step_id": 1,
+            "time": "06:01",
+            "role": "气象/监测组",
+            "action": "台风预警",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 2,
+            "time": "06:04",
+            "role": "企业负责人",
+            "action": "事故上报",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 3,
+            "time": "06:07",
+            "role": "市气象局",
+            "action": "会商研判",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 4,
+            "time": "06:10",
+            "role": "应急指挥部",
+            "action": "启动响应",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 5,
+            "time": "06:13",
+            "role": "应急指挥部",
+            "action": "船只回港",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 6,
+            "time": "06:16",
+            "role": "交通管制组",
+            "action": "人员转移",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 7,
+            "time": "06:19",
+            "role": "气象/监测组",
+            "action": "安置点开放",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 8,
+            "time": "06:22",
+            "role": "企业负责人",
+            "action": "险情巡查",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 9,
+            "time": "06:25",
+            "role": "工程抢险组",
+            "action": "险情处置",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 10,
+            "time": "06:28",
+            "role": "工程抢险组",
+            "action": "排涝作业",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 11,
+            "time": "06:31",
+            "role": "交通管制组",
+            "action": "交通管制",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "卫星电话",
+                "quantity": 10
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          }
+        ]
+      },
+      "expected_errors": [
+        {
+          "error_type": "responsibility",
+          "step_id": 5,
+          "violated_rule": "职责:(应急指挥部,船只回港)"
+        },
+        {
+          "error_type": "responsibility",
+          "step_id": 6,
+          "violated_rule": "职责:(交通管制组,人员转移)"
+        },
+        {
+          "error_type": "responsibility",
+          "step_id": 7,
+          "violated_rule": "职责:(气象/监测组,安置点开放)"
+        },
+        {
+          "error_type": "responsibility",
+          "step_id": 8,
+          "violated_rule": "职责:(企业负责人,险情巡查)"
+        }
+      ],
+      "detected_errors": [
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 5,
+          "location": "步骤5：角色'应急指挥部'执行动作'船只回港'",
+          "description": "职责错配：角色'应急指挥部'不包含动作'船只回港'。",
+          "violated_rule": "职责:(应急指挥部,船只回港)",
+          "severity": 3
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 6,
+          "location": "步骤6：角色'交通管制组'执行动作'人员转移'",
+          "description": "职责错配：角色'交通管制组'不包含动作'人员转移'。",
+          "violated_rule": "职责:(交通管制组,人员转移)",
+          "severity": 3
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 7,
+          "location": "步骤7：角色'气象/监测组'执行动作'安置点开放'",
+          "description": "职责错配：角色'气象/监测组'不包含动作'安置点开放'。",
+          "violated_rule": "职责:(气象/监测组,安置点开放)",
+          "severity": 3
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 8,
+          "location": "步骤8：角色'企业负责人'执行动作'险情巡查'",
+          "description": "职责错配：角色'企业负责人'不包含动作'险情巡查'。",
+          "violated_rule": "职责:(企业负责人,险情巡查)",
+          "severity": 3
+        }
+      ],
+      "injected_error_count": 4,
+      "detected_error_count": 4,
+      "detected_injected_errors": 4,
+      "missed_errors": 0,
+      "missed_error_details": [],
+      "additional_error_details": []
+    },
+    {
+      "sample_id": "S2-0012",
+      "scenario": "S2",
+      "profile": 3,
+      "variant": 1,
+      "mutations": [
+        "local_step_swaps",
+        "multiple_explicit_responsibility_conflicts"
+      ],
+      "dataset_version": "local-multiple-errors-v2",
+      "injection_plan": {
+        "temporal_pairs": [
+          3,
+          2
+        ],
+        "responsibility_steps": [
+          5,
+          4
+        ],
+        "resource_single_tasks": 2,
+        "resource_unknown_types": 2
+      },
+      "annotation_source": "人工设计错误模板的确定性参数化标注，未经人工逐条复核",
+      "script": {
+        "scenario_id": "S2",
+        "raw_text": "步骤1 | 06:01 | 气象/监测组 | 台风预警 | 资源：无\n步骤2 | 06:04 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 06:07 | 市气象局 | 会商研判 | 资源：无\n步骤4 | 06:10 | 应急指挥部 | 启动响应 | 资源：无\n步骤5 | 06:16 | 交通管制组 | 人员转移 | 资源：无\n步骤6 | 06:13 | 海事/海上救援 | 船只回港 | 资源：无\n步骤7 | 06:19 | 气象/监测组 | 安置点开放 | 资源：无\n步骤8 | 06:25 | 交通管制组 | 险情处置 | 资源：无\n步骤9 | 06:22 | 企业负责人 | 险情巡查 | 资源：无\n步骤10 | 06:28 | 工程抢险组 | 排涝作业 | 资源：无\n步骤11 | 06:31 | 交通管制组 | 交通管制 | 资源：卫星电话×10",
+        "steps": [
+          {
+            "step_id": 1,
+            "time": "06:01",
+            "role": "气象/监测组",
+            "action": "台风预警",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 2,
+            "time": "06:04",
+            "role": "企业负责人",
+            "action": "事故上报",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 3,
+            "time": "06:07",
+            "role": "市气象局",
+            "action": "会商研判",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 4,
+            "time": "06:10",
+            "role": "应急指挥部",
+            "action": "启动响应",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 5,
+            "time": "06:16",
+            "role": "交通管制组",
+            "action": "人员转移",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 6,
+            "time": "06:13",
+            "role": "海事/海上救援",
+            "action": "船只回港",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 7,
+            "time": "06:19",
+            "role": "气象/监测组",
+            "action": "安置点开放",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 8,
+            "time": "06:25",
+            "role": "交通管制组",
+            "action": "险情处置",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 9,
+            "time": "06:22",
+            "role": "企业负责人",
+            "action": "险情巡查",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 10,
+            "time": "06:28",
+            "role": "工程抢险组",
+            "action": "排涝作业",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 11,
+            "time": "06:31",
+            "role": "交通管制组",
+            "action": "交通管制",
+            "description": "",
+            "resources": [
+              {
+                "resource_type": "卫星电话",
+                "quantity": 10
+              }
+            ],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          }
+        ]
+      },
+      "expected_errors": [
+        {
+          "error_type": "temporal",
+          "step_id": 5,
+          "violated_rule": "时序:船只回港→人员转移"
+        },
+        {
+          "error_type": "temporal",
+          "step_id": 8,
+          "violated_rule": "时序:险情巡查→险情处置"
+        },
+        {
+          "error_type": "responsibility",
+          "step_id": 5,
+          "violated_rule": "职责:(交通管制组,人员转移)"
+        },
+        {
+          "error_type": "responsibility",
+          "step_id": 7,
+          "violated_rule": "职责:(气象/监测组,安置点开放)"
+        },
+        {
+          "error_type": "responsibility",
+          "step_id": 9,
+          "violated_rule": "职责:(企业负责人,险情巡查)"
+        },
+        {
+          "error_type": "responsibility",
+          "step_id": 8,
+          "violated_rule": "职责:(交通管制组,险情处置)"
+        }
+      ],
+      "detected_errors": [
+        {
+          "error_type": "temporal",
+          "error_type_cn": "时序",
+          "step_id": 5,
+          "location": "动作'人员转移'（步骤5）出现在'船只回港'（步骤6）之前",
+          "description": "时序倒置：'船只回港'必须先于'人员转移'执行。",
+          "violated_rule": "时序:船只回港→人员转移",
+          "severity": 1
+        },
+        {
+          "error_type": "temporal",
+          "error_type_cn": "时序",
+          "step_id": 8,
+          "location": "动作'险情处置'（步骤8）出现在'险情巡查'（步骤9）之前",
+          "description": "时序倒置：'险情巡查'必须先于'险情处置'执行。",
+          "violated_rule": "时序:险情巡查→险情处置",
+          "severity": 1
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 5,
+          "location": "步骤5：角色'交通管制组'执行动作'人员转移'",
+          "description": "职责错配：角色'交通管制组'不包含动作'人员转移'。",
+          "violated_rule": "职责:(交通管制组,人员转移)",
+          "severity": 3
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 7,
+          "location": "步骤7：角色'气象/监测组'执行动作'安置点开放'",
+          "description": "职责错配：角色'气象/监测组'不包含动作'安置点开放'。",
+          "violated_rule": "职责:(气象/监测组,安置点开放)",
+          "severity": 3
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 8,
+          "location": "步骤8：角色'交通管制组'执行动作'险情处置'",
+          "description": "职责错配：角色'交通管制组'不包含动作'险情处置'。",
+          "violated_rule": "职责:(交通管制组,险情处置)",
+          "severity": 3
+        },
+        {
+          "error_type": "responsibility",
+          "error_type_cn": "职责",
+          "step_id": 9,
+          "location": "步骤9：角色'企业负责人'执行动作'险情巡查'",
+          "description": "职责错配：角色'企业负责人'不包含动作'险情巡查'。",
+          "violated_rule": "职责:(企业负责人,险情巡查)",
+          "severity": 3
+        }
+      ],
+      "injected_error_count": 6,
+      "detected_error_count": 6,
+      "detected_injected_errors": 6,
+      "missed_errors": 0,
+      "missed_error_details": [],
+      "additional_error_details": []
+    },
+    {
+      "sample_id": "S2-B001",
+      "scenario": "S2",
+      "profile": "temporal_boundary",
+      "variant": 0,
+      "mutations": [
+        "omit_required_release_condition"
+      ],
+      "boundary_case": true,
+      "annotation_source": "人工设计的必要前置条件边界用例，标注先于检测生成",
+      "annotation_reason": "台风影响未解除便组织渔船出港，违反影响解除→渔船出港的必要前置条件。",
+      "miss_reason": "当前temporal_strict=false将所有缺失前置都降为提示，未区分必要条件与可省略环节；提示不计入检出错误。严格模式会检出。",
+      "script": {
+        "scenario_id": "S2",
+        "raw_text": "步骤1 | 08:00 | 气象/监测组 | 台风预警 | 资源：无\n步骤2 | 08:03 | 企业负责人 | 事故上报 | 资源：无\n步骤3 | 08:06 | 市气象局 | 会商研判 | 资源：无\n步骤4 | 08:09 | 应急指挥部 | 启动响应 | 资源：无\n步骤5 | 08:12 | 海事/海上救援 | 船只回港 | 资源：无\n步骤6 | 08:15 | 社区/基层 | 险情巡查 | 资源：无\n步骤7 | 08:18 | 工程抢险组 | 排涝作业 | 资源：无\n步骤8 | 08:21 | 交通管制组 | 交通管制 | 资源：无\n步骤9 | 08:24 | 社区/基层 | 人员转移 | 资源：无\n步骤10 | 08:27 | 工程抢险组 | 险情处置 | 资源：无\n步骤11 | 08:30 | 疏散引导组 | 安置点开放 | 资源：无\n步骤12 | 10:00 | 市海洋局 | 渔船出港 | 台风影响尚未解除，提前组织渔船出港；本步骤不满足影响解除这一必要前置条件。 | 资源：无",
+        "steps": [
+          {
+            "step_id": 1,
+            "time": "08:00",
+            "role": "气象/监测组",
+            "action": "台风预警",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 2,
+            "time": "08:03",
+            "role": "企业负责人",
+            "action": "事故上报",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 3,
+            "time": "08:06",
+            "role": "市气象局",
+            "action": "会商研判",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 4,
+            "time": "08:09",
+            "role": "应急指挥部",
+            "action": "启动响应",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 5,
+            "time": "08:12",
+            "role": "海事/海上救援",
+            "action": "船只回港",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 6,
+            "time": "08:15",
+            "role": "社区/基层",
+            "action": "险情巡查",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 7,
+            "time": "08:18",
+            "role": "工程抢险组",
+            "action": "排涝作业",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 8,
+            "time": "08:21",
+            "role": "交通管制组",
+            "action": "交通管制",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 9,
+            "time": "08:24",
+            "role": "社区/基层",
+            "action": "人员转移",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 10,
+            "time": "08:27",
+            "role": "工程抢险组",
+            "action": "险情处置",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 11,
+            "time": "08:30",
+            "role": "疏散引导组",
+            "action": "安置点开放",
+            "description": "",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          },
+          {
+            "step_id": 12,
+            "time": "10:00",
+            "role": "市海洋局",
+            "action": "渔船出港",
+            "description": "台风影响尚未解除，提前组织渔船出港；本步骤不满足影响解除这一必要前置条件。",
+            "resources": [],
+            "raw_text": "",
+            "action_raw": "",
+            "action_grounded": true
+          }
+        ]
+      },
+      "expected_errors": [
+        {
+          "error_type": "temporal",
+          "step_id": 12,
+          "violated_rule": "时序:影响解除→渔船出港"
+        }
+      ],
+      "detected_errors": [
+        {
+          "error_type": "temporal_hint",
+          "error_type_cn": "temporal_hint",
+          "step_id": 12,
+          "location": "动作'渔船出港'（步骤12）",
+          "description": "提示：前置动作'影响解除'未在脚本中出现。偏序模式下允许省略该中间环节，仅作提示、不计入错误。",
+          "violated_rule": "时序:影响解除→渔船出港",
+          "severity": 1
+        }
+      ],
+      "injected_error_count": 1,
+      "detected_error_count": 0,
+      "detected_injected_errors": 0,
+      "missed_errors": 1,
+      "missed_error_details": [
+        {
+          "error_type": "temporal",
+          "step_id": 12,
+          "violated_rule": "时序:影响解除→渔船出港"
+        }
+      ],
+      "additional_error_details": []
+    }
+  ],
+  "output_dir": "D:\\czb\\work\\标准化建设\\code\\emergency_ELCIG_V3\\output\\S2-Validator-20261013-112538-590282"
+}
