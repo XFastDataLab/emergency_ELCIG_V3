@@ -16,8 +16,6 @@ from openai import OpenAI, AsyncOpenAI
 VOLCES_API_KEY = "你的密钥"
 VOLCES_BASE_URL = "https://ark.cn-beijing.volces.com/api/v3"
 VOLCES_DPSK_V3 = "deepseek-v3-2-251201"
-# VOLCES_DPSK_V3 = "deepseek-v3-250324" #常规
-# VOLCES_DPSK_V3 = "doubao-seed-2-0-mini-260428" #token额度不足自动扣费
  
 
 src_file = "../GB∕T 33000-2025 大中型企业安全生产标准化管理体系目录.docx"
@@ -54,7 +52,6 @@ class DEEPSEEK_V4(AIModel):
 
 class AIModelEnum(Enum):
     DeepSeek_V3 = DEEPSEEK_V3(URL=VOLCES_BASE_URL,KEY=VOLCES_API_KEY,MODEL="deepseek-v3-2-251201",INPUT_MAXSIZE=100000)
-    # DeepSeek_V4 = DEEPSEEK_V4(URL="https://api.deepseek.com",KEY="REPLACE_WITH_ENV_VALUE",MODEL="deepseek-v4-flash",INPUT_MAXSIZE=700000)
     DeepSeek_V4 = DEEPSEEK_V4(URL="https://ark.cn-beijing.volces.com/api/v3",KEY="XXXXXX",MODEL="deepseek-v4-1-flash-260910",INPUT_MAXSIZE=100000)
     # v4 flash 正式版
     DeepSeek_V4_FLASH_OFFICAL = DEEPSEEK_V4(URL="https://ark.cn-beijing.volces.com/api/v3",KEY="XXXXX",MODEL="deepseek-v4-flash-ga-260731",INPUT_MAXSIZE=100000)
